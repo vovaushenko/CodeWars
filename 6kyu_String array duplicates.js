@@ -22,6 +22,3 @@ function dup(s) {
   let solution = antiDup.split(' ');
   return solution;
 }
-console.log(
-  dup(['ccooddddddewwwaaaaarrrrsssss', 'piccaninny', 'hubbubbubboo'])
-);
