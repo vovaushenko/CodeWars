@@ -1,7 +1,3 @@
-// https://www.codewars.com/kata/5f78635e51f6bc003362c7d9/train/javascript
-
-console.log(isItPossible('0X0' + '0XX' + '0XX'));
-
 function isItPossible(field) {
   //lets count the number of X's and O's and '_'s
 
@@ -136,15 +132,17 @@ function isItPossible(field) {
     return false;
   }
 
-  console.log(frequencyCounter);
-  console.log(frequencyCounter[0], frequencyCounter.X);
-  console.log(`victory ---  ${victory}`);
-  console.log(`zeroVictory --- ${victoryOfZero}`);
+  //check for equality before the last turn
+  if (frequencyCounter._ === 1 && frequencyCounter.X !== frequencyCounter[0]) {
+    return false;
+  }
 
+  if (frequencyCounter._ > 0 && frequencyCounter.X - frequencyCounter[0] > 1) {
+    return false;
+  }
+
+  if (victory === true && frequencyCounter._ === 0) {
+    return false;
+  }
   return true;
 }
-
-// //if victory === true and frequency of X's > 0's -> impossible
-// if (victory === true && frequencyCounter[0] < frequencyCounter.X) {
-//   return false;
-// }
