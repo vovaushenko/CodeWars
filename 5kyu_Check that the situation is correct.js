@@ -1,3 +1,7 @@
+// https://www.codewars.com/kata/5f78635e51f6bc003362c7d9/train/javascript
+
+console.log(isItPossible('XXX' + '0_0' + '___'));
+
 function isItPossible(field) {
   //lets count the number of X's and O's and '_'s
 
@@ -144,5 +148,9 @@ function isItPossible(field) {
   if (victory === true && frequencyCounter._ === 0) {
     return false;
   }
-  return true;
 }
+
+// //if victory === true and frequency of X's > 0's -> impossible
+// if (victory === true && frequencyCounter[0] < frequencyCounter.X) {
+//   return false;
+// }
