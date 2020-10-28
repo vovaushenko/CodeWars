@@ -25,6 +25,7 @@ function isItPossible(field) {
   //check all winning combinations
   let victory = false;
   let victoryOfZero = false;
+  let victoryOfX = false;
   if (field[0] === field[1] && field[1] === field[2] && field[0] != '_') {
     field[0] === '0' ? (victoryOfZero = true) : false;
     victory = true;
