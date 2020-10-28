@@ -1,6 +1,4 @@
-// madam -> True
-// adamm -> True
-// junk -> False
+// https://www.codewars.com/kata/58ae6ae22c3aaafc58000079
 
 function permuteAPalindrome(input) {
   //lets create objects of char frequencies
@@ -48,9 +46,3 @@ function permuteAPalindrome(input) {
 
   return true;
 }
-
-console.log(
-  permuteAPalindrome(
-    'natsrmuwiaqivkofqktjqumimjqyvrrlmzrwvnzitbsbjjuvorlyfrukvrmv'
-  )
-);
