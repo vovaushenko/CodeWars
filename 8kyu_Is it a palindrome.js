@@ -1,4 +1,8 @@
-function isPalindrome(x) {
+//www.codewars.com/kata/57a1fd2ce298a731b20006a4
+
+//Recursive solution
+
+https: function isPalindrome(x) {
   //Recursive version
   let palindrome = '';
 
