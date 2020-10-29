@@ -1,19 +1,22 @@
-function isPalindrome(x) {
-  //Recursive version
-  let palindrome = '';
+// https://www.codewars.com/kata/5df261342964c80028345a0a
 
-  function letsMakeOurPalindrome(input) {
-    if (input.length === 0) {
-      return;
-    }
+// Test.assertEquals(checkParity('even','101010'), 1);
+//     Test.assertEquals(checkParity('odd','101010'), 0);
+//     Test.assertEquals(checkParity('even','101011'), 0);
+//     Test.assertEquals(checkParity('odd','101011'), 1);
 
-    palindrome += input[input.length - 1];
-    letsMakeOurPalindrome(input.slice(0, -1));
+function checkParity(parity, bin) {
+  //lets firstly convert bin into a decimal number
+
+  let decimalNum = 0;
+  for (let i = 0; i < bin.length; i++) {
+    decimalNum += parseInt(bin[i]) * 2 ** (bin.length - 1 - i);
   }
 
-  letsMakeOurPalindrome(x);
+  let isEvenOrOdd;
+  bin % 2 === 0 ? (isEvenOrOdd = 'odd') : (isEvenOrOdd = 'even');
 
-  return palindrome.toLowerCase() === x.toLowerCase() ? true : false;
+  return parity !== isEvenOrOdd ? 1 : 0;
 }
 
-console.log(isPalindrome('Abba'));
+console.log(checkParity('', ''));
