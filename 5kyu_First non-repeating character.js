@@ -1,5 +1,4 @@
-// 'stress', the function should return 't'
-// { s: 3, t: 1, r: 1, e: 1 }
+// https://www.codewars.com/kata/52bc74d4ac05d0945d00054e
 
 function firstNonRepeatingLetter(str) {
   //firstly, lets find frequencies of letters
