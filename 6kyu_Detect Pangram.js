@@ -27,5 +27,3 @@ function isPangram(string) {
   //otherwise it's a pangram
   return true;
 }
-
-console.log(isPangram('The quick brown fox jumps over the lazy dog'));
