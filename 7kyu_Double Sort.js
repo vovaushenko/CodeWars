@@ -49,7 +49,3 @@ const dbSort = (a) => {
   const result = sortedNums.concat(sortedStrs);
   return result;
 };
-
-dbSort(["Banana", "Orange", "Apple", "Mango", 11, 5, 2, 8, 111]);
-
-// [1,5,7] , [2,6,11,15]
