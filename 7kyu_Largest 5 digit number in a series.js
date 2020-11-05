@@ -15,5 +15,3 @@ function solution(digits) {
   }
   return maxConsecutive;
 }
-
-console.log(solution("1234567890"));
