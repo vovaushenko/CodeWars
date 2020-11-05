@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // https://www.codewars.com/kata/523f5d21c841566fde000009
 
 const arrayDiff = (arr1, arr2) => {
@@ -29,4 +30,3 @@ const arrayDiff = (arr1, arr2) => {
     }
   }
   return sol.map(Number);
-};
