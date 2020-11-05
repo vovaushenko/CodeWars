@@ -8,5 +8,3 @@ const sequenceSum = (start, end, step) => {
   }
   return sum;
 };
-
-sequenceSum(2, 2, 2);
