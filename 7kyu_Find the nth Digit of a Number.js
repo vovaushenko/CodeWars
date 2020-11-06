@@ -9,5 +9,3 @@ const findDigit = (num, n) => {
 
   return n <= 0 ? -1 : Number(strNum[strNum.length - n]);
 };
-
-console.log(findDigit(-2825, 3));
