@@ -11,7 +11,7 @@ function SequenceSum(num) {
     sol.push(i);
   }
   let solution = sol.join('+');
-  solution += ` = ${sum}`;
+  solution += `=${sum}`;
   return solution;
 }
 
