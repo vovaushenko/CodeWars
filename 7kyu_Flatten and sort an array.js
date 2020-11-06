@@ -20,5 +20,3 @@ const flattenAndSort = (arr) => {
   // and then sort
   return flattenedArr.sort((a, b) => a - b);
 };
-
-console.log(flattenAndSort([[3, 2, 1], [4, 6, 5], [], [9, 7, 8]]));
