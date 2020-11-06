@@ -12,5 +12,3 @@ const findLongest = (arr) => {
   }
   return solution;
 };
-
-findLongest([8, 900, 500]);
