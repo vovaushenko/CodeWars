@@ -14,5 +14,3 @@ const twosDifference = (arr) => {
   }
   return solution;
 };
-
-console.log(differenceOfTwo([4, 3, 1, 5, 6]));
