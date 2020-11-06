@@ -33,5 +33,3 @@ const isAnagram = (word1, word2) => {
 
   return true;
 };
-
-console.log(isAnagram("NSpEOCIr  ", "OpSXErICN"));
