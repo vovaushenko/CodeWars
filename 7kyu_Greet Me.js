@@ -13,5 +13,3 @@ const greet = (name) => {
 
   return `Hello ${capitalized}!`;
 };
-
-greet('JACK');
