@@ -7,5 +7,3 @@ const sumCubes = (num) => {
   }
   return sum;
 };
-
-sumCubes(2);
