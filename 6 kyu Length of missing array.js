@@ -23,4 +23,3 @@ const getLengthOfMissingArray = (arrOfArr) => {
     }
   }
 };
-console.log(getLengthOfMissingArray(null));
