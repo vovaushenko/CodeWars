@@ -1,7 +1,5 @@
 // https://www.codewars.com/kata/525e5a1cb735154b320002c8
 
-// 1 3 6 10 15
-
 function triangular(num) {
   let sum = 0;
 
@@ -11,5 +9,3 @@ function triangular(num) {
   }
   return sum;
 }
-
-triangular(5);
