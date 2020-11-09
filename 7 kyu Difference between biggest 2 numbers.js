@@ -14,5 +14,3 @@ const diffBig2 = (arr) => {
   }
   return arr[0] - arr[1];
 };
-
-diffBig2([10, 5, 2]);
