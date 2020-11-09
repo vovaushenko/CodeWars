@@ -1,23 +1,3 @@
-<<<<<<< HEAD
-// https://www.codewars.com/kata/5898b4b71d298e51b600014b
-
-// const sortTheInnerContent = (str) => {
-//   let words = str.split(' ');
-//   console.log(words);
-//   let solution = [];
-//   for (let word of words) {
-//     console.log(word);
-//     let sort = [...word].sort((a,b)=>b-a)
-//   }
-// };
-
-// sortTheInnerContent('sort the inner content in descending order');
-
-const word = 'sort';
-
-let sort = [...word].sort((a, b) => a - b);
-console.log(sort);
-=======
 // https://www.codewars.com/kata/5966847f4025872c7d00015b
 
 const averageString = (str) => {
@@ -50,4 +30,3 @@ const averageString = (str) => {
 
   return getNum(nums, averageNum) ? getNum(nums, averageNum) : "n/a";
 };
->>>>>>> 8887dab1295a245876be4301c0c90305a4b231a0
