@@ -21,4 +21,3 @@ const prefill = (num, content) => {
 
   return result;
 };
-prefill(true, 5);
