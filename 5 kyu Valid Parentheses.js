@@ -14,4 +14,3 @@ function validParentheses(str) {
 
   return arrOfFrequencies[0] === arrOfFrequencies[1] ? true : false;
 }
-console.log(validParentheses('())(()'));
