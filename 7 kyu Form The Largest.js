@@ -2,5 +2,3 @@
 
 const maxNumber = (num) =>
   parseInt([...String(num)].sort((a, b) => b - a).join(''));
-
-console.log(maxNumber(213));
