@@ -1,5 +1,3 @@
-// https://www.codewars.com/kata/5a905c2157c562994900009d
-
 const productArray = (arr) => {
   let result = [];
   for (let i = 0; i < arr.length; i++) {
@@ -11,5 +9,3 @@ const productArray = (arr) => {
   }
   return result;
 };
-
-console.log(productArray([3, 2, 3]));
