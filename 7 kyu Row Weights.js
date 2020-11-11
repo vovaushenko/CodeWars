@@ -9,5 +9,3 @@ const rowWeights = (arr) => {
   }
   return [evenSum, oddSum];
 };
-
-rowWeights([13, 27, 49]);
