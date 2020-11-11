@@ -1,6 +1,6 @@
-// https://www.codewars.com/kata/57d2807295497e652b000139
+//www.codewars.com/kata/5512e5662b34d88e44000060
 
-const averages = (arr) => {
+https: const averages = (arr) => {
   if (arr === null) {
     return [];
   }
