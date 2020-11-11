@@ -14,5 +14,3 @@ const arrayLeaders = (arr) => {
   }
   return arrayLeaders;
 };
-
-console.log(arrayLeaders([-36, -12, -27]));
