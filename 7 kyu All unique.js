@@ -15,5 +15,3 @@ const hasUniqueChars = (str) => {
 
   return true;
 };
-
-console.log(hasUniqueChars('++-'));
