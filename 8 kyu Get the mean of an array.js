@@ -5,4 +5,3 @@ const getAverage = (marks) => {
 
   return Math.floor(marksAverage / marks.length);
 };
-getAverage([1, 1, 1, 1, 1, 1, 1, 2]);
