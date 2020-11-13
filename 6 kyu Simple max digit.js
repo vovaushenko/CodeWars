@@ -15,5 +15,3 @@ const solve = (num) => {
   }
   return result;
 };
-
-console.log(solve(48));
