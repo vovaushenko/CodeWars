@@ -17,5 +17,3 @@ const anagrams = (word, words) => {
 
   return solution;
 };
-
-console.log(anagrams('ab', ['aa', 'ab', 'ac', 'ba', 'bb', 'bc', 'cc', 'cd']));
