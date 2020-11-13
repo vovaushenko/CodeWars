@@ -6,5 +6,3 @@ const automorphic = (num) => {
     ? 'Automorphic'
     : 'Not!!';
 };
-
-console.log(automorphic(1));
