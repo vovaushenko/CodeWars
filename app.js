@@ -1,19 +1,30 @@
-// https://www.codewars.com/kata/553e8b195b853c6db4000048
+// https://www.codewars.com/kata/5c3433a4d828182e420f4197
 
-const hasUniqueChars = (str) => {
-  console.log(str);
-  let map = {};
-  for (let char of str) {
-    map[char.toLowerCase()] ? map[char]++ : (map[char] = 1);
-  }
+const ultimateReverse = (arr) => {
+  let solution = [];
+  let arrJoin = arr.join('');
 
-  for (let key in map) {
-    if (map[key] > 1) {
-      return false;
+  let reverse = [...arrJoin].reverse().join('');
+
+  // lets do this recursively
+  let counter = 0;
+  const ultimateReverser = (str) => {
+    if (str.length === 0) {
+      return;
     }
-  }
+    let reversedWord = '';
+    for (let i = 0; i < arr[counter].length; i++) {
+      reversedWord += arr[counter][i];
+    }
+    solution.push(reversedWord);
+    counter++;
 
-  return true;
+    ultimateReverser(str.substring(arr[0].length));
+  };
+  ultimateReverser(reverse);
+  console.log(solution);
 };
 
-console.log(hasUniqueChars('++-'));
+ultimateReverse(['I', 'like', 'big', 'butts', 'and', 'I', 'cannot', 'lie!']);
+
+// "!", "eilt", "onn", "acIdn", "ast", "t", "ubgibe", "kilI"}
