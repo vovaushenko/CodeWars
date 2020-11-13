@@ -18,6 +18,3 @@ function sort(sentence) {
   let solution = arrOfNonCapital.concat(arrOfCapital);
   return solution.join(" ");
 }
-
-console.log(sort("Pioneers, O Pioneers!"));
-("and land land of of the Vermont Thirteen Old Massachusetts Land Connecticut");
