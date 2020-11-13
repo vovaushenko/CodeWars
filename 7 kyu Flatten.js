@@ -13,5 +13,3 @@ const flatten = (arr) => {
   }
   return result;
 };
-
-flatten([1, 2, 3]);
