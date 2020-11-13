@@ -19,5 +19,3 @@ const multiplicationTable = (num) => {
 
   return solution;
 };
-
-multiplicationTable(3);
