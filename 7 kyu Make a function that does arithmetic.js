@@ -12,5 +12,3 @@ const arithmetic = (a, b, operator) => {
       return a / b;
   }
 };
-
-console.log(arithmetic(5, 2, 'divide'));
