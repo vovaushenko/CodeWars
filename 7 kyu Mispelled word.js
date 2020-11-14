@@ -1,5 +1,3 @@
-// 2 problems 7-6
-
 // https://www.codewars.com/kata/5892595f190ca40ad0000095
 
 const mispelled = (wrd1, wrd2) => {
@@ -23,5 +21,3 @@ const mispelled = (wrd1, wrd2) => {
   }
   return counterOfDifference > 1 ? false : true;
 };
-
-console.log(misspelled('versed', 'applb'));
