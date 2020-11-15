@@ -10,5 +10,3 @@ const spinWords = (str) => {
   }
   return res.join(' ')
 };
-
-spinWords('Hey fellow warriors');
