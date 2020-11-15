@@ -16,6 +16,3 @@ const stringTransformer = (str) => {
     .join(' ')
     
 };
-
-
-stringTransformer('Example Input');
