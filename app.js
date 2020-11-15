@@ -1,15 +1,5 @@
-// https://www.codewars.com/kata/514a024011ea4fb54200004b
+// https://www.codewars.com/kata/5417423f9e2e6c2f040002ae
 
-const domainName = (str) => {
-  if (str.includes('//')) {
-    let withoutHttp = str.split('//');
-    let noHtttp = withoutHttp[1].split('.');
-    if (noHtttp.length === 2) {
-      return noHtttp[0];
-    }
-    return noHtttp.filter((el) => el.length > 3)[0];
-  } else {
-    let domain = str.split('.').filter((el) => el.length > 3);
-    return domain[0];
-  }
-};
+const digitize = (num) => [...String(num)].map(Number);
+
+console.log(digitize(123));
