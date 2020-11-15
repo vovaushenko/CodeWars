@@ -4,5 +4,3 @@ const solution = (str, num) => {
   let result = str.slice(0, num);
   return result.length < str.length ? `${result}...` : result;
 };
-
-
