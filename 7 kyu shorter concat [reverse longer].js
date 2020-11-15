@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/54557d61126a00423b000a45/train/javascript
+// https://www.codewars.com/kata/54557d61126a00423b000a45
 
 const shorter_reverse_longer = (...arr) => {
   arr = arr.sort((a, b) => a.length - b.length);
@@ -19,5 +19,3 @@ const shorter_reverse_longer = (...arr) => {
     [...short].join(''),
   ].join('');
 };
-
-console.log(shorter_reverse_longer('first', 'abcde'));
