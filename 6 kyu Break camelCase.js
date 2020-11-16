@@ -10,5 +10,3 @@ const solution = (str) => {
   }
   return breakCamel;
 };
-
-solution('camelCasing');
