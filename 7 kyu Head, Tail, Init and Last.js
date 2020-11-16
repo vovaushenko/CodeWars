@@ -7,5 +7,3 @@ const tail = (arr) => arr.filter((num, id) => id > 0);
 const last = (arr) => arr[arr.length - 1];
 
 const init = (arr) => arr.filter((num, id) => id != arr.length - 1);
-
-console.log(init([1, 2, 3, 4, 5]));
