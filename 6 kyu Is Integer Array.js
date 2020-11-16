@@ -15,5 +15,3 @@ const isIntArray = (arr) => {
   }
   return false;
 };
-
-console.log(isIntArray(["-1"]));
