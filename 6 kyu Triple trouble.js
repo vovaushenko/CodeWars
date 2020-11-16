@@ -32,4 +32,3 @@ const tripledouble = (num1, num2) => {
   }
   return 0
 };
-console.log(tripledouble(451999277, 41177722899));
