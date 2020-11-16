@@ -30,5 +30,3 @@ const validate = (num) => {
     return sum % 10 === 0 ? true : false;
   }
 };
-
-validate(891);
