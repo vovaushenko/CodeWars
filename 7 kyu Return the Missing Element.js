@@ -8,5 +8,3 @@ const getMissingElement = (arr) => {
     }
   }
 };
-
-console.log(getMissingElement([0, 5, 1, 3, 2, 9, 7, 6, 4]));
