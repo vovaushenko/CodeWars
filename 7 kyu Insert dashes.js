@@ -13,5 +13,3 @@ const insertDash = (num) => {
   }
   return sol;
 };
-
-insertDash(1003567);
