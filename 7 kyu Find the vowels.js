@@ -11,5 +11,3 @@ const vowelIndices = (str) => {
   });
   return solution;
 };
-
-findVowels('YoMama');
