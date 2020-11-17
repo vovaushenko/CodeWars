@@ -7,5 +7,3 @@ const last = (...input) => {
     return input[0][input[0].length - 1] ? input[0][input[0].length - 1] : input[0];
   }
 };
-
-console.log(last(5));
