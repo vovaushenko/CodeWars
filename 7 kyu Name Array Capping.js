@@ -24,9 +24,3 @@ const capMe = (arr) => {
   capitalizer(arr);
   return result;
 };
-
-capMe(['KARLY', 'DANIEL', 'KELSEY'])
-
-// let arr = ['jo', 'nelson', 'jurie'];
-
-// console.log(arr.map((el, id) => (id === 0 ? el.toUpperCase() : el)));
