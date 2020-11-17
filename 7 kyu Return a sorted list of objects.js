@@ -3,4 +3,3 @@
 const sortList = (sortBy, arr) => {
   return arr.sort((a, b) => b[sortBy] - a[sortBy]);
 };
-
