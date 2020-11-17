@@ -7,5 +7,3 @@ const menFromBoys = (arr) => {
   
   return [...men, ...boys]
 };
-
-console.log(menFromBoys([-94, -99 , -100 , -99 , -96 , -99]));
