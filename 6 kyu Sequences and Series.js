@@ -13,5 +13,3 @@ const getScore = (n) => {
     }
   }
 };
-
-console.log(getScore(1));
