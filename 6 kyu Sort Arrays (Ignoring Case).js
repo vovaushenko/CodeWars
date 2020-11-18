@@ -15,5 +15,3 @@ const sortme = (arr) => {
   }
   return arr;
 };
-
-sort(["C", "d", "a", "B"]);
