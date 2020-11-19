@@ -25,5 +25,3 @@ const orderedCount = (str) => {
   }
   return res;
 };
-
-orderedCount('abracadabra');
