@@ -26,4 +26,3 @@ const mergesorted = (a, b) => {
 
   return result;
 };
-console.log(mergesorted([1,2,3],[4,5,6]))
