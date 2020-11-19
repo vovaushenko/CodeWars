@@ -1,17 +1,5 @@
-// https://www.codewars.com/kata/5254bd1357d59fbbe90001ec
+// https://www.codewars.com/kata/54df2067ecaa226eca000229
 
-const getScore = (n) => {
-  if (n === 1) {return 50}
-  let increment = 100;
-  let num = 50;
+const f = (num) => (num > 0 && num % 1 === 0 ? (num * (num + 1)) / 2 : false);
 
-  for (let i = 0; i < n; i++) {
-    num += increment;
-    increment += 50;
-    if (i === n - 2) {
-      return num;
-    }
-  }
-};
-
-console.log(getScore(1));
+console.log(f(3.14));
