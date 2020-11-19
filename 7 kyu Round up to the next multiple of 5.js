@@ -8,6 +8,3 @@ const roundToNext5 = (num) => {
     num++;
   }
 };
-
-
-console.log(roundToNext5(-2))
