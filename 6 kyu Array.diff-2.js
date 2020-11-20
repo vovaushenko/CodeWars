@@ -11,5 +11,3 @@ const arrayDiff = (arr1, arr2) => {
 
   return solution;
 };
-
-arrayDiff([1, 2, 2, 2, 3], [2]);
