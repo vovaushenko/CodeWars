@@ -8,8 +8,3 @@ const order = (words) => {
     .join(" ");
   return sorted;
 };
-
-order("is2 Thi1s T4est 3a");
-
-// var s = "is2 ";
-// console.log (s.match(r)[0]);
