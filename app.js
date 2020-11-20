@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // https://www.codewars.com/kata/5b7176768adeae9bc9000056
 
 const indexEqualsValue = (arr) => {
@@ -23,3 +24,11 @@ const indexEqualsValue = (arr) => {
 };
 
 console.log(indexEqualsValue([-8, 0, 2, 5]));
+=======
+var removeDuplicates = function(nums) {
+  return [... new Set(nums)]
+};
+
+
+console.log(removeDuplicates([0,0,1,1,1,2,2,3,3,4]))
+>>>>>>> 7ee9eefe903366c2922f32f1a1d2aab95d6f40f3
