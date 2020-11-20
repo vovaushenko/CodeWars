@@ -1,17 +1,25 @@
-// https://www.codewars.com/kata/5254bd1357d59fbbe90001ec
+// https://www.codewars.com/kata/5b7176768adeae9bc9000056
 
-const getScore = (n) => {
-  if (n === 1) {return 50}
-  let increment = 100;
-  let num = 50;
+const indexEqualsValue = (arr) => {
+  let start = 0;
+  let end = arr.length - 1;
+  let mid = Math.floor((start + end) / 2);
 
-  for (let i = 0; i < n; i++) {
-    num += increment;
-    increment += 50;
-    if (i === n - 2) {
-      return num;
+  if (arr[mid] <= mid) {
+    for (let i = 0; i < mid; i++) {
+      if (arr[i] === i) {
+        return i;
+      }
     }
   }
+
+  for (let j = mid; j < arr.length; j++) {
+    if (arr[j] === j) {
+      return j;
+    }
+  }
+
+  return -1;
 };
 
-console.log(getScore(1));
+console.log(indexEqualsValue([-8, 0, 2, 5]));
