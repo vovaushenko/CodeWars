@@ -12,5 +12,3 @@ const countBits = (num) => {
   toBinary(num);
   return res.filter((a) => a == 1).length;
 };
-
-console.log(countBits(1234 ));
