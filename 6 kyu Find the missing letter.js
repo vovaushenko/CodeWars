@@ -12,5 +12,3 @@ const findMissingLetter = (arr) => {
 
   return arr[0].toUpperCase() === arr[0] ? missing.toUpperCase() : missing;
 };
-
-console.log(findMissingLetter(["a", "b", "c", "d", "f"]));
