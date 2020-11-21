@@ -5,5 +5,3 @@ const maxTriSum = (arr) =>
     .sort((a, b) => b - a)
     .slice(0, 3)
     .reduce((a, b) => a + b);
-
-console.log(maxTriSum([2, 1, 8, 0, 6, 4, 8, 6, 2, 4]));
