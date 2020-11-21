@@ -20,11 +20,3 @@ const sortTheInnerContent = (words) => {
 
   return result.join(' ');
 };
-
-console.log(sortTheInnerContent('wait f me'));
-// let mixedUp =
-//   word[0] +
-//   [...word.slice(1, word.length - 1)].sort().reverse().join('') +
-//   word[word.length - 1];
-
-// console.log(mixedUp);
