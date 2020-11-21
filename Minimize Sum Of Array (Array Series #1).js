@@ -16,5 +16,3 @@ const minSum = (arr) => {
   
   return min;
 };
-
-minSum([12, 6, 10, 26, 3, 24]);
