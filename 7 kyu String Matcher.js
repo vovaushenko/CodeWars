@@ -1,5 +1,3 @@
-// https://www.codewars.com/kata/565ce4ab24ef4aee6a000074
-
 const isMatching = (str, str1, str2) => {
   // get rid of white spaces
   str = str.replace(/ /g, '');
@@ -18,5 +16,3 @@ const isMatching = (str, str1, str2) => {
 
   return str === combined ? true : false;
 };
-
-isMatching('email box', 'b aIl', 'Mo x e');
