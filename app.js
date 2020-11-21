@@ -1,20 +1,13 @@
-// https://www.codewars.com/kata/5a523566b3bfa84c2e00010b
+// https://www.codewars.com/kata/5a63948acadebff56f000018
 
-const minSum = (arr) => {
-  let sorted = arr.sort((a, b) => a - b);
-  
-  let i = 0;
-  let j = arr.length - 1;
-  let min = 0;
-  let mid = Math.floor((i + j) / 2);
-  console.log(mid, arr[mid]);
-  while (i <= mid && j > mid) {
-    min += arr[i] * arr[j];
-    i++;
-    j--;
-  }
-  
-  return min;
-};
+const maxProduct = (arr, num) =>
+  arr
+    .sort((a, b) => b - a)
+    .slice(0, num)
+    .reduce((a, b) => a * b, 1);
+// arr
+//   .sort((a, b) => b - a)
+//   .slice(0, num)
+//   .reduce((total, val) => total + val);
 
-minSum([12, 6, 10, 26, 3, 24]);
+maxProduct([4, 3, 5], 2);
