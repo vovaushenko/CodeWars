@@ -1,16 +1,24 @@
-// https://www.codewars.com/kata/526571aae218b8ee490006f4
+// https://www.codewars.com/kata/5626b561280a42ecc50000d1
 
-const countBits = (num) => {
+const num = 9;
+
+// const sumDigPow = (min, max) => {
+//   let res = [];
+
+const sumDigPow = (min, max) => {
   let res = [];
-  let toBinary = (n) => {
-    if (n === 0) return;
-    res.push(n % 2);
 
-    toBinary(Math.floor(n / 2));
-  };
-
-  toBinary(num);
-  return res.filter((a) => a == 1).length;
+  for (let i = min; i < max; i++) {
+    if (
+      [...(i + '')].reduce((total, a, id) => Number(a) ** (id + 1) + Number(total)) === i   || [...i+''].length == 1) {
+      res.push(i);
+    }
+  }
+  return res;
 };
 
-console.log(countBits(1234 ));
+console.log(
+  [...(i + '')].reduce((total, a, id) => Number(a) ** (id + 1) + Number(total))
+);
+
+// sumDigPow(1, 10);
