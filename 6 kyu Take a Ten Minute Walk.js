@@ -14,5 +14,3 @@ const isValidWalk = (walk) => {
   }
   return true;
 };
-
-console.log(isValidWalk(['n', 'e', 'n', 's', 'n', 's', 'n', 's', 'n', 's']));
