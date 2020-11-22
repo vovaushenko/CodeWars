@@ -13,5 +13,3 @@ const list = (names) => {
       }
     });
 };
-
-console.log(list([]));
