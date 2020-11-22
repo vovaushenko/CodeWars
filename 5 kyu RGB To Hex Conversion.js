@@ -20,7 +20,3 @@ const rgb = (r, g, b) => {
 
   return resR + resG + resB;
 };
-
-console.log(rgb(220, 20, 60));
-
-// console.log(num.toString(16));
