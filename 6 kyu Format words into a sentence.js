@@ -10,5 +10,3 @@ const formatWords = (arr) => {
   });
   return formatted;
 };
-
-console.log(formatWords(['one', 'two', 'three', 'four']));
