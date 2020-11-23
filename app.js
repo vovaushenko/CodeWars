@@ -1,18 +1,8 @@
-// https://www.codewars.com/kata/54f9f4d7c41722304e000bbb
+// https://www.codewars.com/kata/56541980fa08ab47a0000040
 
-const firstDup = (str) => {
-  const map = {};
+ const printerError = (s) => `${s.length - s.replace(/[^a-m]+/g, '').length}/${s.length}`;
 
-  for (let char of str) {
-    map[char] ? map[char]++ : (map[char] = 1);
-  }
-  console.log(map);
+let s = 'aaaxbbbbyyhwawiwjjjwwm';
 
-  for (char of str) {
-    if (map[char] > 1) {
-      return char;
-    }
-  }
-};
-
-console.log(firstDup('1a2b3a3c'));
+let z = s.replace(/[^a-m]+/g, '');
+console.log(s.length, z.length, s.length - z.length);
