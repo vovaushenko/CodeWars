@@ -14,5 +14,3 @@ const change = (string) => {
   }
   return result;
 };
-
-change('a   **&  cZ');
