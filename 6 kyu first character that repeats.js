@@ -14,5 +14,3 @@ const firstDup = (str) => {
     }
   }
 };
-
-console.log(firstDup('1a2b3a3c'));
