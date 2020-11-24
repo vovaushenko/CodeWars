@@ -1,5 +1,5 @@
 // https://www.codewars.com/kata/5b6db1acb118141f6b000060
-
+console.log('hey')
 const recycle = (input) => {
   console.log('hey')
   console.log(input);
