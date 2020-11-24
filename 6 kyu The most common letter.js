@@ -23,5 +23,3 @@ const replaceCommon = (str, letter) => {
   }
   return result;
 };
-
-console.log(replaceCommon('real talk bro', 'n'));
