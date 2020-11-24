@@ -5,5 +5,3 @@ const wordSearch = (pattern, array) => {
 
   return res.length !== 0 ? res : ['Empty'];
 };
-
-console.log(wordSearch('ab', ['za', 'aB', 'abc', 'zab', 'zbc']));
