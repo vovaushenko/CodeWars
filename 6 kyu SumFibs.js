@@ -13,4 +13,3 @@ const sumFibs = (num) => {
   let fibs = fibonacci_series(num);
   return fibs.filter((a) => a % 2 == 0).reduce((total, num) => total + num);
 };
-console.log(sumFibs(9));
