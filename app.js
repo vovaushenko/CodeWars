@@ -1,16 +1,21 @@
-// https://www.codewars.com/kata/5839edaa6754d6fec10000a2
+// https://www.codewars.com/kata/5389864ec72ce03383000484/train/javascript
 
-const findMissingLetter = (arr) => {
-  let alphabet = "abcdefghijklmnopqrstuvwxyz";
-  let lowerCase = arr.map((char) => alphabet.indexOf(char.toLowerCase()));
-  let missing;
-  for (let i = 0; i < lowerCase.length; i++) {
-    if (lowerCase[i + 1] - lowerCase[i] == 2) {
-      missing = alphabet[lowerCase[i] + 1];
+const autocomplete = (input, dictionary) => {
+  let gerRidOfUnnecessary = input.replace(/[^a-zA-Z0-9 !?]+/g, '');
+  let solution = [];
+  for (let word of dictionary) {
+    if (gerRidOfUnnecessary === word.slice(0, gerRidOfUnnecessary.length)) {
+      solution.push(word);
     }
   }
-
-  return arr[0].toUpperCase() === arr[0] ? missing.toUpperCase() : missing;
+  return solution;
 };
 
-console.log(findMissingLetter(["a", "b", "c", "d", "f"]));
+// let a1 = "ai";
+// let a2 = "azrplane";
+
+// let length = a1.length;
+
+// console.log(a2.slice(0, length));
+
+console.log(autocomplete("b^1", ["airplane", "airport", "apple", "ball"]));
