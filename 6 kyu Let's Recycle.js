@@ -1,5 +1,5 @@
 // https://www.codewars.com/kata/5b6db1acb118141f6b000060
-// paper, glass, organic, and plastic.
+
 const recycle = (input) => {
   let paper = input
     .filter((a) => a.material === "paper" || a.secondMaterial === "paper")
@@ -21,4 +21,3 @@ const recycle = (input) => {
 
   return recycled;
 };
-
