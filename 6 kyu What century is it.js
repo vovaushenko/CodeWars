@@ -7,3 +7,4 @@ const whatCentury = (num) => {
   if (century == 22) return century+'nd'
   if (century == 23) return century+'rd'
 };
+

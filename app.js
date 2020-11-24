@@ -1,9 +1,18 @@
-// https://www.codewars.com/kata/52fb87703c1351ebd200081f
+// https://www.codewars.com/kata/5b6db1acb118141f6b000060
 
-const whatCentury = (num) => {
-  let century = Math.ceil(num / 100);
-  if (century <= 20) return century+'th'
-  if (century == 21) return century+'st'
-  if (century == 22) return century+'nd'
-  if (century == 23) return century+'rd'
+const recycle = (input) => {
+  console.log('hey')
+  console.log(input);
 };
+
+recycle([
+  { type: "rotten apples", material: "organic" },
+  {
+    type: "out of date yogurt",
+    material: "organic",
+    secondMaterial: "plastic",
+  },
+  { type: "wine bottle", material: "glass", secondMaterial: "paper" },
+  { type: "amazon box", material: "paper" },
+  { type: "beer bottle", material: "glass", secondMaterial: "paper" },
+]);
