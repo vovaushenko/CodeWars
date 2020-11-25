@@ -10,5 +10,3 @@ const makeEveryLetterAfterXCaps = (str, letter) => {
   }
   return letters.join('');
 };
-
-console.log(makeEveryLetterAfterXCaps('and the cow jumped over the moon', 'n'));
