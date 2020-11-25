@@ -17,7 +17,3 @@ const transform = (s) => {
   }
   return res;
 };
-
-transform('abbreviation');
-
-// a2b2revi2ton
