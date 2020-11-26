@@ -9,5 +9,3 @@ const vampire_test = (a, b) => {
   }
   return true;
 };
-
-console.log(vampire_test(-30, -51));
