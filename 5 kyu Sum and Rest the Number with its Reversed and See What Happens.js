@@ -17,4 +17,3 @@ const sumDifRev = (num) => {
   
   return res[num - 1];
 };
-
