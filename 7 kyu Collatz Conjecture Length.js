@@ -16,5 +16,3 @@ const collatz = (n) => {
   helper(n);
   return array.length;
 };
-
-collatz(20);
