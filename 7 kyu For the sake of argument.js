@@ -4,5 +4,3 @@ const numbers = (...nums) => {
   let filtered = nums.filter((a) => typeof a == 'number');
   return nums.length == filtered.length ? true : false;
 };
-
-numbers(1, 3, NaN);
