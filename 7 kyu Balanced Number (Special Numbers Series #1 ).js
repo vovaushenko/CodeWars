@@ -18,5 +18,3 @@ const balancedNum = (num) => {
     return leftSum == rightSum ? 'Balanced' : 'Not Balanced';
   }
 };
-
-console.log(balancedNum(13));
