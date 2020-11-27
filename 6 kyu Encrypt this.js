@@ -14,5 +14,3 @@ const encryptThis = (str) => {
 
   return encrypted.join(' ');
 };
-
-console.log(encryptThis('A wise old owl lived in an oak'));
