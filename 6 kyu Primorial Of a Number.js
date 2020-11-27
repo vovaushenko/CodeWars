@@ -19,5 +19,3 @@ const numPrimorial = (num) => {
   }
   return arrOfPrimes.reduce((product, n) => product * n);
 };
-
-console.log(numPrimorial(5));
