@@ -8,11 +8,3 @@ const meetings = (str) => {
     .join(")(");
   return "(" + res + ")";
 };
-
-
-
-// let res = str
-//     .split(";")
-//     .map((pair) => pair.split(":").reverse().join(", ").toUpperCase())
-//     .sort()
-//     .join("");
