@@ -9,8 +9,3 @@ const inArray = (a1, a2) => {
   }
   return res.sort();
 };
-
-solve(
-  ["arp", "live", "strong"],
-  ["lively", "alive", "harp", "sharp", "armstrong"]
-);
