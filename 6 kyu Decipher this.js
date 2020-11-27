@@ -14,7 +14,3 @@ const decipherThis = (str) => {
 
   return deciphered.join(' ')
 };
-
-// let a = String.fromCharCode(72)
-
-console.log(decipherThis('72olle 103doo 100ya'));
