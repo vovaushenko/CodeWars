@@ -14,5 +14,3 @@ const isValidIP = (ip) => {
 
   return true;
 };
-
-console.log(isValidIP('0.0.0.0'));
