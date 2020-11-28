@@ -11,5 +11,3 @@ const parse = (data) => {
   }, 0);
   return res;
 };
-
-console.log(parse('iiisdoso'));
