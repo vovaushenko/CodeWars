@@ -15,10 +15,3 @@ const stockList = (listOfArt, listOfCat) => {
   }
   return total.join(' - ');
 };
-
-console.log(
-  sumOfQuantities(
-    ['BBAR 150', 'CDXE 515', 'BKWR 250', 'BTSQ 890', 'DRTY 600'],
-    'A'
-  )
-);
