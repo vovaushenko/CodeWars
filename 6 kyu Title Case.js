@@ -18,5 +18,3 @@ const titleCase = (str1, str2) => {
   });
   return titleCased.join(' ');
 };
-
-console.log(titleCase('the quick brown fox'));
