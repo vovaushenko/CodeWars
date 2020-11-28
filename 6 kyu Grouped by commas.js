@@ -17,5 +17,3 @@ const groupByCommas = (num) => {
 
   return [...res.join('')].reverse().join('');
 };
-
-solve(100);
