@@ -12,9 +12,3 @@ const oddOneOut = (str) => {
   }
   return result;
 };
-
-console.log(oddOneOut('racecar'));
-
-// //  ["H", "e", " ", "W", "r", "l", "d"]
-// let a = 'Hello World';
-// console.log(a.slice(3));
