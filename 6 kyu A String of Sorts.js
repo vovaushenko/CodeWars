@@ -22,7 +22,3 @@ const sortString = (str1, str2) => {
 
   return [...strangelySorted, ...rest].join('');
 };
-
-console.log(sortString('bungholio', 'aacbuoldiiaoh'));
-
-// buoolihng
