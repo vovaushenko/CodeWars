@@ -12,19 +12,3 @@ const autocomplete = (input, dictionary) => {
 
   return solution.slice(0, 5);
 };
-
-console.log(
-  autocomplete('n~!@#$%^&*()_+1234567890ope', [
-    'Airplane',
-    'airport',
-    'apple',
-    'ball',
-    'airport',
-    'airport',
-    'airport',
-    'airport',
-    'airport',
-    'airport',
-    'airport',
-  ])
-);
