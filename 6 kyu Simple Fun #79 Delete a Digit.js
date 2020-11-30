@@ -15,4 +15,3 @@ const deleteDigit = (num) => {
   }
   return biggestNumber;
 };
-deleteDigit(152);
