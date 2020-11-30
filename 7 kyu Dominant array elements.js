@@ -9,5 +9,3 @@ const solve = (arr) => {
   
   return solution;
 };
-
-solve([5, 4, 3, 2, 1]);
