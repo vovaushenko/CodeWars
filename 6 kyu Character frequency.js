@@ -2,7 +2,7 @@
 
 const letterFrequency = (str) => {
   str = str.toLowerCase().replace(/[^a-zA-Z]+/g, '');
-  console.log(str);
+ 
   let map = {};
   for (let char of str) {
     map[char] ? map[char]++ : (map[char] = 1);
