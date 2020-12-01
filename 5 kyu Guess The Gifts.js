@@ -16,16 +16,3 @@ const guessGifts = (wishlist, presents) => {
   res = [...new Set(res)];
   return res;
 };
-
-var wish = [
-  { name: 'card game', size: 'small', clatters: 'no', weight: 'light' },
-  { name: 'bobble hat', size: 'small', clatters: 'no', weight: 'light' },
-  { name: 'socks', size: 'small', clatters: 'no', weight: 'light' },
-];
-
-var pr = [
-  { size: 'small', clatters: 'no', weight: 'light' },
-  { size: 'small', clatters: 'no', weight: 'light' },
-];
-
-console.log(guessGifts(wish, pr));
