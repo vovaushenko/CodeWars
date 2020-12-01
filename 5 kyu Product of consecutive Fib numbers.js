@@ -20,7 +20,3 @@ const productFib = (prod) => {
 
   return closestTwo;
 };
-
-console.log(productFib(447577));
-
-// currentProduct !== prod
