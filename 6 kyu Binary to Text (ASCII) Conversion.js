@@ -18,11 +18,3 @@ const binaryToString = (binary) => {
   helper(binary);
   return solution;
 };
-
-// let a = '01100001';
-// let digit = parseInt(a, 2);
-// console.log(digit);
-
-// console.log(String.fromCharCode(digit));
-
-binaryToString('00110001001100000011000100110001');
