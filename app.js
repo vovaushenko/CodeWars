@@ -1,12 +1,38 @@
-// https://www.codewars.com/kata/53046ceefe87e4905e00072a
+// https://www.codewars.com/kata/554910d77a3582bbe300009c
 
-const palindrome = (str) => {
-  let onlyLetters = str.replace(/[^a-zA-Z]+/g, '').toLowerCase();
-  let reversed = '';
-  for (let i = onlyLetters.length - 1; i >= 0; i--) {
-    reversed += onlyLetters[i];
+const getWinner = (arr) => {
+  let map = {};
+
+  for (let vote of arr) {
+    map[vote] ? map[vote]++ : (map[vote] = 1);
   }
-  return reversed === onlyLetters ? true : false;
+
+  var keyValuePairs = Object.keys(map)
+    .map((key) => [key, map[key]])
+    .sort((a, b) => b[1] - a[1]);
+  let winner = keyValuePairs[0];
+
+  return winner[1] > arr.length / 2 ? winner[0] : null;
 };
 
-console.log(palindrome('A man, a plan, a canal: Panaza'));
+console.log(
+  getWinner([
+    'Maria Fleed',
+    'Maria Fleed',
+    'Tetsuya Tsurugi',
+    'Maria Fleed',
+    'Maria Fleed',
+    'Tetsuya Tsurugi',
+    'Tetsuya Tsurugi',
+    'Maria Fleed',
+    'Tetsuya Tsurugi',
+    'Tetsuya Tsurugi',
+    'Tetsuya Tsurugi',
+    'Tetsuya Tsurugi',
+    'Maria Fleed',
+    'Tetsuya Tsurugi',
+    'Tetsuya Tsurugi',
+    'Maria Fleed',
+    'Maria Fleed',
+  ])
+);
