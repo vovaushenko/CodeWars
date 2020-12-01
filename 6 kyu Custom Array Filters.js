@@ -25,23 +25,3 @@ Array.prototype.inRange = function (min, max) {
     (a) => typeof a === 'number' && a % 1 === 0 && a >= min && a <= max
   );
 };
-let arr = [
-  4,
-  123.2,
-  9,
-  '1',
-  7,
-  '0',
-  6,
-  2,
-  'c',
-  1,
-  'b',
-  5,
-  1.2,
-  3,
-  12.01,
-  'a',
-  0.1,
-  '9',
-];
