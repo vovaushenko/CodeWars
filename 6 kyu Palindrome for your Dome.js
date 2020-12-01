@@ -8,5 +8,3 @@ const palindrome = (str) => {
   }
   return reversed === onlyLetters ? true : false;
 };
-
-console.log(palindrome('A man, a plan, a canal: Panaza'));
