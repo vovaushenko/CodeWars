@@ -8,5 +8,3 @@ const simpleTransposition = (str) => {
   }
   return row1.join('') + row2.join('');
 };
-
-console.log(encrypt('Simple text'));
