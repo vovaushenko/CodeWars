@@ -18,5 +18,3 @@ const deepCount = (arr) => {
   helper(arr);
   return counter;
 };
-
-console.log(deepCount(['x', 'y', ['z']]));
