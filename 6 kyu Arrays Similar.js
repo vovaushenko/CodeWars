@@ -11,5 +11,3 @@ const arraysSimilar = (a1, a2) => {
   }
   return true;
 };
-
-console.log(arraysSimilar([1, 2, 2, 3, 4], [2, 1, 2, '4', 3]));
