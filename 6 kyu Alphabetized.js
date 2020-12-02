@@ -11,7 +11,3 @@ const alphabetized = (str) => {
     )
     .join('');
 };
-
-console.log(alphabetized('The Holy Bible'));
-
-// BbeehHilloTy
