@@ -13,5 +13,3 @@ const generateTriangulars = (n) => {
 };
 
 const sumTriangularNumbers = (limit) => limit > 0 ? generateTriangulars(limit).reduce((a, b) => a + b, 0) : 0;
-
-console.log(sumTriangularNumbers(-291));
