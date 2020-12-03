@@ -16,5 +16,3 @@ const solve = (str) => {
 
   return simpleReverse.join('');
 };
-
-console.log(solve('your code rocks'));
