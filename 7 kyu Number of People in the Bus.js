@@ -2,9 +2,3 @@
 
 const number = (busStops) =>
   busStops.map((a) => a[0] - a[1]).reduce((a, b) => a + b);
-
-console.log(number([
-  [10, 0],
-  [3, 5],
-  [5, 8],
-]));
