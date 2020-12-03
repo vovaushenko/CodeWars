@@ -19,5 +19,3 @@ const computeDepth = (num) => {
   }
   return step - 1;
 };
-
-depth(42);
