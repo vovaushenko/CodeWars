@@ -7,6 +7,3 @@ const nbDig = (n, d) => {
     .map((a) => [...a].filter((a) => a === String(d)).join(""))
     .join("").length;
 };
-
-console.log(nbDig(25, 1));
-// 1, 16, 81, 100, 121, 144, 169, 196, 361, 441
