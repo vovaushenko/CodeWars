@@ -5,5 +5,3 @@ const sortMyString = (str) => {
   let evenIds = [...str].filter((a, id) => id % 2 === 0).join('');
   return evenIds + ' ' + oddIds;
 };
-
-sort('CodeWars');
