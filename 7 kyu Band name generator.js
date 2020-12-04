@@ -5,5 +5,3 @@ const bandNameGenerator = (str) =>
   str[0] === str[str.length - 1]
     ? (res = capitalize(str) + str)
     : (res = 'The ' + capitalize(str));
-
-console.log(bandNameGenerator('alaska'));
