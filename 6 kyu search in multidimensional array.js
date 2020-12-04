@@ -18,5 +18,3 @@ const flatten = (arr) => {
 };
 
 const locate = (arr, value) => flatten(arr).includes(value);
-
-console.log(locate(['a', 'b', ['c', 'd', ['e']]], 'z'));
