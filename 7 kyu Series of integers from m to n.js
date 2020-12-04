@@ -2,5 +2,3 @@
 
 const generateIntegers = (min, max) =>
   Array.from({ length: max - min + 1 }, (_) => min++);
-
-console.log(generateIntegers(2, 5));
