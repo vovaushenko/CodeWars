@@ -1,23 +1,4 @@
-// https://www.codewars.com/kata/59b401e24f98a813f9000026
+// https://www.codewars.com/kata/59f7fc109f0e86d705000043
 
-const computeDepth = (num) => {
-  let arr = [];
-  let step = 1;
+const divisibleByThree = (num) => [...num].reduce((total, n) => total + Number(n), 0) % 3 === 0 ? true : false;
 
-  while (arr.length !== 10) {
-    console.log(num, step);
-    let tempNum = num * step;
-    let toStr = [...(tempNum + '')];
-
-    for (let digit of toStr) {
-      if (!arr.includes(digit)) {
-        arr.push(digit);
-      }
-    }
-
-    step++;
-  }
-  return step - 1;
-};
-
-depth(42);
