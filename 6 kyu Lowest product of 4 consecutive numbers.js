@@ -10,5 +10,3 @@ const lowestProduct = (num) => {
   }
   return min;
 };
-
-lowestProduct('123456789');
