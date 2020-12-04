@@ -5,8 +5,3 @@ const spacify = (str) =>
     .split(' ')
     .map((word) => word.split('').join(' '))
     .join('   ');
-
-console.log(spacify('hello world'));
-
-
-'h e l l o   w o r l d'
