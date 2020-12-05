@@ -10,5 +10,3 @@ const replaceAll = (seq, find, replace) => {
     return seq.map((num) => (num === find ? (num = replace) : num));
   }
 };
-
-console.log();
