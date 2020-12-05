@@ -11,7 +11,5 @@ const catchSignChange = (arr) => {
       counter++;
     }
   }
-  console.log(counter);
+  return counter;
 };
-
-catchSignChange([1, -3, -4, 0, 5]);
