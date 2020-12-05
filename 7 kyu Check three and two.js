@@ -10,5 +10,3 @@ const checkThreeAndTwo = (arr) => {
   if (!frequencies.includes(2)) return false;
   return true;
 };
-
-console.log(checkThreeAndTwo(["a", "a", "a", "b", "b"]));
