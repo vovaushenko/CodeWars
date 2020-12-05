@@ -7,5 +7,3 @@ const sumSquareEvenRootOdd = (arr) =>
       .reduce((total, num) => total + num, 0)
       .toFixed(2)
   );
-
-console.log(sumSquareEvenRootOdd([4, 5, 7, 8, 1, 2, 3, 0]));
