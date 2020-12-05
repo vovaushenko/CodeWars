@@ -6,5 +6,3 @@ const unusedDigits = (...nums) => {
   res = n.filter((a) => !nums.includes(a)).join('');
   return res;
 };
-
-unusedDigits(12, 34, 56, 78);
