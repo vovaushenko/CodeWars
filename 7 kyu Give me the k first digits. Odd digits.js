@@ -7,5 +7,3 @@ const findOddDigits = (n, k) => {
     .slice(0, k);
   return odds.length < k ? 0 : parseInt(odds.join(''));
 };
-
-console.log(findOddDigits(66647460, 0));
