@@ -5,5 +5,3 @@ const solve = (str1, str2) => {
   let uniques2 = [...str2].filter((a) => !str1.includes(a)).join('');
   return uniques1 + uniques2;
 };
-
-console.log(solve('xyab', 'xzca'));
