@@ -14,5 +14,3 @@ const duplicates = (arr) => {
   
   return duplicatesCounter;
 };
-
-duplicates([1, 2, 2, 20, 6, 20, 2, 6, 2, 2]);
