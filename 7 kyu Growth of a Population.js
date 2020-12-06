@@ -8,5 +8,3 @@ const nbYear = (p0, percent, aug, p) => {
   }
   return years;
 };
-
-nbYear(1500, 5, 100, 5000);
