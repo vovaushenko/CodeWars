@@ -1,12 +1,5 @@
-// /https://www.codewars.com/kata/540f8a19a7d43d24ac001018
+// https://www.codewars.com/kata/5738f5ea9545204cec000155
 
-const nthterm = (start, id, step) => {
-  let count = 0;
-  while (count !== id) {
-    start += step;
-    count++;
-  }
-  return start;
-};
+const countLettersAndDigits = (str) => str.replace(/[^A-Za-z0-9]+/g, '').length;
 
-console.log(nthterm(1, 2, 3));
+console.log(counter('hel2!lo!!!!'));
