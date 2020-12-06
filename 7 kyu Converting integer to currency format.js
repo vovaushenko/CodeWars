@@ -19,5 +19,3 @@ const toCurrency = (price) => {
     .map((a) => [...a].reverse().join(''))
     .join(',');
 };
-
-console.log(toCurrency(13234));
