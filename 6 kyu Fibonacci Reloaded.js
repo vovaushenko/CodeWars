@@ -13,5 +13,3 @@ const fib = (n) => {
 
   return fibs[fibs.length - 1];
 };
-
-fib(5);
