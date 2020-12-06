@@ -18,5 +18,3 @@ const countAdjacentPairs = (str) => {
   }
   return counter;
 };
-
-adj('cat cat cat cat dog dog dog cat cat dog dog');
