@@ -8,5 +8,3 @@ const nthterm = (start, id, step) => {
   }
   return start;
 };
-
-console.log(nthterm(1, 2, 3));
