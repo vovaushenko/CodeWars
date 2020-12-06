@@ -9,5 +9,3 @@ const camelize = (str) => {
     .map((a) => a.charAt(0).toUpperCase() + a.slice(1))
     .join('');
 };
-
-console.log(camelize('dir/for/data'));
