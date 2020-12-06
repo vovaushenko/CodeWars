@@ -14,5 +14,3 @@ const highestRank = (arr) => {
   }
   return Number(mostFrequent[mostFrequent.length - 1]);
 };
-
-сщтыщдуhighestRank([12, 10, 10, 8, 12, 7, 6, 4, 10, 12, 1, 1, 1]);
