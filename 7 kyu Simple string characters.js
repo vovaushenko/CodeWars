@@ -7,5 +7,3 @@ const solve = (str) => {
   const rest = str.length - (lowercase + uppercase + numbers);
   return [uppercase, lowercase, numbers, rest];
 };
-
-console.log(solve("*'&ABCDabcde12345"));
