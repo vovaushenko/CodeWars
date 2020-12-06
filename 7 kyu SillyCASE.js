@@ -7,5 +7,3 @@ const sillycase = (str) => {
 
   return left.toLowerCase() + right.toUpperCase();
 };
-
-console.log(sillycase('foobar'));
