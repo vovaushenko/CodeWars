@@ -6,5 +6,3 @@ const solve = (str, start, end) => {
   const after = str.slice(end + 1);
   return before + [...mid].reverse().join('') + after;
 };
-
-console.log(solve('codewars', 1, 5));
