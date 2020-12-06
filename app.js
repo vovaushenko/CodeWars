@@ -1,18 +1,24 @@
-// https://www.codewars.com/kata/5420fc9bb5b2c7fd57000004
+// https://www.codewars.caom/kata/5158bfce931c51b69b000001
 
-const highestRank = (arr) => {
-  let map = {};
-  for (let num of arr) {
-    map[num] ? map[num]++ : (map[num] = 1);
-  }
-
-  let maxFrequency = Math.max(...Object.values(map));
-
-  let mostFrequent = [];
-  for (let key in map) {
-    if (map[key] === maxFrequency) mostFrequent.push(key);
-  }
-  return Number(mostFrequent[mostFrequent.length - 1]);
+const extractIds = (data) => {
+  let result = [];
+  const helper = (input) => {
+    for (let key in input) {
+      if (typeof input[key] === 'object') {
+        helper(input[key]);
+      }
+      if (key === 'id') {
+        result.push(input[key]);
+      }
+    }
+  };
+  helper(data);
+  return result;
 };
 
-сщтыщдуhighestRank([12, 10, 10, 8, 12, 7, 6, 4, 10, 12, 1, 1, 1]);
+var d = {
+  id: 1,
+  items: [{ id: 2 }, { id: 3, items: [{ id: 4 }, { id: 5 }] }],
+};
+
+extractIds(d);
