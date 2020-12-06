@@ -8,5 +8,3 @@ const obfuscate = (email) =>
       return char;
     })
     .join('');
-
-console.log(obfuscate('vovaushenko@gmail.com'));
