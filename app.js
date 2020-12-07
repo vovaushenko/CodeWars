@@ -1,21 +1,6 @@
-// https://www.codewars.com/kata/51b6249c4612257ac0000005
+// https://www.codewars.com/kata/520d9c27e9940532eb00018e
 
-const decoder = (str) => {
-  let nums = {
-    I: 1,
-    V: 5,
-    X: 10,
-    L: 50,
-    C: 100,
-    D: 500,
-    M: 1000,
-  };
-  if (str[0] === "I" && str.length !== 1) {
-    nums.I = -1;
-    return [...str].reduce((total, num) => total + nums[num], 0);
-  }
+const solution = (...arr) =>
+  [...new Set(arr)].length === arr.length ? false : true;
 
-  return [...str].reduce((total, num) => total + nums[num], 0);
-};
-
-console.log(decoder("IV"));
+console.log(solution("1", "2", "3", "2"));
