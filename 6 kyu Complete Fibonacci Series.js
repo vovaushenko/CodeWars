@@ -14,5 +14,3 @@ const fibonacci = (limit) => {
 
   return fibs;
 };
-
-console.log(fibonacci(4));
