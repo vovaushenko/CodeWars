@@ -17,5 +17,3 @@ const decoder = (str) => {
 
   return [...str].reduce((total, num) => total + nums[num], 0);
 };
-
-console.log(decoder("IV"));
