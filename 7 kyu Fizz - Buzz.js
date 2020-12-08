@@ -7,5 +7,3 @@ const solution = (num) => {
   let C = array.filter((a) => a % 3 === 0 && a % 5 === 0 && a !== 0).length;
   return [A, B, C];
 };
-
-fizzbuzz(20);
