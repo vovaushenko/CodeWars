@@ -13,5 +13,3 @@ const findUniq = (arr) => {
   let res = arr.filter((a) => a.toLowerCase().includes(frequencyPairs[0][0]));
   return res;
 };
-
-findUniq(['Aa', 'aaa', 'aaaaa', 'BbBb', 'Aaaa', 'AaAaAa', 'a']) === 'BbBb';
