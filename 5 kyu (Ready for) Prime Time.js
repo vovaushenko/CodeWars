@@ -17,5 +17,3 @@ const prime = (max) => {
 
   return primes;
 };
-
-console.log(prime(11));
