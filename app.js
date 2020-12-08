@@ -1,5 +1,14 @@
-// https://www.codewars.com/kata/52b74e0936d582d9210005ff
+function createFunctions(n) {
+  var callbacks = [];
 
-String.prototype.reverse = function () {
-  return [...this].reverse().join('');
-};
+  for (var i = 0; i < n; i++) {
+    callbacks.push(() => {
+      let num = i;
+      return num;
+    });
+  }
+
+  return callbacks;
+}
+
+console.log(createFunctions(5));
