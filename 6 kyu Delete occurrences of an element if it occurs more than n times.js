@@ -21,5 +21,3 @@ const deleteNth = (arr, n) => {
   }
   return solution;
 };
-
-deleteNth([20, 37, 20, 21], 1);
