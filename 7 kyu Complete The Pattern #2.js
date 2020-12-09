@@ -10,5 +10,3 @@ const pattern = (num) => {
   }
   return res.trim();
 };
-
-pattern(11);
