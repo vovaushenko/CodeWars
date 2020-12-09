@@ -15,5 +15,3 @@ const jumpingNumber = (num) => {
 
   return 'Jumping!!';
 };
-
-console.log(jumpingNumber(4346456));
