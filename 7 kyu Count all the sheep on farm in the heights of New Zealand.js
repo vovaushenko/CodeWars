@@ -2,5 +2,3 @@
 
 const lostSheep = (friday, saturday, total) =>
   total - [...friday, ...saturday].reduce((a, b) => a + b, 0);
-
-lostSheep([1, 2], [3, 4], 15);
