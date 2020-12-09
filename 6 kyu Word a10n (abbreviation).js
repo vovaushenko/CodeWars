@@ -6,5 +6,3 @@ const abbreviate = (str) => {
     .map((a) => (a.length > 3 ? `${a[0]}${a.length - 2}${a[a.length - 1]}` : a))
     .join('');
 };
-
-abbreviate('You need, need not want, to complete this code-wars mission');
