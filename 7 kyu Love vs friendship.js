@@ -4,5 +4,3 @@ const wordsToMarks = (str) => {
   let alphabet = ' abcdefghijklmnopqrstuvwxyz';
   return [...str].reduce((total, char) => total + alphabet.indexOf(char), 0);
 };
-
-console.log(wordsToMarks('attitude'));
