@@ -13,5 +13,3 @@ const decodeMorse = (morseCode) => {
 
   return morseCode;
 };
-
-console.log(decodeMorse('.... . -.--   .--- ..- -.. .'));
