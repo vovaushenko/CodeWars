@@ -7,7 +7,3 @@ const myLanguages = (obj) => {
     .sort((a, b) => b[1] - a[1])
     .map((lang) => lang[0]);
 };
-
-console.log(myLanguages({ Java: 10, Ruby: 80, Python: 65 }));
-
-// 5
