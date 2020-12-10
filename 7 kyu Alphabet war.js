@@ -13,5 +13,3 @@ const alphabetWar = (str) => {
   if (rightSidePower < leftSidePower) return 'Left side wins!';
   return "Let's fight again!";
 };
-
-console.log(alphabetWar('zdqmwpbs'));
