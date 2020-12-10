@@ -1,3 +1,15 @@
-// https://www.codewars.com/kata/5a512f6a80eba857280000fc
+//https:www.codewars.com/kata/52a6b34e43c2484ac10000cd
 
-const nthSmallest = (arr, n) => arr.sort((a, b) => b - a)[n - 1];
+const getNiceNames = (people) =>
+  people.filter((a) => a.wasNice === true).map((a) => a.name);
+
+const getNaughtyNames = (people) =>
+  people.filter((a) => a.wasNice === false).map((a) => a.name);
+
+console.log(
+  getNaughtyNames([
+    { name: 'Warrior reading this kata', wasNice: true },
+    { name: 'xDranik', wasNice: false },
+    { name: 'Santa', wasNice: true },
+  ])
+);
