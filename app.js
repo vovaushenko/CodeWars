@@ -1,3 +1,5 @@
-// https://www.codewars.com/kata/58acfe4ae0201e1708000075
+// https://www.codewars.com/kata/57ed30dde7728215300005fa
 
-const inviteMoreWomen = (L) => L.reduce((a, b) => a + b, 0) > 0 ? true : false;
+const bump = (x) => [...x].filter((a) => a === 'n').length > 15 ? 'Car Dead' : 'Woohoo!';
+
+// 3
