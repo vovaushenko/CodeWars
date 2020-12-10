@@ -12,5 +12,3 @@ const countArara = (num) => {
     ).join(' ');
   }
 };
-console.log(countArara(5));
-// 5
