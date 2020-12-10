@@ -1,15 +1,5 @@
-//https:www.codewars.com/kata/52a6b34e43c2484ac10000cd
+// https://www.codewars.com/kata/530017aac7c0f49926000084
 
-const getNiceNames = (people) =>
-  people.filter((a) => a.wasNice === true).map((a) => a.name);
+const pluck = (arr, name) => arr.map((a) => (a[name] ? a[name] : undefined));
 
-const getNaughtyNames = (people) =>
-  people.filter((a) => a.wasNice === false).map((a) => a.name);
-
-console.log(
-  getNaughtyNames([
-    { name: 'Warrior reading this kata', wasNice: true },
-    { name: 'xDranik', wasNice: false },
-    { name: 'Santa', wasNice: true },
-  ])
-);
+console.log(pluck([{ a: 1, b: 3 }, { a: 2 }], 'b'));
