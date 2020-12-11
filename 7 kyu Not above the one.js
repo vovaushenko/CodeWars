@@ -5,5 +5,3 @@ const greaterThanOneIndecies = (a) =>
   a.map((e, i) => (e > 1 ? i : undefined)).filter((x) => x || x === 0);
 
 const binaryCleaner = (arr) => [lessThanTwo(arr), greaterThanOneIndecies(arr)];
-
-console.log(greaterThanOneIndecies([2, 2, 0]));
