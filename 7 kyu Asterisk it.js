@@ -14,6 +14,3 @@ const asteriscIt = (input) => {
   }
   return res;
 };
-
-asteriscIt([1, 4, 64]);
-// 4
