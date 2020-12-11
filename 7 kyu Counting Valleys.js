@@ -26,6 +26,3 @@ const countingValleys = (s) => {
   }
   return getOutOfValley;
 };
-
-console.log(countingValleys('FUFFDDFDUDFUFUF'));
-// 3
