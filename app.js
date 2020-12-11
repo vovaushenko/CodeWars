@@ -1,4 +1,11 @@
-// https://www.codewars.com/kata/563d59dd8e47a5ed220000ba
+// https://www.codewars.com/kata/55ed875819ae85ca8b00005c
 
-const getSumOfDigits = (integer) =>
-  [...(integer + '')].reduce((total, num) => total + Number(num), 0);
+const multiplyAndFilter = (array, multiplier) =>
+  array.filter((a) => typeof a === 'number').map((num) => num * multiplier);
+
+console.log(
+  multiplyAndFilter(
+    [1, null, function () {}, 2.5, 'string', 10, undefined, {}, []],
+    3
+  )
+);
