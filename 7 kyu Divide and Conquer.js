@@ -5,5 +5,3 @@ const divCon = (x) => {
   const stringsSum = x.filter((a) => typeof a === 'string').reduce((a, b) => a + parseInt(b), 0);
   return numsSum - stringsSum;
 };
-
-divCon(['5', '0', 9, 3, 2, 1, '9', 6, 7]);
