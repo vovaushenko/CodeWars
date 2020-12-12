@@ -8,5 +8,3 @@ const initializeNames = (name) => {
     .map((a, id) => (id === 0 || id === name.length - 1 ? a : a[0].toUpperCase() + '.'))
     .join(' ');
 };
-
-console.log(initializeNames('Alice Betty Catherine Davis'));
