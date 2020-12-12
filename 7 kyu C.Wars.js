@@ -8,5 +8,3 @@ const initials = (n) => {
     )
     .join('.');
 };
-
-console.log(initials('barack hussain obama'));
