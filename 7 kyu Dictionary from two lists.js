@@ -10,5 +10,3 @@ const createDict = (keys, values) => {
   }
   return result;
 };
-
-console.log(createDict(['a', 'b', 'c', 'd'], [1, 2, 3]));
