@@ -10,5 +10,3 @@ const explode = (input) => {
 
   return result;
 };
-
-digitsExplode('102269');
