@@ -1,9 +1,15 @@
-// https://www.codewars.com/kata/5b5097324a317afc740000fe
+// https://www.codewars.com/kata/526e8de0512511429e000006/train/javascript
 
-const lessThanTwo = (a) => a.filter((num) => num < 2);
-const greaterThanOneIndecies = (a) =>
-  a.map((e, i) => (e > 1 ? i : undefined)).filter((x) => x || x === 0);
+String.prototype.trim1 = function () {
+  let i = 0;
+  let j = this.length - 1;
 
-const binaryCleaner = (arr) => [lessThanTwo(arr), greaterThanOneIndecies(arr)];
+  while (this[i] === ' ') {
+    i++;
+  }
 
-console.log(greaterThanOneIndecies([2, 2, 0]));
+  while (this[j] === ' ') {
+    j--;
+  }
+  return this.slice(i, j + 1);
+};
