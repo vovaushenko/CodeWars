@@ -8,5 +8,3 @@ const lengthOfSequence = (arr, num) => {
   }
   return count[1] - count[0] + 1;
 };
-
-console.log(lengthOfSequence([0, -3, 7, 4, 0, 3, 7, 9], 7));
