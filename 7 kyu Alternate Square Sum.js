@@ -8,5 +8,3 @@ const alternateSqSum = (arr) => {
     oddIds.reduce((total, num) => total + num ** 2, 0)
   );
 };
-
-console.log(alternateSqSum([11, 12, 13, 14, 15]));
