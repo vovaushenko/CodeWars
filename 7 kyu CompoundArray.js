@@ -20,6 +20,3 @@ const compoundArray = (arr1, arr2) => {
   }
   return merged;
 };
-
-compound([1, 2, 3, 4, 5, 6], [9, 8, 7, 6]);
-// [1, 9, 2, 8, 3, 7, 4, 6]
