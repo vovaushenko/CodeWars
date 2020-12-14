@@ -9,5 +9,3 @@ const isNice = (arr) => {
   }
   return true;
 };
-
-console.log(isNice([2, 10, 9, 3]));
