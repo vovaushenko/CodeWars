@@ -1,13 +1,5 @@
-// https://www.codewars.com/kata/59b844528bcb7735560000a0
+// https://www.codewars.com/kata/555b73a81a6285b6ce000047
 
-const isNice = (arr) => {
-  if (arr.length === 0) return false
-  for (let num of arr) {
-    if (!(arr.includes(num - 1) || arr.includes(num + 1))) {
-      return false;
-    }
-  }
-  return true;
-};
+const add = (...arr) => arr.map((num, id) => num * (id + 1)).reduce((a, b) => a + b, 0);
 
-console.log(isNice([2, 10, 9, 3]));
+console.log(add(1,4,-5,5));
