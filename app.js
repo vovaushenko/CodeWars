@@ -1,18 +1,5 @@
-// https://www.codewars.com/kata/56b97b776ffcea598a0006f2
+// https://www.codewars.com/kata/56b1eb19247c01493a000065
 
-const bubblesortOnce = (a) => {
-  const swap = (a, id1, id2) => ([a[id1], a[id2]] = [a[id2], a[id1]]);
+const uniqueSum = (arr) => (arr.length ? [...new Set(arr)].reduce((a, b) => a + b, 0) : null);
 
-  for (let i = a.length; i > 0; i--) {
-    for (let j = 0; j < i - 1; j++) {
-      if (a[j] > a[j + 1]) {
-        swap(a, j, j + 1);
-      }
-    }
-    break;
-  }
-  return a
-};
-
-bubblesortOnce([9, 7, 5, 3, 1, 2, 4, 6, 8]);
-// [7, 5, 3, 1, 2, 4, 6, 8, 9
+console.log(uniqueSum([1, 3, 8, 1, 8]));
