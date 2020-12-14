@@ -13,6 +13,3 @@ const flipNumber = (str) => {
   reverser([...str]);
   return result;
 };
-
-flipNumber('012345');
-// 504132
