@@ -6,5 +6,3 @@ const palindrome = (num) => {
 
   return pal == num;
 };
-
-console.log(palindrome(1221));
