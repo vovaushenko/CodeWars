@@ -8,5 +8,3 @@ const validateWord = (s) => {
   const frequencies = Object.values(map);
   return frequencies.reduce((a, b) => a + b) / frequencies.length !== frequencies[0] ? false : true;
 };
-
-console.log(validateWord('abcdabc'));
