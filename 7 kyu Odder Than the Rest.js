@@ -7,5 +7,3 @@ const oddOne = (arr) => {
   }
   return -1;
 };
-
-console.log(oddOne([2, 4, 6, 7, 10]));
