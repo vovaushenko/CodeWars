@@ -1,10 +1,5 @@
-// https://www.codewars.com/kata/58ba6fece3614ba7c200017f
+// https://www.codewars.com/kata/5966eeb31b229e44eb00007a
 
-const palindrome = (num) => {
-  if (typeof num !== 'number' || num < 0) return 'Not valid';
-  let pal = Number([...(num + '')].reverse().join(''));
+const vaporcode = (str) => [...str.replace(/ /g, '')].map((a) => a.toUpperCase()).join('  ');
 
-  return pal == num;
-};
-
-console.log(palindrome(1221));
+console.log(vaporcode('Lets go to the movies!!!'));
