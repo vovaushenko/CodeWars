@@ -11,5 +11,3 @@ const freqSeq = (str, char) => {
   }
   return result.join(char);
 };
-
-freqSec('hello world', '-');
