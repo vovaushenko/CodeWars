@@ -12,5 +12,3 @@ const sumR = (arr) => {
   summarizer(arr);
   return sum;
 };
-
-sumR([1, 2, 3]);
