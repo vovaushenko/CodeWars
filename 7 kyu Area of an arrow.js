@@ -7,7 +7,3 @@ const arrowArea = (a, b) => {
 
   return parseFloat(area.toFixed(2));
 };
-
-console.log(arrowArea(25, 25));
-
-// t7 - 1     /3
