@@ -13,7 +13,3 @@ const reverseByCenter = (str) => {
     return secondHalf + str[midPosition] + firstHalf;
   }
 };
-
-console.log(secondHalf('agent'));
-
-// t7 -3
