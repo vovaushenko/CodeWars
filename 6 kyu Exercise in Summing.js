@@ -11,5 +11,3 @@ const maximumSum = (values, num) => {
   const sorted = [...values].sort((a, b) => b - a);
   return sorted.slice(0, num).reduce((total, n) => total + n, 0);
 };
-
-console.log(maximumSum([5, 4, 3, 2, 1], 3));
