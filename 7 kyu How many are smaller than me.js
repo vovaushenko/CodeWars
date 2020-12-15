@@ -3,7 +3,3 @@
 const smaller = (arr) => {
   return arr.map((a, id) => arr.slice(id).filter((num) => num < a).length);
 };
-
-console.log(smaller([5, 4, 3, 2, 1]));
-
-// t7 - 2     /3
