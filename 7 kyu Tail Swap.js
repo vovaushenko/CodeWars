@@ -7,5 +7,3 @@ const tailSwap = (arr) => {
   arr[1][1] = temp;
   return arr.map((a) => a.join(':'));
 };
-
-console.log(tailSwap(['abc:123', 'cde:456']));
