@@ -16,5 +16,3 @@ const longestConsec = (arr, k) => {
   }
   return longestCombination;
 };
-
-console.log(longestConsec(['it', 'wkppv', 'ixoyx', '3452', 'zzzzzzzzzzzz'], 3));
