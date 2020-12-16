@@ -9,5 +9,3 @@ const cyclops = (num) => {
   if (binary[Math.floor(binary.length / 2)] !== '0') return false;
   return true;
 };
-
-console.log(cyclops(5));
