@@ -9,5 +9,3 @@ const countSmileys = (faces) => {
     .filter((face) => face.includes(')') || face.includes('D'))
     .filter((face) => face.includes('-') || face.includes('~') || face.length === 2).length;
 };
-
-console.log(countSmileys([';]', ':[', ';*', ':$', ';-D']));
