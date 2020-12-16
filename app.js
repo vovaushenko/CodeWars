@@ -1,15 +1,13 @@
-// https://www.codewars.com/kata/52cd0d600707d0abcd0003eb
+// https://www.codewars.com/kata/55830eec3e6b6c44ff000040
 
-const minimumSum = (values, num) => {
-  if (num == 0) return 0;
-  const sorted = [...values].sort((a, b) => a - b);
-  return sorted.slice(0, num).reduce((total, n) => total + n, 0);
+const oddity = (num) => {
+  let counter = [];
+  for (let i = 1, s = Math.sqrt(num); i <= s; i++) {
+    if (num % i === 0) counter.push(i);
+  }
+  console.log(counter);
+
+  // return counter % 2 === 0 ? 'even' : 'odd';
 };
 
-const maximumSum = (values, num) => {
-  if (num == 0) return 0;
-  const sorted = [...values].sort((a, b) => b - a);
-  return sorted.slice(0, num).reduce((total, n) => total + n, 0);
-};
-
-console.log(maximumSum([5, 4, 3, 2, 1], 3));
+console.log(oddity(4));
