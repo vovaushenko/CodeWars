@@ -7,5 +7,3 @@ const reverseIt = (input) => {
     ? [...input].reverse().join('')
     : Number([...(input + '')].reverse().join(''));
 };
-
-console.log(reverseIt(314159));
