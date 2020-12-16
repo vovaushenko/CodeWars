@@ -13,4 +13,3 @@ const numbersWithDigitInside = (x, d) => {
 
   return [foundNumbers.length, sum, product];
 };
-console.log(numbersWithDigitInside(11, 1));
