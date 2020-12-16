@@ -9,5 +9,3 @@ const password = (pass) => {
 
   return true;
 };
-
-console.log(password('bbcdzzzzZ1'));
