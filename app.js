@@ -1,16 +1,6 @@
-// https://www.codewars.com/kata/57547f9182655569ab0008c4
+// https://www.codewars.com/kata/55d7e5aa7b619a86ed000070
 
-const replicate = (times, num) => {
-  if (times <= 0) return [];
-  let result = [];
+const orderWord = (str) =>
+  str ? [...str].sort((a, b) => a.charCodeAt(0) - b.charCodeAt(0)).join('') : 'Invalid String!';
 
-  const replicator = () => {
-    if (result.length === times) return;
-    result.push(num);
-    replicator();
-  };
-  replicator();
-  return result;
-};
-
-replicate(4, 5);
+console.log(sorter(''));
