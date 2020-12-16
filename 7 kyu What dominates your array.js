@@ -14,5 +14,3 @@ const dominator = (arr) => {
   }
   return dominatingPower || -1;
 };
-
-console.log(dominator([1, 2, 3, 4, 5]));
