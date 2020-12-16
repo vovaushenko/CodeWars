@@ -1,6 +1,6 @@
 // https://www.codewars.com/kata/5727bb0fe81185ae62000ae3
 
-// firstly we will be going from the last char to our first char with recursion
+
 
 const cleanString = (str) => {
   let result = [];
@@ -27,5 +27,3 @@ const cleanString = (str) => {
 
   return result.reverse().join('');
 };
-
-cleanString('abc#d##c');
