@@ -12,5 +12,3 @@ const replicate = (times, num) => {
   replicator();
   return result;
 };
-
-replicate(4, 5);
