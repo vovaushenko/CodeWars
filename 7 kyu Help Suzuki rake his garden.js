@@ -10,5 +10,3 @@ const solve = (garden) => {
   }
   return arr.join(' ');
 };
-
-solve('slug spider rock gravel gravel gravel gravel gravel gravel gravel');
