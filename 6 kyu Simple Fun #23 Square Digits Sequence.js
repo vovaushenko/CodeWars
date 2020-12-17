@@ -16,5 +16,3 @@ const squareDigitsSequence = (num) => {
 
   return numbreOfCalls + 2;
 };
-
-console.log(squareDigitsSequence(103));
