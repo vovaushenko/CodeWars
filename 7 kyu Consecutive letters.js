@@ -14,5 +14,3 @@ const solve = (s) => {
   }
   return true;
 };
-
-console.log(solve('dabc'));
