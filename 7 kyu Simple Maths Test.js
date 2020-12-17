@@ -11,5 +11,3 @@ const isEven = (num) => num % 2 === 0;
 const divisibleByTen = (num) => num % 10 === 0;
 
 const numberProperty = (n) => [isPrime(n), isEven(n), divisibleByTen(n)];
-
-console.log(numberProperty(-10));
