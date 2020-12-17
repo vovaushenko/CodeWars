@@ -1,14 +1,8 @@
-// https://www.codewars.com/kata/571c1e847beb0a8f8900153d
+// https://www.codewars.com/kata/57b6f850a6fdc76523001162
 
-const solve = (garden) => {
-  let arr = garden.split(' ');
+const counterEffect = (num) =>
+  [...(num + '')].map((n) => Array.from({ length: Number(n) + 1 }, (_, id) => id));
 
-  for (let i = 0; i < arr.length; i++) {
-    if (arr[i] !== 'gravel' && arr[i] !== 'rock') {
-      arr[i] = 'gravel';
-    }
-  }
-  return arr.join(' ');
-};
+console.log(counterEffect('0000'));
 
-solve('slug spider rock gravel gravel gravel gravel gravel gravel gravel');
+// Array.from({ length: n + 1 }, (_, id) => id)
