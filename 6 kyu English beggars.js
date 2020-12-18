@@ -14,3 +14,6 @@ const beggars = (val, n) => {
 
   return res.map((a) => a.reduce((a, b) => a + b, 0));
 };
+
+
+
