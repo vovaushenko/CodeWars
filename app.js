@@ -1,19 +1,20 @@
-// https://www.codewars.com/kata/5a24254fe1ce0ec2eb000078
+// https://www.codewars.com/kata/526233aefd4764272800036f
 
-const solve = (str, id) => {
-  if (str[id] !== '(') {
-    return -1;
-  }
-  let counter = 0;
+const matrixAddition = (a, b) =>
+  a.map((row, firstId) => row.map((num, secondId) => num + b[firstId][secondId]));
 
-  for (let i = id; i < str.length; i++) {
-    if (str[i] === '(') counter++;
-    if (str[i] === ')') counter--;
-
-    if (counter == 0) {
-      return i;
-    }
-  }
-};
-
-console.log(solve('((1)23(45))(aB)', 1));
+console.log(
+  matrixAddition(
+    [
+      [1, 2, 3],
+      [3, 2, 1],
+      [1, 1, 1],
+    ],
+    //      +
+    [
+      [2, 2, 1],
+      [3, 2, 3],
+      [1, 1, 3],
+    ]
+  )
+);
