@@ -11,5 +11,3 @@ const validateEAN = (ean) => {
     ? Number(ean[ean.length - 1]) === 10 - (total % 10)
     : Number(ean[ean.length - 1]) === 0;
 };
-
-console.log(validateEAN("4003301018392"));
