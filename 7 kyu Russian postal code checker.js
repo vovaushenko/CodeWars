@@ -10,5 +10,3 @@ const zipvalidate = (code) => {
   }
   return true;
 };
-
-console.log(zipvalidate("310003"));
