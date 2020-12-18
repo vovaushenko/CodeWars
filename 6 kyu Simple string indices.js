@@ -15,5 +15,3 @@ const solve = (str, id) => {
     }
   }
 };
-
-console.log(solve('((1)23(45))(aB)', 1));
