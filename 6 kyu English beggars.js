@@ -14,5 +14,3 @@ const beggars = (val, n) => {
 
   return res.map((a) => a.reduce((a, b) => a + b, 0));
 };
-
-console.log(beggars([1, 2, 3, 4, 5], 6));
