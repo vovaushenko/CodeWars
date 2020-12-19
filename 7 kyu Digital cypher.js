@@ -15,11 +15,3 @@ const encode = (str, n) => {
 
   return meshWithCipher;
 };
-
-encode('masterpiece', 1939);
-
-// s  c  o  u  t
-// 19  3 15 21 20
-// + 1  9  3  9  1
-// ---------------
-// 20 12 18 30 21
