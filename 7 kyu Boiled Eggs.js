@@ -15,7 +15,3 @@ const cookingTime = (eggs) => {
   helper(eggs);
   return count * 5;
 };
-
-cookingTime(0);
-
-//  3                         /5
