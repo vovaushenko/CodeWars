@@ -11,7 +11,3 @@ const calc = (str) => {
 
   return firstSum - secondSum;
 };
-
-console.log(calc('ABC'));
-
-// 0               /5
