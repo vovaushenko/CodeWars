@@ -1,3 +1,4 @@
+// https://www.codewars.com/kata/520446778469526ec0000001
 Array.prototype.sameStructureAs = function (other) {
   if (isArray(this) == true && isArray(other) == false) return false;
 
@@ -10,7 +11,7 @@ Array.prototype.sameStructureAs = function (other) {
         return;
       }
 
-      //edge case of recursion 
+      //edge case of recursion
       if (a1.length === 0 || a2.length === 0) {
         if (a1.length || a2.length) {
           checker = false;
