@@ -1,5 +1,3 @@
-// https://www.codewars.com/kata/5a9078e24a6b340b340000b8
-
 const solve = (num) => {
   const smallerPrime = nearestSmallerPrime(num);
   const biggerPrime = nearestBiggerPrime(num);
@@ -30,5 +28,3 @@ function nearestBiggerPrime(num) {
   }
   return num;
 }
-
-console.log(solve(350000));
