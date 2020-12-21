@@ -1,27 +1,5 @@
-// https://www.codewars.com/kata/58c9322bedb4235468000019
+// https://www.codewars.com/kata/565b112d09c1adfdd500019c
 
-const findSummerOfDigits = (n) =>
-  n.split('').reduce((total, digit) => total + Number(digit), 0) + '';
+const nthChar = (arr) => arr.map((word, id) => word[id]).join('');
 
-const isVeryEven = (num) => {
-  let stringifiedNum = num + '';
-  
-  if (stringifiedNum.length === 1) {
-    return num % 2 === 0 ? true : false;
-  }
-  let isVeryEven;
-
-  const helper = (n) => {
-    if (n.length === 1) {
-      Number(n) % 2 === 0 ? (isVeryEven = true) : (isVeryEven = false);
-      return;
-    }
-    n = findSummerOfDigits(n);
-    helper(n);
-  };
-
-  helper(stringifiedNum);
-  return isVeryEven;
-};
-
-console.log(isVeryEven(88));
+console.log(nthChar(['yoda', 'best', 'has']));
