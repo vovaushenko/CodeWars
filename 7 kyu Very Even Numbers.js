@@ -23,5 +23,3 @@ const isVeryEven = (num) => {
   helper(stringifiedNum);
   return isVeryEven;
 };
-
-console.log(isVeryEven(88));
