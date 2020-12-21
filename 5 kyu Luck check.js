@@ -14,5 +14,3 @@ const luckCheck = (ticket) => {
 function sumOfDigits(arr) {
   return arr.reduce((total, num) => total + Number(num), 0);
 }
-
-console.log(luckCheck('414'));
