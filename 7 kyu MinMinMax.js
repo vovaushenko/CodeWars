@@ -22,5 +22,3 @@ function findSmallestAbsent(min, max, nums) {
 
   return smallestAbsent;
 }
-
-console.log(minMinMax([2, -4, 8, -5, 9, 7]));
