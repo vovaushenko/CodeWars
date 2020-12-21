@@ -11,11 +11,3 @@ function makeLooper(str) {
     return word[counter];
   };
 }
-
-var abc = makeLooper('abc');
-console.log(abc());
-console.log(abc());
-console.log(abc());
-console.log(abc());
-console.log(abc());
-console.log(abc());
