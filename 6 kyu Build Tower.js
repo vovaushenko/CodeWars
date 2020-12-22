@@ -25,5 +25,3 @@ function makeFloor(length, iteration) {
 
   return floor.join('');
 }
-
-console.log(towerBuilder(6));
