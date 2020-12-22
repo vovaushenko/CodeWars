@@ -19,5 +19,3 @@ const findNb = (volume) => {
   helper(volume);
   return canBeDone ? numberOfBlocks : -1;
 };
-
-console.log(findNb(91716553919377));
