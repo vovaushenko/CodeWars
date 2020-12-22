@@ -26,7 +26,3 @@ function swap(arr, id1, id2) {
 function numberWeigth(num) {
   return [...(num + '')].reduce((weigth, digit) => weigth + Number(digit), 0);
 }
-
-console.log(orderWeight('56 65 74 100 99 68 86 180 90'));
-
-// "100 180 90 56 65 74 68 86 99"
