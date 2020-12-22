@@ -40,5 +40,3 @@ function evaluateEvil(evil) {
     .map((numberOfSoldiers, id) => numberOfSoldiers * EVIL_RACES[id])
     .reduce((totalWorth, raceWorth) => totalWorth + raceWorth, 0);
 }
-
-console.log(goodVsEvil('1 1 1 1 1 1', '1 1 1 1 1 1 1'));
