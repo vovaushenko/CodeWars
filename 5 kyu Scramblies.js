@@ -13,5 +13,3 @@ const scramble = (str1, str2) => {
   }
   return true;
 };
-
-console.log(scramble('katas', 'steak'));
