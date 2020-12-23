@@ -20,5 +20,3 @@ const score = (dice) => {
 
   return result;
 };
-
-console.log(score([4, 4, 4, 4, 3]));
