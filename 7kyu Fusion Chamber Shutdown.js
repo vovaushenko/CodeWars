@@ -24,6 +24,3 @@ const burner = (c, h, o) => {
 
   return [water, carbonDioxide, methane];
 };
-
-burner(45, 11, 100);
-//     C    H   O
