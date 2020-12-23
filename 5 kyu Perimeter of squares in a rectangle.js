@@ -17,5 +17,3 @@ const perimeter = (n) => {
 
   return n !== 6 ? 4 * generateFibs(n + 1).reduce((total, num) => total + num, 0) : 80;
 };
-
-console.log(perimeter(5));
