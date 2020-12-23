@@ -1,21 +1,10 @@
-// https://www.codewars.com/kata/559a28007caad2ac4e000083
+// https://www.codewars.com/kata/539a0e4d85e3425cb0000a88
 
-const generateFibs = (length) => {
-  let fibs = [1, 1];
-  let i = 0;
-  let j = 1;
-  while (fibs.length !== length) {
-    fibs.push(fibs[i] + fibs[j]);
-    i++;
-    j++;
-  }
-  return fibs;
+const add = (num) => {
+  const sum = (second) => add(num + second);
+
+  sum.valueOf = () => num;
+  return sum;
 };
 
-const perimeter = (n) => {
-  if (n == 0) return 4;
-
-  return n !== 6 ? 4 * generateFibs(n + 1).reduce((total, num) => total + num, 0) : 80;
-};
-
-console.log(perimeter(5));
+console.log(add(1)(2));
