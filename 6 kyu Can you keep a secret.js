@@ -10,11 +10,3 @@ const createSecretHolder = (secret) => {
     },
   };
 };
-
-let obj = createSecretHolder(5);
-
-console.log(obj);
-
-console.log(obj.getSecret());
-console.log(obj.setSecret(2));
-console.log(obj.getSecret());
