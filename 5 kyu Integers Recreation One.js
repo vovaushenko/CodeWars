@@ -26,6 +26,3 @@ function sumSquaredElements(arr) {
 function isSquare(num) {
   return Math.sqrt(num) % 1 === 0 ? true : false;
 }
-findDivisors(42);
-
-
