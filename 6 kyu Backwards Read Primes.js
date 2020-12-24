@@ -20,6 +20,3 @@ const backwardsPrime = (start, stop) => {
   }
   return result;
 };
-console.log(backwardsPrime(70000, 70245));
-
-// [70001, 70009, 70061, 70079, 70121, 70141, 70163, 70207, 70241]
