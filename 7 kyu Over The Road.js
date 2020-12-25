@@ -27,5 +27,3 @@ function genereateOddOrEvenNums(length, flag) {
     return evens.reverse();
   }
 }
-
-console.log(overTheRoad(3, 3));
