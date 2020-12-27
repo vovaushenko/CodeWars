@@ -17,5 +17,3 @@ const tribonacci = (signature, n) => {
 
   return res;
 };
-
-tribonacci([1, 1, 1], 10);
