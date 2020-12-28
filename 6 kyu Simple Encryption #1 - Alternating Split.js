@@ -71,7 +71,3 @@ function decrypter(encryptedText) {
 
   return decodedText;
 }
-
-console.log(decrypt('hskt svr neetn!Ti aai eyitrsig', 1));
-
-// s eT ashi tist!
