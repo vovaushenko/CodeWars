@@ -20,5 +20,3 @@ const sumDigNthTerm = (initval, patternl, nthterm) => {
 
   return [...(lastNum + '')].reduce((total, digit) => total + Number(digit), 0);
 };
-
-console.log(sumDigNthTerm(10, [2, 1, 3], 6));
