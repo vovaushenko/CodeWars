@@ -9,5 +9,3 @@ const nbrOfLaps = (x, y) => {
 
   return [l / x, l / y];
 };
-
-console.log(nbrOfLaps(5, 3));
