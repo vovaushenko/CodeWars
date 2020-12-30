@@ -24,5 +24,3 @@ const divisibleByLast = (num) => {
 };
 
 divisibleByLast(73312);
-
-// 73312          => [false, false, true, false, true]
