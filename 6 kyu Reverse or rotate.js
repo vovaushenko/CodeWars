@@ -17,11 +17,9 @@ const revrot = (str, sz) => {
 
   // lets apply our transformations to chunks
   let result = chunks.map((ch) =>
-    isSumOfCubesDivisibleByTwo(ch) 
-    ? (ch = reverseChunk(ch)) 
-    : (ch = rotateToLeftByOne(ch))
+    isSumOfCubesDivisibleByTwo(ch) ? (ch = reverseChunk(ch)) : (ch = rotateToLeftByOne(ch))
   );
-  return result.join('')
+  return result.join('');
 };
 
 function isSumOfCubesDivisibleByTwo(str) {
@@ -38,8 +36,3 @@ function rotateToLeftByOne(str) {
 
   return rest + firstChar;
 }
-
-console.log(revrot('66443875', 4));
-
-// revrot('123456  987654', 6);
-// // "    234561 876549"
