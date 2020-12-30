@@ -5,5 +5,3 @@ const buildRowText = (index, char) => {
 
   return '|' + row.join('|') + '|';
 };
-
-console.log(buildRowText(2, 'B'));
