@@ -10,5 +10,3 @@ const multiples = (s1, s2, s3) => {
 
     return result;
 };
-
-console.log(multiples(13, 15, 800));
