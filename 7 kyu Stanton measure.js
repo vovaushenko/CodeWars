@@ -5,5 +5,3 @@ const stantonMeasure = (arr) => {
 
     return arr.filter((num) => num == n).length;
 };
-
-stantonMeasure([1, 4, 3, 2, 1, 2, 3, 2]);
