@@ -7,5 +7,3 @@ const manipulate = (num) => {
     const secondPart = '0'.repeat(zerosLength);
     return Number(firstHalf + secondPart);
 };
-
-manipulate(2837743);
