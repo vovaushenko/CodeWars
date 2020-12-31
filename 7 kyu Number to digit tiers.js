@@ -2,5 +2,3 @@
 
 const createArrayOfTiers = (num) =>
     Array.from({ length: (num + '').length }, (_, id) => (num + '').slice(0, id + 1));
-
-console.log(createArrayOfTiers(2017));
