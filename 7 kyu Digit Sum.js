@@ -3,5 +3,3 @@
 const sumTheDigitsOfStr = (str) => [...str].reduce((total, num) => total + Number(num), 0);
 
 const digitSum = (str) => (str.length === 1 ? str : digitSum(sumTheDigitsOfStr(str) + ''));
-
-console.log(digitSum('1011'));
