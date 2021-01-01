@@ -12,5 +12,3 @@ const mathEngine = (arr) => {
 
     return productOfNonNegative + sumOfAllNegatives;
 };
-
-mathEngine([1, 2, 3, -4, -5]);
