@@ -14,5 +14,3 @@ const triangleType = (a, b, c) => {
     if (triangle.filter((angle) => angle === 90).length === 1) return 2;
     return 3;
 };
-
-console.log(triangleType(7.9999, 4, 4));
