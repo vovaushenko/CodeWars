@@ -1,16 +1,13 @@
-// https://www.codewars.com/kata/587854330594a6fb7e000057
+// https://www.codewars.com/kata/56d5166ec87df55dbe000063
+const findAvarage = (arr) => arr.reduce((a, b) => a + b, 0) / arr.length;
 
-const mathEngine = (arr) => {
-    if (!arr) return 0;
-    const productOfNonNegative = arr
-        .filter((num) => num >= 0)
-        .reduce((product, digit) => product * digit, 1);
+const sumAverage = (arr) =>
+    Math.floor(arr.reduce((total, subarr) => total + findAvarage(subarr), 0));
 
-    const sumOfAllNegatives = arr
-        .filter((num) => num < 0)
-        .reduce((sum, digit) => sum + digit, 0);
-
-    return productOfNonNegative + sumOfAllNegatives;
-};
-
-mathEngine([1, 2, 3, -4, -5]);
+console.log(
+    sumAverage([
+        [-4, 3, -8, -2],
+        [2, 9, 1, -5],
+        [-7, -2, -6, -4],
+    ])
+);
