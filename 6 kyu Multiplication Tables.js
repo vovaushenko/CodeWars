@@ -9,5 +9,3 @@ const multiplicationTable = (row, col) => {
     }
     return table;
 };
-
-multiplicationTable(3, 3);
