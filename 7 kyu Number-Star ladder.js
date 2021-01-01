@@ -13,5 +13,3 @@ const pattern = (n) => {
 
     return res.trim();
 };
-
-pattern(10);
