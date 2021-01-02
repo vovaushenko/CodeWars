@@ -5,5 +5,3 @@ const compose = (f, g) => {
         return f(g(...args));
     };
 };
-
-// const compose = (...fns) => arg => fns.reduceRight((res, fn) => fn(res), arg);
