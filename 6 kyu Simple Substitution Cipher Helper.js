@@ -1,3 +1,5 @@
+// https://www.codewars.com/kata/52eb114b2d55f0e69800078d
+
 function SubstitutionCipher(abc1, abc2) {
     this.encode = function (str) {
         return [...str]
@@ -10,8 +12,3 @@ function SubstitutionCipher(abc1, abc2) {
             .join('');
     };
 }
-
-var abc1 = 'abcdefghijklmnopqrstuvwxyz';
-var abc2 = 'etaoinshrdlucmfwypvbgkjqxz';
-
-var sub = new SubstitutionCipher(abc1, abc2);
