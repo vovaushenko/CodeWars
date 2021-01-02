@@ -9,5 +9,3 @@ const decode = (str) => {
     const ALPHABET = { 1: 'a', 2: 'e', 3: 'i', 4: 'o', 5: 'u' };
     return [...str].map((char) => (ALPHABET[char] ? ALPHABET[char] : char)).join('');
 };
-
-console.log(decode('"h3 th2r2"'));
