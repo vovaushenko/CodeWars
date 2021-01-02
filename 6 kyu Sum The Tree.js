@@ -1,8 +1,4 @@
-const tree = {
-    value: 10,
-    left: { value: 1, left: null, right: null },
-    right: { value: 2, left: null, right: null },
-};
+// https://www.codewars.com/kata/5800580f8f7ddaea13000025
 
 const sumTheTreeValues = (root) => {
     let values = [];
@@ -18,5 +14,3 @@ const sumTheTreeValues = (root) => {
 
     return values.reduce((a, b) => a + b, 0);
 };
-
-sumTheTreeValues(tree);
