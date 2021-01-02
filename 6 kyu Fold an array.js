@@ -31,5 +31,3 @@ const foldArray = (arr, n) => {
     helper(arr);
     return result;
 };
-
-console.log(fold([-9, 9, -8, 8, 66, 23], 1));
