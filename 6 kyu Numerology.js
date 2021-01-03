@@ -11,5 +11,3 @@ const solution = (date) => {
     }
     return result;
 };
-
-console.log(solution(new Date('01/02/2008')));
