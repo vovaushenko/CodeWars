@@ -24,15 +24,3 @@ const mazeRunner = (maze, directions) => {
         return 'Finish';
     return 'Lost'    
 };
-
-let maze = [
-    [1, 1, 1, 1, 1, 1, 1],
-    [1, 0, 0, 0, 0, 0, 3],
-    [1, 0, 1, 0, 1, 0, 1],
-    [0, 0, 1, 0, 0, 0, 1],
-    [1, 0, 1, 0, 1, 0, 1],
-    [1, 0, 0, 0, 0, 0, 1],
-    [1, 2, 1, 0, 1, 0, 1],
-];
-
-console.log(mazeRunner(maze, ['N', 'N', 'N', 'N', 'N', 'E', 'E', 'E', 'E', 'E', 'W', 'W']));
