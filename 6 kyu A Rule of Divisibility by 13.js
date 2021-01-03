@@ -27,5 +27,3 @@ const thirt = (n) => {
     helper(reverseNum(n));
     return tempNum;
 };
-
-console.log(thirt(8529));
