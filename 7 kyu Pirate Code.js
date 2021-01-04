@@ -6,5 +6,3 @@ const amaroPlan = (pirateNum) => {
 
     return res;
 };
-
-amaroPlan(5);
