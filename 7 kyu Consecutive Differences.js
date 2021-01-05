@@ -23,5 +23,3 @@ const differences = (arr) => {
   helper(arr);
   return res[0];
 };
-
-console.log(differences([-1]));
