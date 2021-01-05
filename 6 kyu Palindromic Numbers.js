@@ -13,5 +13,3 @@ const palindromize = (num) => {
 
     return `${counter} ${tempNum}`;
 };
-
-console.log(palindromize(195));
