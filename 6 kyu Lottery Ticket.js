@@ -12,12 +12,3 @@ const bingo = (ticket, win) => {
 
     return numberOfWins >= win ? 'Winner!' : 'Loser!';
 };
-
-bingo(
-    [
-        ['ABC', 65],
-        ['HGR', 74],
-        ['BYHT', 74],
-    ],
-    2
-);
