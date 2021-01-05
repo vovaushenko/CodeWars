@@ -36,5 +36,3 @@ function addArrays(shorter, longer) {
         return shorter.map((num, id) => num + longer[id]);
     }
 }
-
-console.log(splitAndAdd([15], 3));
