@@ -7,5 +7,3 @@ const fizzbuzz = (n) =>
         if ((id + 1) % 5 === 0) return 'Buzz';
         return id + 1;
     });
-
-console.log(fizzbuzz(20));
