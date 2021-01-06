@@ -5,5 +5,3 @@ const getProductId = (str) => {
     const productId = possibleIds.indexOf('p') + 1;
     return possibleIds[productId] !== 'p' ? possibleIds[productId] : possibleIds[productId + 1];
 };
-
-console.log(getProductId('http://www.exampleshop.com/letter-p-book-stand-p-192837-11112011.html'));
