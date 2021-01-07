@@ -8,5 +8,3 @@ const toDecimal = (num) => {
 };
 
 const calculate = (num1, num2) => toDecimal(num1) + toDecimal(num2);
-
-console.log(calculate('10', '1'));
