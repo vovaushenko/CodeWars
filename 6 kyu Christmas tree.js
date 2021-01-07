@@ -25,8 +25,3 @@ const christmasTree = (n) => {
 
     return tree;
 };
-// An = a1 + (n-1)*d
-
-//   A3 = 1 + 2*2
-
-console.log(christmasTree(5));
