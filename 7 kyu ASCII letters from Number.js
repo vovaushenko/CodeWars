@@ -15,5 +15,3 @@ const convert = (number) => {
     splitByTwo(number);
     return result.map((ascii) => asciiToChar(ascii)).join('');
 };
-
-console.log(convert('676584'));
