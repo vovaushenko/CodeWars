@@ -5,7 +5,3 @@ const consecutive = (arr) => {
     const fullLength = Math.max(...arr) - Math.min(...arr) + 1;
     return fullLength - arr.length;
 };
-
-//  4 5 6 7 8
-
-console.log(consecutive([1]));
