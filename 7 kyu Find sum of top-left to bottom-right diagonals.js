@@ -7,12 +7,3 @@ const diagonalSum = (matrix) => {
     }
     return sum;
 };
-
-console.log(
-    diagonalSum([
-        [5, 9, 1, 0],
-        [8, 7, 2, 3],
-        [1, 4, 1, 9],
-        [2, 3, 8, 2],
-    ])
-);
