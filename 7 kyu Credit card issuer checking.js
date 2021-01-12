@@ -10,5 +10,3 @@ const getIssuer = (number) => {
 
     return 'Unknown';
 };
-
-console.log(getIssuer(41111111111111));
