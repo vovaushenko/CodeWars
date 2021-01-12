@@ -8,5 +8,3 @@ const specialNumber = (num) => {
 
     return 'Special!!';
 };
-
-console.log(specialNumber(656));
