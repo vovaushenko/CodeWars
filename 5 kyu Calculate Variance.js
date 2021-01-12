@@ -6,5 +6,3 @@ const variance = (array) => {
     const mean = calculateMean(array);
     return array.reduce((acc, num) => acc + (num - mean) ** 2, 0) / array.length;
 };
-
-console.log(variance([1, 2, 2, 3]));
