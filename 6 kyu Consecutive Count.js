@@ -12,5 +12,3 @@ const getConsectiveItems = (items, key) => {
 
     return maxConsecutive;
 };
-
-console.log(getConsectiveItems(900, 0));
