@@ -10,5 +10,3 @@ const absentVowel = (sentence) => {
 
     return vowels.indexOf(missing);
 };
-
-absentVowel('Bb Smith sent us six neatly arranged range bicycles');
