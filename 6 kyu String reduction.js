@@ -12,5 +12,3 @@ const solve = (a, b) => {
 
   return a.length - b.length;
 };
-
-console.log(solve('semqxsal', 'se'));
