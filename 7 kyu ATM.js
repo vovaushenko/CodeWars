@@ -29,5 +29,3 @@ const solve = (num) => {
 
     return !remainder ? counter : -1;
 };
-
-solve(125);
