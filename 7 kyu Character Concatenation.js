@@ -13,5 +13,3 @@ const charConcat = (str) => {
 
     return result;
 };
-
-charConcat('abcdef');
