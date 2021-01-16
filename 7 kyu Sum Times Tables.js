@@ -5,5 +5,3 @@ const sumTimesTables = (arr, min, max) => {
 
     return arr.reduce((res, num) => res + num * sumOfNumsInRange, 0);
 };
-
-console.log(sumTimesTables([2, 5], 1, 3));
