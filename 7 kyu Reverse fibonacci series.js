@@ -18,5 +18,3 @@ function generateFibs(number) {
 
     return fibs;
 }
-
-console.log(reverseFibo(10));
