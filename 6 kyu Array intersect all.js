@@ -14,9 +14,3 @@ const intersect = (...arrays) => {
 
     return intersection;
 };
-
-var a = ['dog', 'bar', 'foo'];
-var b = ['foo', 'bar', 'cat'];
-var c = ['gin', 'bar', 'foo'];
-
-intersect(a, b, c);
