@@ -1,21 +1,38 @@
-// https://www.codewars.com/kata/5ff6060ed14f4100106d8e6f
+// https://www.codewars.com/kata/522498c9906b0cfcb40001fc
 
-const uncensor = (infected, discovered) => {
-    if (!discovered) return infected;
-    let text;
+// function makeCounter() {
+//     let count = 0;
+
+//     return function () {
+//         return count++;
+//     };
+// }
+
+// let counter = makeCounter();
+
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+// console.log(counter());
+
+function genfib() {
+    let fibs = [0, 1];
     let counter = 0;
-
-    const helper = (s) => {
-        if (counter === discovered.length) return;
-        text = s.replace('*', discovered[counter]);
+    return () => {
+        let fibNum = fibs[counter];
+        if (counter > 1) {
+            fibNum = fibs[counter - 1] + fibs[counter - 2];
+            fibs.push(fibNum);
+        }
         counter++;
-
-        helper(text);
+        return fibNum;
     };
+}
 
-    helper(infected);
-
-    return text;
-};
-
-console.log(uncensor('xyz', ''));
+let fibbb = genfib();
+console.log(fibbb());
+console.log(fibbb());
+console.log(fibbb());
+console.log(fibbb());
+console.log(fibbb());
+console.log(fibbb());
