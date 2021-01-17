@@ -15,5 +15,3 @@ const firstUniqChar = (s) => {
     }
     return unique || unique == 0 ? unique : -1;
 };
-
-console.log(firstUniqChar('leetcode'));
