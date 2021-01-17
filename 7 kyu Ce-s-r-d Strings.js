@@ -17,5 +17,3 @@ const uncensor = (infected, discovered) => {
 
     return text;
 };
-
-console.log(uncensor('xyz', ''));
