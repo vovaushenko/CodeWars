@@ -1,36 +1,9 @@
-// https://www.codewars.com/kata/5227129b316b56d50d0003b7
+// Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.
 
-const flattenTwoLevels = (arr) => {
-    let result = [];
+// Follow up: Could you implement a solution using only O(1) extra space complexity and O(n) runtime complexity?
 
-    const helper = (a) => {
-        if (!a.length) return;
+const missingNumber = (nums) => {
+    const sum = (nums.length * (nums.length + 1)) / 2;
 
-        !Array.isArray(a[0]) ? result.push(a[0]) : result.push(willFlatten(a[0]));
-
-        helper(a.slice(1));
-    };
-
-    helper(arr);
-    console.log(result);
+    return sum - nums.reduce((a, b) => a + b, 0);
 };
-
-function willFlatten(arr) {
-    const result = [];
-    function flattener(a) {
-        if (!a.length) return;
-
-        if (!Array.isArray(a[0])) {
-            result.push(a[0]);
-        } else {
-            flattener(a[0]);
-        }
-
-        flattener(a.slice(1));
-    }
-    flattener(arr);
-
-    return result;
-}
-
-flattenTwoLevels([1, [2, 3], [4, 5, [6, 7, 8], 9, 10, [11, [12, [13, 14], 15], 16], 17], 18]);
