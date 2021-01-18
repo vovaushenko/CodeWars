@@ -19,5 +19,3 @@ const flatten = (arr) => {
 };
 
 const arraySum = (arr) => flatten(arr).reduce((a, b) => a + (+b || 0), 0);
-
-console.log(arraySum([1, 'hey', 2, [1, 2]]));
