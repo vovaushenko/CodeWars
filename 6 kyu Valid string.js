@@ -10,5 +10,3 @@ const validWord = (dictionary, word) => {
 
     return word.length ? false : true;
 };
-
-console.log(validWord(['ab', 'a', 'bc'], 'abc'));
