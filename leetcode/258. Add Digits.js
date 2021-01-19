@@ -9,5 +9,3 @@ const addDigits = (num) => {
 
     return +num;
 };
-
-console.log(addDigits(38));
