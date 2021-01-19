@@ -1,13 +1,12 @@
-// https://www.codewars.com/kata/557efeb04effce569d000022
+// 4. Median of Two Sorted Arrays
+// Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.
 
-const makeAcronym = (str) => {
-  if (!str) return '';
-  if (typeof str !== 'string') return 'Not a string';
-  if (str.replace(/\D+/g, '')) return 'Not letters';
+// Follow up: The overall run time complexity should be O(log (m+n)).
 
-  return str
-    .split(' ')
-    .map((word) => word[0].toUpperCase())
-    .join('');
+const findMedianSortedArrays = (nums1, nums2) => {
+  const mergedArr = nums1.concat(nums2).sort((a, b) => a - b);
+  let mid = Math.floor(mergedArr.length / 2);
+  return mergedArr.length % 2 !== 0 ? mergedArr[mid] : (mergedArr[mid] + mergedArr[mid - 1]) / 2;
 };
-console.log(makeAcronym('hey there'));
+
+console.log(findMedianSortedArrays([1, 2, 4], [3]));
