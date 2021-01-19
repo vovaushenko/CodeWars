@@ -18,5 +18,3 @@ const computerToPhone = (nums) => {
 
   return result;
 };
-
-computerToPhone('0789456123');
