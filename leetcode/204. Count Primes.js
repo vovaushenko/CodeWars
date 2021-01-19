@@ -15,5 +15,3 @@ const countPrimes = (n) => {
 
   return primes.length;
 };
-
-console.log(countPrimes(2));
