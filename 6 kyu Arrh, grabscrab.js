@@ -2,5 +2,3 @@
 const areSimilar = (word1, word2) => [...word1].sort().join('') === [...word2].sort().join('');
 const grabscrab = (anagram, dictionary) =>
   dictionary.map((word) => (areSimilar(anagram, word) ? word : null)).filter((word) => word);
-
-console.log(grabscrab('ortsp', ['sport', 'parrot', 'ports', 'matey']));
