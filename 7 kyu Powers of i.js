@@ -9,5 +9,3 @@ const pofi = (n) => {
 
   return ((n - 1) / 2) % 2 == 0 ? 'i' : '-i';
 };
-
-console.log(pofi(9));
