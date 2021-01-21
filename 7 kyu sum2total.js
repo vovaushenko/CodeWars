@@ -28,5 +28,3 @@ const sum2total = (arr) => {
   helper(arr);
   return result;
 };
-
-console.log(sum2total([1, 2, 3, 4, 5]));
