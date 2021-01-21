@@ -9,5 +9,3 @@ const isPalindrome = (s) => {
   s = s.replace(/[^a-z0-9]/gi, '').toLowerCase();
   return s === [...s].reverse().join('');
 };
-
-console.log(isPalindrome(''));
