@@ -21,5 +21,3 @@ const firstMissingPositive = (nums) => {
 
   return missing || positive[positive.length - 1] + 1;
 };
-
-console.log(firstMissingPositive([1, 1, 2, 2]));
