@@ -12,5 +12,3 @@ const countInversions = (arr) => {
 
   return inversions;
 };
-
-console.log(countInversions([4, 3, 2, 1]));
