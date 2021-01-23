@@ -9,5 +9,3 @@ const zipWith = (fn, a0, a1) => {
   }
   return res;
 };
-
-console.log(zipWith(Math.pow, [10, 10, 10, 10], [0, 1, 2, 3]));
