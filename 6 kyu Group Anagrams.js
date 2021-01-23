@@ -25,5 +25,3 @@ const groupAnagrams = (words) => {
 
   return output;
 };
-
-console.log(groupAnagrams(['rat', 'tar', 'star']));
