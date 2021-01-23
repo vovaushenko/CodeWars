@@ -1,11 +1,4 @@
 // https://www.codewars.com/kata/5825792ada030e9601000782/train/javascript
 
-const zipWith = (fn, a0, a1) => {
-  let res = [];
-  let minLength = Math.min(a0.length, a1.length);
-
-  for (let i = 0; i < minLength; i++) {
-    res.push(fn(a0[i], a1[i]));
-  }
-  return res;
-};
+const zipWith = (f, a1, a2) =>
+  Array.from({ length: Math.min(a1.length, a2.length) }, (_, id) => f(a1[id], a2[id]));
