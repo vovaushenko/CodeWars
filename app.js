@@ -1,17 +1,19 @@
-// https://www.codewars.com/kata/55b4f9906ac454650900007d
+// https://www.codewars.com/kata/55c353487fe3cc80660001d4/train/javascript
 
-const stringChunk = (str, size) => {
-  if (size < 1 || typeof size != 'number' || size === undefined) return [];
+const capitalsFirst = (str) => {
   let res = [];
+  const words = str
+    .split(' ')
+    .map((word) => (word[0].match(/[a-zA-Z]+/g) ? word : ''))
+    .filter((word) => word);
+  console.log(words);
+  for (let word of words) {
+    word[0] === word[0].toUpperCase() && res.push(word);
+  }
+  for (let word of words) {
+    word[0] !== word[0].toUpperCase() && res.push(word);
+  }
 
-  (function slicer(s) {
-    if (!s.length) return;
-    res.push(s.slice(0, size));
-
-    slicer(s.substring(size));
-  })(str);
-
-  return res;
+  console.log(res);
 };
-
-console.log(stringChunk('bizarre love 3angle'));
+capitalsFirst('hey You, Sort me Already!');
