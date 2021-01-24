@@ -11,11 +11,3 @@ const scoreMatrix = (matrix) =>
         : (altSum -= calculateAletrnatingSum(row)),
     0
   );
-
-console.log(
-  scoreMatrix([
-    [2, 3, 2, 3],
-    [2, 3, 2, 3],
-    [2, 3, 2, 3],
-  ])
-);
