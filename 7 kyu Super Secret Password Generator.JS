@@ -13,4 +13,3 @@ function createSSP(password) {
     .map((char) => (superSecretChars[char.toLowerCase()] ? superSecretChars[char] : char))
     .join('');
 }
-console.log(createSSP('haxorpassword'));
