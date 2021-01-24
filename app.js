@@ -1,16 +1,17 @@
-// https://www.codewars.com/kata/54402d52cf3625b882000141
+// https://www.codewars.com/kata/55b4f9906ac454650900007d
 
-function createSSP(password) {
-  const superSecretChars = {
-    a: '@',
-    s: '$',
-    o: '0',
-    h: '5',
-    x: '*',
-  };
+const stringChunk = (str, size) => {
+  if (size < 1 || typeof size != 'number' || size === undefined) return [];
+  let res = [];
 
-  return [...password]
-    .map((char) => (superSecretChars[char.toLowerCase()] ? superSecretChars[char] : char))
-    .join('');
-}
-console.log(createSSP('haxorpassword'));
+  (function slicer(s) {
+    if (!s.length) return;
+    res.push(s.slice(0, size));
+
+    slicer(s.substring(size));
+  })(str);
+
+  return res;
+};
+
+console.log(stringChunk('bizarre love 3angle'));
