@@ -1,27 +1,11 @@
-// https://www.codewars.com/kata/5244b0588978473f9500002b
+const sortme = (arr) => {
+  arr.sort((a, b) =>
+    a.replace(/\D/g, '') !== b.replace(/\D/g, '')
+      ? a.replace(/\D/g, '') - b.replace(/\D/g, '')
+      : a > b
+  );
 
-const solution = (data, replace) => {
-  const traverse = (d) => {
-    for (let key in d) {
-      if (typeof d[key] !== 'object') {
-        if (d[key] === 'dynamic') d[key] = replace;
-      } else {
-        traverse(d[key]);
-      }
-    }
-  };
-
-  traverse(data);
-
-  return data;
+  return arr;
 };
 
-const dataA = {
-  foo: 'dynamic',
-  bar: {
-    baz: ['dynamic'],
-  },
-  dynamic: true,
-};
-
-console.log(solution({ dynamic: 'foo' }, 'bar'));
+console.log(sortme(['web-1305', 'site-1305', 'web-1304', 'site-1304']));
