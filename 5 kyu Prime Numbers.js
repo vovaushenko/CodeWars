@@ -15,5 +15,3 @@ const getPrimes = (start, finish) => {
 
   return primeNumbers;
 };
-
-console.log(getPrimes(30, 0));
