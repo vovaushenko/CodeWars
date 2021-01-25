@@ -31,18 +31,3 @@ Object.prototype.toRandomArray = function () {
   }
   return values;
 };
-
-var obj = {
-  a: 1,
-  b: {
-    x: 2,
-    y: 3,
-  },
-  c: {
-    z: {
-      q: 4,
-    },
-  },
-};
-
-console.log(obj.random());
