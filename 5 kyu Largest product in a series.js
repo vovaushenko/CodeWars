@@ -14,5 +14,3 @@ const greatestProduct = (str) => {
   helper(str);
   return maxProduct;
 };
-
-console.log(greatestProduct('123834539327238239583'));
