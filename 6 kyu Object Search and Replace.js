@@ -15,13 +15,3 @@ const solution = (data, replace) => {
 
   return data;
 };
-
-const dataA = {
-  foo: 'dynamic',
-  bar: {
-    baz: ['dynamic'],
-  },
-  dynamic: true,
-};
-
-console.log(solution({ dynamic: 'foo' }, 'bar'));
