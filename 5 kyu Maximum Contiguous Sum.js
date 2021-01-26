@@ -12,5 +12,3 @@ const maxContiguousSum = (arr) => {
   }
   return maxSum;
 };
-
-console.log(maxContiguousSum([58, 10, -32, -22, 3, -4, 34]));
