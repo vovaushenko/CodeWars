@@ -22,5 +22,3 @@ const zipObject = (keys, values) => {
   }
   return res;
 };
-
-console.log(zipObject(['fred', 'barney']));
