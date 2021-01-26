@@ -12,5 +12,3 @@ const extend = (...objects) => {
 
   return extendedObject;
 };
-
-extend({ a: false, b: null }, { a: true, b: 2, c: 3 });
