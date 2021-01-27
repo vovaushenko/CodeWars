@@ -16,5 +16,3 @@ const beeramid = (bonus, price) => {
   }
   return numerOfLevels;
 };
-
-console.log(beeramid(3, 4));
