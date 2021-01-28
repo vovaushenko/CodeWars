@@ -18,5 +18,3 @@ function searchSubstr(fullText, searchText, allowOverlap) {
   helper(fullText);
   return count;
 }
-
-console.log(searchSubstr('aaa', ''));
