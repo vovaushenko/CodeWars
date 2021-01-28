@@ -10,5 +10,3 @@ const findUnique = (nums) => {
     if (map[key] === 1) return +key;
   }
 };
-
-console.log(findUnique([1, 8, 4, 4, 6, 1, 8]));
