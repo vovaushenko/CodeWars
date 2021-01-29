@@ -27,5 +27,3 @@ const binaryGap = (n) => {
 
   return maxGap;
 };
-// 10110
-console.log(binaryGap(7));
