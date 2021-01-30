@@ -14,5 +14,3 @@ const majorityElement = (arr) => {
 
   return majorityNums;
 };
-
-majorityElement([1, 2]);
