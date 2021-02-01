@@ -8,5 +8,3 @@ const calculate1RM = (w, r) => {
   const maxByLombardi = Math.round(w * r ** 0.1);
   return Math.max(maxByEpley, maxByMcGlothin, maxByLombardi);
 };
-
-console.log(calculate1RM(135, 20));
