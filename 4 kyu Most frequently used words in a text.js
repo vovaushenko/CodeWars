@@ -3,7 +3,7 @@
 const topThreeWords = (text) => {
   let words = text
     .toLowerCase()
-    .replace(/[^\w\s]|_/g, '')
+    .replace(/[,.:;!?\/\\]|( ' )/g, '')
     .split(' ')
     .filter((word) => word);
 
