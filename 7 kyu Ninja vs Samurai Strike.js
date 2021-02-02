@@ -10,13 +10,3 @@ class Warrior {
     enemy.health = Math.max(0, enemy.health - punch * 10);
   }
 }
-
-let ninja = new Warrior('Ninja');
-let samurai = new Warrior('Samurai');
-
-console.log(ninja);
-console.log(samurai);
-
-ninja.strike(samurai, 5);
-
-console.log(samurai);
