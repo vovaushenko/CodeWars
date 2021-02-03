@@ -16,5 +16,3 @@ const collatz = (num) => {
   helper(num);
   return sequence.join('->');
 };
-
-console.log(collatz(3));
