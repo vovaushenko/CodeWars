@@ -21,7 +21,3 @@ const firstNSmallest = (arr, n) => {
 
   return result;
 };
-
-console.log(firstNSmallest([10, 8, -7, -7, 5, -8, 1, -1], 2));
-
-// [-10, -9, -8, -10, -10]
