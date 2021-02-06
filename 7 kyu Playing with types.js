@@ -9,9 +9,3 @@ const typing = (val) => {
 
   return `${typeof val}=${value}`;
 };
-
-console.log(
-  typing(function () {
-    return 1;
-  })
-);
