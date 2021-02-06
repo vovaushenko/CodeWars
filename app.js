@@ -1,17 +1,3 @@
-// https://www.codewars.com/kata/543e308b23ccbda148001526
+// https://www.codewars.com/kata/540c013634e6bac0350000a5
 
-const typing = (val) => {
-  if (val === undefined) return 'undefined';
-  if (typeof val === 'object' || 'string') {
-    value = JSON.stringify(val);
-  }
-  if (typeof val === 'function') value = '' + val;
-
-  return `${typeof val}=${value}`;
-};
-
-console.log(
-  typing(function () {
-    return 1;
-  })
-);
+const projectPartners = (n) => (n * (n - 1)) / 2;
