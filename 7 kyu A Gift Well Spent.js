@@ -8,5 +8,3 @@ const buy = (x, arr) => {
   }
   return null;
 };
-
-console.log(buy(3, [1, 1]));
