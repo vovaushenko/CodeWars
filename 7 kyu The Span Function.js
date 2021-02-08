@@ -14,9 +14,3 @@ const span = (arr, pred) => {
 
   return res;
 };
-
-function isEven(x) {
-  return Math.abs(x) % 2 === 0;
-}
-
-console.log(span([2, 4, 6, 1, 8, 10], isEven));
