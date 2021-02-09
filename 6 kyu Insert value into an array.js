@@ -6,5 +6,3 @@ Array.prototype.insert = function (id, val) {
 };
 
 Object.defineProperty(Array.prototype, 'insert', { enumerable: false });
-
-console.log([1, 2].insert(111, 'hey'));
