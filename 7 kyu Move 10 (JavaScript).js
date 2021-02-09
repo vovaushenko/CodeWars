@@ -8,7 +8,3 @@ const moveTen = (s) =>
         : String.fromCharCode(char.charCodeAt(0) + 10 - 122 + 96)
     )
     .join('');
-
-// a = 97 z = 122
-
-console.log(moveTen('exampletesthere'));
