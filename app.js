@@ -1,10 +1,6 @@
 // https://www.codewars.com/kata/581dc1852d68e751180000c6
 
-Array.prototype.insert = function (id, val) {
-  this.splice(id, 0, val);
-  return this;
-};
+const TITLES = ['Rocky 1', 'Rocky 2', 'My Little Poney'];
+const search = (searchTerm) => TITLES.filter((title) => title.includes(searchTerm));
 
-Object.defineProperty(Array.prototype, 'insert', { enumerable: false });
-
-console.log([1, 2].insert(111, 'hey'));
+console.log(search('ock'));
