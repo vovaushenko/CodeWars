@@ -7,12 +7,3 @@ const strongEnough = (earthquake, age) => {
   const strength = 1000 * Math.pow(0.99, age);
   return strength > earthquake ? 'Safe!' : 'Needs Reinforcement!';
 };
-
-strongEnough(
-  [
-    [2, 3, 1],
-    [3, 1, 1],
-    [1, 1, 2],
-  ],
-  2
-);
