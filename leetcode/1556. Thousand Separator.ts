@@ -19,5 +19,3 @@ const thousandSeparator = (n: number): string => {
 
   return [...result].reverse().join('');
 };
-
-console.log(thousandSeparator(1123456789));
