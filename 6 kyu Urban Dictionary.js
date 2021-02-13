@@ -12,12 +12,3 @@ class WordDictionary {
     return this.words.find((v) => reg.test(v)) !== undefined;
   }
 }
-
-let dict = new WordDictionary();
-dict.addWord('bad');
-dict.addWord('dad');
-dict.addWord('mad');
-
-console.log(dict);
-console.log(dict.search('mad'));
-console.log(dict.search('.ad'));
