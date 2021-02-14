@@ -9,5 +9,3 @@ const merge = (a1: number[], m: number, a2: number[], n: number): void => {
   for (let num of a2) a1.push(num);
   a1.sort((a, b) => a - b);
 };
-
-console.log(merge([1, 2, 3, 0, 0, 0], 3, [2, 5, 6], 3));
