@@ -15,5 +15,3 @@ const subarraySum = (nums: number[], target: number): number => {
 
   return counter;
 };
-
-subarraySum([1, 2, 3], 3);
