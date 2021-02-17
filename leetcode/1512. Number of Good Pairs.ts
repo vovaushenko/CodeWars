@@ -18,5 +18,3 @@ const numIdenticalPairs = (nums: number[]): number => {
   }
   return goodPairsCounter;
 };
-
-console.log(numIdenticalPairs([1, 2, 3]));
