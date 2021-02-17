@@ -1,19 +1,8 @@
-// 560. Subarray Sum Equals K
+// 692. Top K Frequent Words
+// Given a non-empty list of words, return the k most frequent elements.
 
-// Given an array of integers nums and an integer k, return the total number of continuous subarrays whose sum equals to k.
+// Your answer should be sorted by frequency from highest to lowest. If two words have the same frequency, then the word with the lower alphabetical order comes first.
 
-const subarraySum = (nums: number[], target: number): number => {
-  let counter = 0;
-
-  for (let i = 0; i < nums.length; i++) {
-    let tempSum = 0;
-    for (let j = i; j < nums.length; j++) {
-      tempSum += nums[j];
-      if (tempSum === target) counter++;
-    }
-  }
-
-  return counter;
+const typeK = (words: string[], k: number): string[] => {
+  return ['a'];
 };
-
-subarraySum([1, 2, 3], 3);
