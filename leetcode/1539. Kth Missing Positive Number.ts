@@ -12,5 +12,3 @@ const findKthPositive = (arr: number[], k: number): number => {
   }
   return number - 1;
 };
-
-console.log(findKthPositive([2, 3, 4, 7, 11], 5));
