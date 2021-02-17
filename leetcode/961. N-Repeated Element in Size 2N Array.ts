@@ -11,5 +11,3 @@ const repeatedNTimes = (nums: number[]): number | undefined => {
     if (!checkedNums[num]) checkedNums[num] = 1;
   }
 };
-
-console.log(repeatedNTimes([5, 1, 5, 2, 5, 3, 5, 4]));
