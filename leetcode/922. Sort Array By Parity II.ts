@@ -17,5 +17,3 @@ const sortArrayByParityII = (nums: number[]): number[] => {
 
   return res;
 };
-
-console.log(sortArrayByParityII([4, 2, 5, 7]));
