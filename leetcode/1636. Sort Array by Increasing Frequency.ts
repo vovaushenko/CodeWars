@@ -14,5 +14,3 @@ const frequencySort = (nums: number[]): number[] => {
 
   return nums;
 };
-
-frequencySort([-1, 1, -6, 4, 5, -6, 1, 4, 1]);
