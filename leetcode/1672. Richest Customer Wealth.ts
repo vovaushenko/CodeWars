@@ -5,11 +5,3 @@
 
 const maximumWealth = (accounts: number[][]): number =>
   Math.max(...accounts.map((acc) => acc.reduce((a, b) => a + b, 0)));
-
-console.log(
-  maximumWealth([
-    [1, 5],
-    [7, 3],
-    [3, 5],
-  ])
-);
