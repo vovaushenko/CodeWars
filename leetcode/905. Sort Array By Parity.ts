@@ -9,5 +9,3 @@ const sortArrayByParity = (nums: number[]): number[] => {
 
   return [...even, ...odd];
 };
-
-console.log(sortArrayByParity([3, 1, 2, 4]));
