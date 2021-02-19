@@ -5,5 +5,3 @@
 
 const runningSum = (arr: number[]): number[] =>
   arr.map((_, id1) => arr.filter((_, id2) => id2 <= id1).reduce((total, n) => total + n, 0));
-
-console.log(runningSum([1, 2, 3, 4]));
