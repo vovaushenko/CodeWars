@@ -21,5 +21,3 @@ const isMonotonic = (arr: number[]): boolean => {
 
   return true;
 };
-
-console.log(isMonotonic([1, 2, 1]));
