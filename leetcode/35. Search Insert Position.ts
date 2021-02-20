@@ -12,5 +12,3 @@ const searchInsert = (nums: number[], target: number): number => {
 
   return 1;
 };
-
-console.log(searchInsert([1, 2], 3));
