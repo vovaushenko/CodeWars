@@ -30,5 +30,3 @@ const generate = (numRows: number): number[][] => {
 
   return triangle;
 };
-
-console.log(generate(1));
