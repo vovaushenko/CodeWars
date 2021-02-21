@@ -25,5 +25,3 @@ const longestPalindrome = (s: string): number => {
 
   return result;
 };
-
-console.log(longestPalindrome('bb'));

@@ -1,27 +1,43 @@
-// https://www.codewars.com/kata/5508b1d298b3238397000a56
+// memoization 🟢, binary-search🟢, sorts 🟢
+'use strict';
 
-const getValuesOrMethods = (obj, type) =>
-  Object.entries(obj)
-    .filter(([_, value]) => typeof value === type)
-    .map(([key, value]) => (type === 'number' ? value : key));
+const randomArray = Array.from({ length: 10 }, () => ~~(Math.random() * 10 + 1));
 
-const returnSpecifics = (obj) => {
-  if (Object.keys(obj).length === 0) return ['The Object is Empty'];
-  const values = getValuesOrMethods(obj, 'number');
-  const methods = getValuesOrMethods(obj, 'function');
+const merge = (a1, a2) => {
+  const res = [];
+  let i = 0;
+  let j = 0;
 
-  return [...values, ...methods];
+  while (i < a1.length && j < a2.length) {
+    if (a1[i] < a2[j]) {
+      res.push(a1[i]);
+      i++;
+    } else {
+      res.push(a2[j]);
+      j++;
+    }
+  }
+
+  while (i < a1.length) {
+    res.push(a1[i]);
+    i++;
+  }
+
+  while (j < a2.length) {
+    res.push(a2[j]);
+    j++;
+  }
+  return res;
 };
 
-console.log(
-  returnSpecifics({
-    a: 1,
-    b: 'str',
-    d: true,
-    c: 2,
-    e: function (a) {
-      return a;
-    },
-    f: 3,
-  })
-);
+const mergeSort = (arr) => {
+  if (arr.length <= 1) return arr;
+
+  let mid = ~~(arr.length / 2);
+  let left = mergeSort(arr.slice(0, mid));
+  let right = mergeSort(arr.slice(mid));
+
+  return merge(left, right);
+};
+console.log(randomArray);
+console.log(mergeSort(randomArray));
