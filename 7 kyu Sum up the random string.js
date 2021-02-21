@@ -6,5 +6,3 @@ const sumFromString = (str) =>
     .split(' ')
     .filter((num) => num)
     .reduce((total, num) => total + +num, 0);
-
-sum('In 2015, I want to know how much does iPhone 6+ cost?');
