@@ -13,5 +13,3 @@ const charToAscii = (str) => {
 
   return map;
 };
-
-console.log(charToAscii('ABaa ^'));
