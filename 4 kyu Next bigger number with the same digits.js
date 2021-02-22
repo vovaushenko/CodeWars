@@ -36,5 +36,3 @@ const nextBigger = (num) => {
   }
   return possibleResult;
 };
-
-console.log(nextBigger(2017));
