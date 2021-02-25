@@ -7,5 +7,3 @@ const xorOperation = (n: number, start: number): number => {
   const nums = Array.from({ length: n }, (_, id) => start + id * 2);
   return nums.reduce((res, num) => res ^ num, 0);
 };
-
-console.log(xorOperation(1, 7));
