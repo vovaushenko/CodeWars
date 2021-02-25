@@ -28,5 +28,3 @@ const isValid = (s: string): boolean => {
 
   return stack.length ? false : true;
 };
-
-console.log(isValid('('));
