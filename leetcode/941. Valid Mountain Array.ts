@@ -28,5 +28,3 @@ const validMountainArray = (arr: number[]): boolean => {
 
   return true;
 };
-
-console.log(validMountainArray([0, 3, 3, 2, 1]));
