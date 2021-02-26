@@ -23,5 +23,3 @@ const findEmployeesRole = (name) => {
   );
   return !foundEmployee ? 'Does not work here!' : foundEmployee.role;
 };
-
-console.log(findEmployeesRole('Anna Bell'));
