@@ -15,5 +15,3 @@ const stringMatching = (words: string[]): string[] => {
   console.log(matchingSubstrings);
   return matchingSubstrings;
 };
-
-stringMatching(['leetcoder', 'leetcode', 'od', 'hamlet', 'am']);

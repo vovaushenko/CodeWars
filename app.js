@@ -1,27 +1,28 @@
-// https://www.codewars.com/kata/55a1528cca4a6d4c5a0000e3
+const nthUglyNumber = (n) => {
+  debugger;
+  let two = 2;
+  let three = 3;
+  let five = 5;
+  let i = 1,
+    j = 1,
+    k = 1;
+  let uglyNumbers = [1];
+  let min;
 
-const employees = [
-  { firstName: 'Ollie', lastName: 'Hepburn', role: 'Boss' },
-  { firstName: 'Morty', lastName: 'Smith', role: 'Truck Driver' },
-  { firstName: 'Peter', lastName: 'Ross', role: 'Warehouse Manager' },
-  { firstName: 'Cal', lastName: 'Neil', role: 'Sales Assistant' },
-  { firstName: 'Jesse', lastName: 'Saunders', role: 'Admin' },
-  { firstName: 'Anna', lastName: 'Jones', role: 'Sales Assistant' },
-  { firstName: 'Carmel', lastName: 'Hamm', role: 'Admin' },
-  { firstName: 'Tori', lastName: 'Sparks', role: 'Sales Manager' },
-  { firstName: 'Peter', lastName: 'Jones', role: 'Warehouse Picker' },
-  { firstName: 'Mort', lastName: 'Smith', role: 'Warehouse Picker' },
-  { firstName: 'Anna', lastName: 'Bell', role: 'Admin' },
-  { firstName: 'Jewel', lastName: 'Bell', role: 'Receptionist' },
-  { firstName: 'Colin', lastName: 'Brown', role: 'Trainee' },
-];
+  while (uglyNumbers.length < n) {
+    let tempTwo = two * i;
+    let tempThree = three * j;
+    let tempFive = five * k;
 
-const findEmployeesRole = (name) => {
-  const [firstName, lastName] = name.split(' ');
-  const foundEmployee = employees.find(
-    (employee) => employee.firstName === firstName && employee.lastName === lastName
-  );
-  return !foundEmployee ? 'Does not work here!' : foundEmployee.role;
+    min = Math.min(tempTwo, tempThree, tempFive);
+    uglyNumbers.push(min);
+
+    if (min === tempTwo) i++;
+    if (min === tempThree) j++;
+    if (min === tempFive) k++;
+  }
+
+  return uglyNumbers[uglyNumbers.length - 1];
 };
 
-console.log(findEmployeesRole('Anna Bell'));
+console.log(nthUglyNumber(12));
