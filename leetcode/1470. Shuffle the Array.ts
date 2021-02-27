@@ -1,4 +1,7 @@
 // 1470. Shuffle the Array
+// Given the array nums consisting of 2n elements in the form [x1,x2,...,xn,y1,y2,...,yn].
+
+// Return the array in the form [x1,y1,x2,y2,...,xn,yn].
 
 function shuffle(nums: number[], n: number): number[] {
   const result = [];
@@ -9,5 +12,3 @@ function shuffle(nums: number[], n: number): number[] {
 
   return result;
 }
-
-shuffle([1, 2, 3, 4, 4, 3, 2, 1], 4);
