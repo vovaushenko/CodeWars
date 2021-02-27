@@ -13,5 +13,3 @@ function restoreString(s: string, indices: number[]): string {
 
   return result.join('');
 }
-
-console.log(restoreString('aiohn', [3, 1, 4, 2, 0]));
