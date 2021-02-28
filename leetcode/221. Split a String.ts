@@ -18,5 +18,3 @@ const balancedStringSplit = (s: string): number => {
 
   return balancedCounter;
 };
-
-console.log(balancedStringSplit('RLRRRLLRLL'));
