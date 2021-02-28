@@ -10,16 +10,3 @@ const sortReindeer = (reindeerNames) => {
 
   return reindeerNames;
 };
-
-console.log(
-  sortReindeer([
-    'Dasher Tonoyan',
-    'Dancer Moore',
-    'Prancer Chua',
-    'Vixen Hall',
-    'Comet Karavani',
-    'Cupid Foroutan',
-    'Donder Jonker',
-    'Blitzen Claus',
-  ])
-);

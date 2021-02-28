@@ -1,13 +1,8 @@
-// 1470. Shuffle the Array
+// SLL
 
-function shuffle(nums: number[], n: number): number[] {
-  const result = [];
-  for (let i = 0; i < n; i++) {
-    result.push(nums[i]);
-    result.push(nums[i + n]);
+class Node {
+  val: number | string;
+  constructor(val: number | string) {
+    this.val = val;
   }
-
-  return result;
 }
-
-shuffle([1, 2, 3, 4, 4, 3, 2, 1], 4);
