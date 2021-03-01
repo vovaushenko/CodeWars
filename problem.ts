@@ -1,22 +1,28 @@
-// 1221. Split a String in Balanced Strings
+// 821. Shortest Distance to a Character
 
-// Balanced strings are those that have an equal quantity of 'L' and 'R' characters.
+// Given a string s and a character c that occurs in s, return an array of integers answer where answer.length == s.length and answer[i] is the distance from index i to the closest occurrence of character c in s.
 
-// Given a balanced string s, split it in the maximum amount of balanced strings.
+const shortestToChar = (s: string, c: string): number[] => {
+  const res = [];
 
-// Return the maximum amount of split balanced strings.
-
-const balancedStringSplit = (s: string): number => {
-  let rCounter = 0;
-  let lCounter = 0;
-  let balancedCounter = 0;
-
+  let counter = 0;
   for (let i = 0; i < s.length; i++) {
-    s[i] === 'R' ? rCounter++ : lCounter++;
-    if (rCounter === lCounter) balancedCounter++;
+    counter++;
+    if (s[i] === c) {
+      counter = 0;
+      console.log(i);
+    }
+    res[i] = counter;
   }
 
-  return balancedCounter;
+  counter = 0;
+  for (let i = s.length - 1; i >= 0; i--) {
+    counter++;
+    if (s[i] === c) counter = 0;
+    res[i] = Math.min(counter, res[i]);
+  }
+
+  return res;
 };
 
-console.log(balancedStringSplit('RLRRRLLRLL'));
+console.log(shortestToChar('loveleetcodeaaaaa', 'e'));
