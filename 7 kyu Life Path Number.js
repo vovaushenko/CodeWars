@@ -11,5 +11,3 @@ const lifePathNumber = (dateOfBirth) =>
   reduceToSingleNumber(
     dateOfBirth.split('-').reduce((lifePNum, num) => lifePNum + reduceToSingleNumber(num), 0)
   );
-
-console.log(lifePathNumber('1906-12-09'));
