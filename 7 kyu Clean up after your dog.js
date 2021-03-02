@@ -10,15 +10,3 @@ const crap = (x, bags, cap) => {
 
   return statistics['@'] > bags * cap ? 'Cr@p' : 'Clean';
 };
-
-console.log(
-  crap(
-    [
-      ['_', '_', '_', '_'],
-      ['_', '_', '_', '@'],
-      ['_', '_', '@', '_'],
-    ],
-    1,
-    1
-  )
-);
