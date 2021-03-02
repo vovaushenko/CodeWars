@@ -25,5 +25,3 @@ function selfDividingNumbers(left: number, right: number): number[] {
 
   return selfDividingNumbers;
 }
-
-console.log(selfDividingNumbers(1, 22));
