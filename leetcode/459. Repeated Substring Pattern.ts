@@ -9,5 +9,3 @@ const repeatedSubstringPattern = (s: string): boolean => {
 
   return false;
 };
-
-console.log(repeatedSubstringPattern('aa'));
