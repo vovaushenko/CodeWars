@@ -20,5 +20,3 @@ const tribonacci = (n: number): number => {
 
   return memo[n];
 };
-
-console.log(tribonacci(25));
