@@ -28,5 +28,3 @@ const rotate = (nums: number[], k: number): void => {
     rotationsCounter++;
   }
 };
-
-rotate([-1, -100, 3, 99], 2);
