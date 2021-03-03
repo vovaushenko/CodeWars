@@ -23,5 +23,3 @@ const nextGreaterElement = (nums1: number[], nums2: number[]): number[] => {
 
   return res;
 };
-
-console.log(nextGreaterElement([2, 4], [1, 2, 3, 4]));
