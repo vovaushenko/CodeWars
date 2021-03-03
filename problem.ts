@@ -1,29 +1,27 @@
-// 728. Self Dividing Numbers
-// A self-dividing number is a number that is divisible by every digit it contains.
+// 645. Set Mismatch
 
-// For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
-
-// Also, a self-dividing number is not allowed to contain the digit zero.
-
-// Given a lower and upper number bound, output a list of every possible self dividing number, including the bounds if possible.
-
-const isSelfDividing = (num: number): boolean => {
-  const digits = [...(num + '')].map(Number);
-  for (let digit of digits) {
-    if (num % digit !== 0) return false;
+const findErrorNums = (nums: number[]): number[] => {
+  if (nums.length === 2) {
+    return nums[0] === 1 ? [1, 2] : [2, 1];
   }
-  return true;
+  const map: { [key: string]: number } = {};
+
+  for (let num of nums) {
+    map[num] ? map[num]++ : (map[num] = 1);
+  }
+
+  const result = [];
+  for (let key in map) {
+    if (map[key] > 1) result.push(+key);
+  }
+
+  const numbers = Object.keys(map);
+
+  for (let i = 1; i <= +numbers[numbers.length - 1]; i++) {
+    if (!numbers.includes(i + '')) result.push(i);
+  }
+  if (result.length === 1) result.push(+numbers[numbers.length - 1] + 1);
+  return result;
 };
 
-function selfDividingNumbers(left: number, right: number): number[] {
-  const selfDividingNumbers = [];
-  for (let i = left; i <= right; i++) {
-    if (![...(i + '')].includes('0') && isSelfDividing(i)) {
-      selfDividingNumbers.push(i);
-    }
-  }
-
-  return selfDividingNumbers;
-}
-
-console.log(selfDividingNumbers(1, 22));
+console.log(findErrorNums([1, 5, 3, 2, 2, 7, 6, 4, 8, 9]));
