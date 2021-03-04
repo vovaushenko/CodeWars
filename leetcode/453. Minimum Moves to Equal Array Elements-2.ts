@@ -23,5 +23,3 @@ const minMoves2 = (nums: number[]): number => {
       : Math.min(calculateMoves(nums, midNum1), calculateMoves(nums, midNum2));
   }
 };
-
-console.log(minMoves2([1, 2, 3, 4]));
