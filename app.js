@@ -1,16 +1,5 @@
-const tribonacci = (n) => {
-  if (n < 2) return n;
-  if (n == 2) return 1;
-  let prev1 = 1;
-  let prev2 = 1;
-  let prev3 = 0;
+// https://www.codewars.com/kata/58880c6e79a0a3e459000004
 
-  for (let i = 3, temp; i <= n; i++) {
-    temp = prev1 + prev2 + prev3;
-    prev3 = prev2;
-    prev2 = prev1;
-    prev1 = temp;
-  }
-  return prev1;
-};
-console.log(tribonacci(25));
+const houseNumbersSum = (a) => a.slice(0, a.indexOf(0)).reduce((a, b) => a + b, 0);
+
+console.log(houseNumbersSum([5, 1, 2, 3, 0, 1, 5, 0, 2]));
