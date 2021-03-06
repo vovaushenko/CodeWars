@@ -1,10 +1,29 @@
-// 1619. Mean of Array After Removing Some Elements
+// 1624. Largest Substring Between Two Equal Characters
+// Given a string s, return the length of the longest substring between two equal characters, excluding the two characters. If there is no such substring return -1.
 
-// Given an integer array arr, return the mean of the remaining integers after removing the smallest 5% and the largest 5% of the elements.
+// A substring is a contiguous sequence of characters within a string.
 
-const trimMean = (arr: number[]): number =>
-  arr
-    .sort((a, b) => a - b)
-    .slice(Math.round(arr.length * 0.05), -Math.round(arr.length * 0.05))
-    .reduce((a, b) => a + b, 0) /
-  (arr.length - 2 * arr.length * 0.05);
+const maxLengthBetweenEqualCharacters = (s: string): number => {
+  const map: { [key: string]: any } = {};
+
+  for (let char of s) {
+    map[char] ? map[char]++ : (map[char] = 1);
+  }
+
+  let res: any = {};
+
+  for (let i = 0; i < s.length; i++) {
+    if (map[s[i]] > 1) {
+      res[s[i]] ? res[s[i]].push(i) : (res[s[i]] = [i]);
+    }
+  }
+
+  let largestSubstring = 0;
+
+  for (let key in res) {
+    res[key].sort((a: any, b: any) => b - a);
+  }
+  return 1;
+};
+
+maxLengthBetweenEqualCharacters('cabbac');
