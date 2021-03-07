@@ -1,29 +1,11 @@
-// 1624. Largest Substring Between Two Equal Characters
-// Given a string s, return the length of the longest substring between two equal characters, excluding the two characters. If there is no such substring return -1.
+// 386. Lexicographical Numbers
+// Given an integer n, return 1 - n in lexicographical order.
 
-// A substring is a contiguous sequence of characters within a string.
+// For example, given 13, return: [1,10,11,12,13,2,3,4,5,6,7,8,9].
 
-const maxLengthBetweenEqualCharacters = (s: string): number => {
-  const map: { [key: string]: any } = {};
+// Please optimize your algorithm to use less time and space. The input size may be as large as 5,000,000.
 
-  for (let char of s) {
-    map[char] ? map[char]++ : (map[char] = 1);
-  }
+// generate array 1 to n  -> sort it lexographically 🙃
+const lexicalOrder = (n: number): any => Array.from({ length: n }, (_, id) => id + 1).sort();
 
-  let res: any = {};
-
-  for (let i = 0; i < s.length; i++) {
-    if (map[s[i]] > 1) {
-      res[s[i]] ? res[s[i]].push(i) : (res[s[i]] = [i]);
-    }
-  }
-
-  let largestSubstring = 0;
-
-  for (let key in res) {
-    res[key].sort((a: any, b: any) => b - a);
-  }
-  return 1;
-};
-
-maxLengthBetweenEqualCharacters('cabbac');
+console.log(lexicalOrder(13));
