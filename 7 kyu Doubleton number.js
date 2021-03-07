@@ -6,5 +6,3 @@ const doubleton = (num) => {
   while (!isDoubleton(num)) num++;
   return num;
 };
-
-console.log(doubleton(1234));
