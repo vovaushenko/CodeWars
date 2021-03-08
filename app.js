@@ -1,5 +1,22 @@
-// https://www.codewars.com/kata/5896616336c4bad1c50000d7
+// https://www.codewars.com/kata/5581a7651185fe13190000ee
 
-const annulusArea = (a) => +((Math.PI * a ** 2) / 4).toFixed(2);
+const pattern = (n) => {
+  let counter = 1;
+  let nums = '';
+  while (nums.length < n) {
+    nums += counter;
+    counter++;
+    if (counter === 10) {
+      counter = 0;
+    }
+  }
 
-console.log(annulusArea(7));
+  let resPattern = [];
+  for (let i = n - 1; i >= 0; i--) {
+    resPattern.push(' '.repeat(i) + nums);
+  }
+
+  return resPattern.join('\n');
+};
+
+console.log(pattern(3));

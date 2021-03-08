@@ -32,5 +32,3 @@ const lemonadeChange = (bills: number[]): boolean => {
 
   return true;
 };
-
-console.log(lemonadeChange([5, 5, 5, 10, 5, 20, 5, 10, 5, 20, 10, 10, 10]));
