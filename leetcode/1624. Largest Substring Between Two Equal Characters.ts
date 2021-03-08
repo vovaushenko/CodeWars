@@ -24,5 +24,3 @@ const maxLengthBetweenEqualCharacters = (s: string): number => {
 
   return Math.max(...substrings);
 };
-
-console.log(maxLengthBetweenEqualCharacters('cbzxy'));
