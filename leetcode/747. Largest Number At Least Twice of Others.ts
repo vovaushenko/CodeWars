@@ -11,5 +11,3 @@ const dominantIndex = (nums: number[]): number => {
   if (+values[values.length - 1] < 2 * +values[values.length - 2]) return -1;
   return nums.indexOf(+values[values.length - 1]);
 };
-
-console.log(dominantIndex([3, 3, 6, 1, 0]));
