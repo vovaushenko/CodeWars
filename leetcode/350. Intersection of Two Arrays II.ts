@@ -24,5 +24,3 @@ const intersect = (nums1: number[], nums2: number[]): number[] => {
 
   return result;
 };
-
-intersect([4, 9, 5], [9, 4, 9, 8, 4]);
