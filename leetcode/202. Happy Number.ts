@@ -19,5 +19,3 @@ const isHappy = (n: number): boolean => {
 
   return true;
 };
-
-console.log(isHappy(2));
