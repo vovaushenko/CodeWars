@@ -12,5 +12,3 @@ const heightChecker = (heights: number[]): number => {
 
   return difference;
 };
-
-console.log(heightChecker([5, 1, 2, 3, 4]));
