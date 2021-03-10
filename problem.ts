@@ -1,16 +1,6 @@
-// 1051. Height Checker
-// Students are asked to stand in non-decreasing order of heights for an annual photo.
+// 1374. Generate a String With Characters That Have Odd Counts
 
-// Return the minimum number of students that must move in order for all students to be standing in non-decreasing order of height.
+const generateTheString = (n: number): string =>
+  n % 2 === 0 ? 'x'.repeat(n - 1) + 'y' : 'x'.repeat(n);
 
-const heightChecker = (heights: number[]): number => {
-  const referrence = [...heights].sort((a, b) => a - b);
-  let difference = 0;
-  for (let i = 0; i < heights.length; i++) {
-    if (heights[i] !== referrence[i]) difference++;
-  }
-
-  return difference;
-};
-
-console.log(heightChecker([5, 1, 2, 3, 4]));
+console.log(generateTheString(5));
