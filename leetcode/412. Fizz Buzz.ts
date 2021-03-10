@@ -8,5 +8,3 @@ const fizzBuzz = (n: number): string[] =>
 
     return id + 1 + '';
   });
-
-console.log(fizzBuzz(15));
