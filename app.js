@@ -1,4 +1,12 @@
-// https://www.codewars.com/kata/5ab363ff6a176b29880000dd
+// https://www.codewars.com/kata/5aa39ba75084d7cf45000008/train/javascript
 
-const hexHash = (code) => [...code].map((char) => char.charCodeAt(0).toString(16));
-console.log(hexHash('Hello, World!'));
+const solve = (n) => {
+  const fiboStrings = ['0', '01'];
+  if (n <= 1) return fiboStrings[n];
+
+  while (fiboStrings.length <= n) {
+    fiboStrings.push(fiboStrings[fiboStrings.length - 1] + fiboStrings[fiboStrings.length - 2]);
+  }
+
+  return fiboStrings[fiboStrings.length - 1];
+};
