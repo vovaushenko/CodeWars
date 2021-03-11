@@ -31,5 +31,3 @@ function findJudge(N: number, trust: number[][]): number {
 
   return possibleJudge;
 }
-
-console.log(findJudge(1, []));
