@@ -14,5 +14,3 @@ const pivotIndex = (nums: number[]): number => {
 
   return -1;
 };
-
-console.log(pivotIndex([1, 2, 3]));
