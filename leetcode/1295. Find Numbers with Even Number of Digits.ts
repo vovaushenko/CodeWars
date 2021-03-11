@@ -3,5 +3,3 @@
 
 const findNumbers = (nums: number[]): any =>
   nums.map((digit) => digit + '').filter((digit) => !(digit.length % 2)).length;
-
-console.log(findNumbers([12, 345, 2, 6, 7896]));
