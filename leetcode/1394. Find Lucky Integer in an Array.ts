@@ -17,5 +17,3 @@ const findLucky = (arr: number[]): number => {
 
   return maxLucky || -1;
 };
-
-console.log(findLucky([2, 2, 2, 3, 3]));
