@@ -8,5 +8,3 @@ const fibonacci = (max, memo = [0, 1]) => {
   }
   return evenSum;
 };
-
-console.log(fibonacci(25997544));
