@@ -9,5 +9,3 @@ const isFibo = (a, b, f) => {
 
   return memo[memo.length - 1] === f;
 };
-
-isFibo(4, 5, 23);
