@@ -1,17 +1,8 @@
-function solution(isBadVersion) {
-  return function (n) {
-    var left = 0;
-    var right = n;
+const fib = (n) => {
+  debugger;
+  if (n <= 2) return 1;
 
-    while (right - left !== 1) {
-      var mid = parseInt((left + right) / 2);
+  return fib(n - 2) + fib(n - 1);
+};
 
-      if (isBadVersion(mid)) {
-        right = mid;
-      } else {
-        left = mid;
-      }
-    }
-    return right;
-  };
-}
+console.log(fib(3));

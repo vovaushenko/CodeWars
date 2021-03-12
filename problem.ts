@@ -1,21 +1,18 @@
-// 1394. Find Lucky Integer in an Array
+// 1732. Find the Highest Altitude
+// There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 
-// Given an array of integers arr, a lucky integer is an integer which has a frequency in the array equal to its value.
+// You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.
 
-// Return a lucky integer in the array. If there are multiple lucky integers return the largest of them. If there is no lucky integer return -1.
+const largestAltitude = (gain: number[]): number => {
+  let maxAltitude = 0;
+  let tempAltitude = 0;
 
-const findLucky = (arr: number[]): number => {
-  let map: { [key: string]: number } = {};
-  for (let digit of arr) {
-    map[digit] ? map[digit]++ : (map[digit] = 1);
+  for (let i = 0; i < gain.length; i++) {
+    tempAltitude += gain[i];
+    maxAltitude = Math.max(maxAltitude, tempAltitude);
   }
 
-  let maxLucky = 0;
-  for (let num of arr) {
-    if (map[num] === num) maxLucky = Math.max(maxLucky, num);
-  }
-
-  return maxLucky || -1;
+  return maxAltitude;
 };
 
-console.log(findLucky([2, 2, 2, 3, 3]));
+console.log(largestAltitude([-4, -3, -2, -1, 4, 3, 2]));
