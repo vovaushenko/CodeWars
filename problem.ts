@@ -1,27 +1,29 @@
-// 1752. Check if Array Is Sorted and Rotated
+// 1003. Check If Word Is Valid After Substitutions
 
-// Given an array nums, return true if the array was originally sorted in non-decreasing order, then rotated some number of positions (including zero). Otherwise, return false.
+// Given a string s, determine if it is valid.
 
-// There may be duplicates in the original array.
+// A string s is valid if, starting with an empty string t = "", you can transform t into s after performing the following operation any number of times:
 
-// Note: An array A rotated by x positions results in an array B of the same length such that A[i] == B[(i+x) % A.length], where % is the modulo operation.
+// Insert string "abc" into any position in t. More formally, t becomes tleft + "abc" + tright, where t == tleft + tright. Note that tleft and tright may be empty.
+// Return true if s is a valid string, otherwise, return false.
 
-const check = (nums: number[]): boolean => {
-  const sortedArr = JSON.stringify([...nums].sort((a, b) => a - b));
-
-  for (let i = 0; i < nums.length; i++) {
-    if (JSON.stringify(nums) === sortedArr) return true;
-    rotate(nums);
+function isValid(s: string): boolean {
+  while (s.length) {
+    if (s === s.replace(/abc/g, '')) return false;
+    s = s.replace(/abc/g, '');
   }
 
-  return false;
-};
+  return true;
+}
 
-const rotate = (arr: number[]): number[] => {
-  const firstNumber: number = arr.shift()!;
-  arr.push(firstNumber);
+console.log(isValid('abccba'));
 
-  return arr;
-};
-
-console.log(check([1, 2, 3]));
+// const isValid = (S) => {
+//   if (S.length < 3) return false;
+//   let current = S, replaced = S.replace(/abc/g, '');
+//   while (current !== replaced) {
+//       current = replaced;
+//       replaced = replaced.replace(/abc/g, '');
+//   }
+//   return replaced.length === 0;
+// };
