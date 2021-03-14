@@ -23,5 +23,3 @@ class Block {
     return 2 * (l * w + l * h + w * h);
   }
 }
-let block = new Block([2, 4, 6]);
-console.log(block.getVolume());
