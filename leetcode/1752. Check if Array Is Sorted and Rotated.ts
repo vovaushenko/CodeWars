@@ -23,5 +23,3 @@ const rotate = (arr: number[]): number[] => {
 
   return arr;
 };
-
-console.log(check([1, 2, 3]));
