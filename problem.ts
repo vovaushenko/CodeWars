@@ -1,8 +1,15 @@
-// 1351. Count Negative Numbers in a Sorted Matrix
-// Given a m x n matrix grid which is sorted in non-increasing order both row-wise and column-wise, return the number of negative numbers in grid.
+// 357. Count Numbers with Unique Digits
 
-const countNegatives = (grid: number[][]): number =>
-  grid.reduce(
-    (negativeNumberCounter, row) => negativeNumberCounter + row.filter((num) => num < 0).length,
-    0
-  );
+const countNumbersWithUniqueDigits = (n: number): number => {
+  let counter = 0;
+
+  for (let i = 0; i < 10 ** n; i++) {
+    if (numberHasUniqueDigits(i)) counter++;
+  }
+  return counter;
+};
+
+const numberHasUniqueDigits = (num: number): boolean =>
+  [...new Set(...[num + ''])].length === [...(num + '')].length;
+
+console.log(countNumbersWithUniqueDigits(7));

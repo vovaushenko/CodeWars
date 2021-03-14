@@ -8,5 +8,3 @@ const isPrime = (num) => {
 };
 
 const nextPrime = (n) => (isPrime(n + 1) ? n + 1 : nextPrime(n + 1));
-
-console.log(nextPrime(12));
