@@ -18,4 +18,3 @@ const checkIfExist = (arr: number[]): boolean => {
 
   return false;
 };
-console.log(checkIfExist([-2, 0, 10, -19, 4, 6, -8]));
