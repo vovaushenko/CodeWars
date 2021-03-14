@@ -13,5 +13,3 @@ const growingPlant = (upSpeed, downSpeed, desiredHeight) => {
 
   return days;
 };
-
-growingPlant(10, 9, 4);
