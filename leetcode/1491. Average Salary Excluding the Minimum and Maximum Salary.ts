@@ -13,5 +13,3 @@ const average = (salary: number[]): number => {
     (salary.length - 2)
   );
 };
-
-console.log(average([1000, 2000, 3000]));
