@@ -1,5 +1,3 @@
-// 1002. Find Common Characters
-
 const commonChars = (A: string[]): string[] => {
   const res = [];
   for (let char of A[0]) {
@@ -11,5 +9,3 @@ const commonChars = (A: string[]): string[] => {
 
   return res;
 };
-
-console.log(commonChars(['bella', 'label', 'roller']));
