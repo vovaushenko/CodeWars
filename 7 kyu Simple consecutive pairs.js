@@ -12,5 +12,3 @@ const pairs = (arr) => {
 
   return pairsCounter;
 };
-
-console.log(pairs([1, 2, 5, 8, -4, -3, 7, 6, 5]));
