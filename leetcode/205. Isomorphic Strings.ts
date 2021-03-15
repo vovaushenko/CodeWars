@@ -13,5 +13,3 @@ const isIsomorphic = (s: string, t: string): boolean => {
 
   return true;
 };
-
-console.log(isIsomorphic('paper', 'title'));
