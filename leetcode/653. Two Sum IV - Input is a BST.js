@@ -1,4 +1,4 @@
-// https://www.codewars.com/kata/5ab363ff6a176b29880000dd
+// Given the root of a Binary Search Tree and a target number k, return true if there exist two elements in the BST such that their sum is equal to the given target.
 
 const findTarget = function (root, k) {
   const values = [];
@@ -28,5 +28,3 @@ const verify = (arr, k) => {
   }
   return false;
 };
-
-console.log(verify([0, -2, 3, null, -1, null, 4], -2));
