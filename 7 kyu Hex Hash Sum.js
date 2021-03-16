@@ -11,5 +11,3 @@ const hexHash = (code) => {
 
   return res;
 };
-
-console.log(hexHash('Forty4Three'));
