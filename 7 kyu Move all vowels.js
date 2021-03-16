@@ -3,5 +3,3 @@
 const moveVowel = (input) =>
   [...input].filter((char) => !'aeiou'.includes(char)).join('') +
   [...input].filter((char) => 'aeiou'.includes(char)).join('');
-
-console.log(moveVowel('day'));
