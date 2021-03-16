@@ -1,3 +1,8 @@
-// https://www.codewars.com/kata/52af7bf41f5a1291a6000025
+// https://www.codewars.com/kata/55e7d9d63bdc3caa2500007d
 
-const timeForMilkAndCookies = (date) => date.getDate() === 24 && date.getMonth() === 11;
+let gcd = (a, b) => (b == 0 ? a : gcd(b, a % b));
+
+let smallest = (n) =>
+  Array.from({ length: n }, (_, id) => id + 1).reduce((a, b) => (a * b) / gcd(a, b), 1);
+
+console.log(smallest(40));
