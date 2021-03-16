@@ -24,5 +24,3 @@ const hasGroupsSizeX = (deck: number[]): boolean => {
 };
 
 const gcd = (x: number, y: number): number => (x === 0 ? y : gcd(y % x, x));
-
-console.log(hasGroupsSizeX([1, 1, 1, 1, 2, 2, 2, 2, 2, 2]));
