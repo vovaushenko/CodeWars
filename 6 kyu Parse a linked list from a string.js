@@ -24,5 +24,3 @@ function parse(string) {
 
   return list;
 }
-
-parse('0 -> 1 -> 4 -> 9 -> 16 -> null');
