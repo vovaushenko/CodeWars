@@ -3,19 +3,18 @@
 
 // Return true if and only if the given tree is univalued.
 
-var isUnivalTree = function (root) {
-  if (!root) return true;
-  const ref = root.val;
+var searchBST = function (root, val) {
+  if (!root) return null;
   let queue = [root];
   let node;
 
   while (queue.length) {
     node = queue.shift();
-    if (node.val !== ref) return false;
+    if (node.val === val) return node;
 
     if (node.left) queue.push(node.left);
     if (node.right) queue.push(node.right);
   }
 
-  return true;
+  return null;
 };
