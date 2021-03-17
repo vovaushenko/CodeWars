@@ -1,12 +1,41 @@
-// 100. Same Tree
-// Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+// https://www.codewars.com/kata/coding-meetup-number-4-higher-order-functions-series-find-the-first-python-developer
 
-// Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.
+const countLanguages = (list) =>
+  list.reduce((map, dev) => ((map[dev.language] = map[dev.language] + 1 || 1), map), {});
 
-const isSameTree = (root1, root2) => {
-  if (!root1 && !root2) return true;
+var list1 = [
+  {
+    firstName: 'Noah',
+    lastName: 'M.',
+    country: 'Switzerland',
+    continent: 'Europe',
+    age: 19,
+    language: 'C',
+  },
+  {
+    firstName: 'Anna',
+    lastName: 'R.',
+    country: 'Liechtenstein',
+    continent: 'Europe',
+    age: 52,
+    language: 'JavaScript',
+  },
+  {
+    firstName: 'Ramon',
+    lastName: 'R.',
+    country: 'Paraguay',
+    continent: 'Americas',
+    age: 29,
+    language: 'Ruby',
+  },
+  {
+    firstName: 'George',
+    lastName: 'B.',
+    country: 'England',
+    continent: 'Europe',
+    age: 81,
+    language: 'C',
+  },
+];
 
-  if (!root1 || !root2 || root1.val !== root2.val) return false;
-
-  return isSameTree(root1.left, root2.left) && isSameTree(root1.right, root2.right);
-};
+console.log(countLanguages(list1));
