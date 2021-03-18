@@ -1,5 +1,6 @@
-// https://www.codewars.com/kata/coding-meetup-number-12-higher-order-functions-series-find-github-admins
+const maxDepth = (root) => {
+  if (!root) return null;
+  const max = Math.max(maxDepth(root.left), maxDepth(root.right));
 
-// 3
-const findAdmin = (list, lang) =>
-  list.filter((dev) => dev.language === lang && dev.githubAdmin === 'yes');
+  return max + 1;
+};
