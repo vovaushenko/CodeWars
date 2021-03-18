@@ -3,7 +3,6 @@
 const preorder = (root) => {
   const values = [];
   const queue = [root];
-  let node;
 
   while (queue.length) {
     let current = queue[0];
@@ -16,14 +15,17 @@ const preorder = (root) => {
   return values;
 };
 
-let preorder = (root, ans = []) => {
-  let queue = [root];
-  while (queue.length > 0) {
-    let cur = queue[0];
-    queue.shift();
-    if (!cur) continue;
-    ans.push(cur.val);
-    queue.unshift(...cur.children);
-  }
-  return ans;
+const postorder = (root) => {
+  const values = [];
+
+  const traverse = (node) => {
+    if (!node) return;
+
+    for (let child of node.children) traverse(child);
+    values.push(node.val);
+  };
+
+  traverse(root);
+
+  return values;
 };
