@@ -8,4 +8,3 @@ const isLanguageDiverse = (list) => {
 
   return mostPopular / lessPopular <= 2;
 };
-console.log(isLanguageDiverse(list1));
