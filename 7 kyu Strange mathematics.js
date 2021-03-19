@@ -4,5 +4,3 @@ const strangeMath = (n, k) =>
   Array.from({ length: n }, (_, id) => id + 1)
     .sort()
     .indexOf(k) + 1;
-
-console.log(strangeMath(15, 15));
