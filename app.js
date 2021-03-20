@@ -1,6 +1,3 @@
-const compose = (...functions) => (val) => functions.reduceRight((acc, f) => f(acc), val);
+const add = (a, b) => Math.log2(2 ** a * 2 ** b);
 
-const multiplyByTwo = (a) => a * 2;
-const plusOne = (a) => a + 1;
-
-console.log(compose(multiplyByTwo, multiplyByTwo, multiplyByTwo, plusOne)(2));
+console.log(sum(5, -10));
