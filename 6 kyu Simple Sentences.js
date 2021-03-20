@@ -7,5 +7,3 @@ const makeSentence = (words) => {
   }
   return res.trim() + '.';
 };
-
-console.log(makeSentence(['hello', 'dear', '.', '.']));
