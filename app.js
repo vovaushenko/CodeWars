@@ -1,12 +1,6 @@
-const solution = (input, markers) => {
-  const res = input
-    .split('\n')
-    .map((newLine) => markers.reduce((newLine, marker) => newLine.split(marker)[0].trim(), newLine))
-    .join('\n');
+const compose = (...functions) => (val) => functions.reduceRight((acc, f) => f(acc), val);
 
-  return res;
-};
+const multiplyByTwo = (a) => a * 2;
+const plusOne = (a) => a + 1;
 
-const replaceAllMarkers = (input, find, r) => input.replace(new RegExp(find, 'g'), r);
-
-console.log(solution('apples, pears # and bananas\ngrapes\nbananas !apples', ['#', '!']));
+console.log(compose(multiplyByTwo, multiplyByTwo, multiplyByTwo, plusOne)(2));
