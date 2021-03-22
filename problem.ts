@@ -1,25 +1,31 @@
-// https://leetcode.com/problems/water-bottles/
+const wordSubsets = (words: string[], pattern: string[]): string[] => {
+  const res = [];
+  const patternHash = pattern.map((p) => generateHashMap(p));
 
-const numWaterBottles = (numBottles: number, numExchange: number): number => {
-  if (numBottles < numExchange) return numBottles;
-
-  let total = numBottles;
-  let empty = 0;
-
-  while (numBottles > 0) {
-    numBottles -= numExchange;
-    total++;
-    empty += 1;
-    if (numBottles < 0) break;
-    if (empty === numExchange) {
-      empty = 0;
-      numBottles++;
-    }
+  for (let word of words) {
+    const wordMap = generateHashMap(word);
+    if (patternHash.every((h) => isValidWord(wordMap, h))) res.push(word);
   }
 
-  return total;
+  return res;
 };
 
-console.log(numWaterBottles(15, 7));
+const generateHashMap = (str: string): any => {
+  let map: { [key: string]: number } = {};
+  for (let char of str) {
+    map[char] ? map[char]++ : (map[char] = 1);
+  }
 
-// 17
+  return map;
+};
+
+const isValidWord = (wordMap: any, patternMap: any): boolean => {
+  for (let key in patternMap) {
+    if (!(key in wordMap)) return false;
+    if (wordMap[key] < patternMap[key]) return false;
+  }
+
+  return true;
+};
+
+console.log(wordSubsets(['amazon', 'apple', 'facebook', 'google', 'leetcode'], ['e', 'o']));
