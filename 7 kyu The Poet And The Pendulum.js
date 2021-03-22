@@ -8,5 +8,3 @@ const pendulum = (nums) => {
 
   return [...nums1.reverse(), ...nums2];
 };
-
-console.log(pendulum([-9, -2, -10, -6]));
