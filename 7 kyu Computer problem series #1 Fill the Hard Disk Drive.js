@@ -13,5 +13,3 @@ const save = (sizes, hd) => {
 
   return counter;
 };
-
-console.log(save([1, 2, 3, 4], 11));
