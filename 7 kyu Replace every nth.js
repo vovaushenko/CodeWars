@@ -20,5 +20,3 @@ const replaceNth = (text, n, oldValue, newValue) => {
 
   return result;
 };
-
-replaceNth('Luke cries: Noooooooooooooooo!', 6, 'o', 'i');
