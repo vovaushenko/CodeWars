@@ -13,5 +13,3 @@ const maxRot = (n) => {
 
   return maxRotatedNum;
 };
-
-maxRot(56789);
