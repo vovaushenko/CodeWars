@@ -23,6 +23,3 @@ const splitOddAndEven = (n) => {
 
   return result;
 };
-
-console.log(splitOddAndEven(13579));
-// 13579
