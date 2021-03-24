@@ -13,5 +13,3 @@ const palindromePairs = (words) => {
 
   return indexesOfPalindromes;
 };
-
-palindromePairs(['dog', 'cow', 'tap', 'god', 'pat']);
