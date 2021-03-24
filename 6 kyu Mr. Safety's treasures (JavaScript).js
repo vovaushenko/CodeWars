@@ -19,5 +19,3 @@ const unlock = (lock) => {
 
   return unlocked;
 };
-
-unlock('Valut');
