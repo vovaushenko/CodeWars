@@ -7,5 +7,3 @@ const cake = (x, y) => {
 
   return x * 0.7 > total ? 'That was close!' : 'Fire!';
 };
-
-cake(1, 'abc');
