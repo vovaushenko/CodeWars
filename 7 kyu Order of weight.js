@@ -5,5 +5,3 @@ const weightToGrams = (weight) => {
   if (weight.includes('G')) return +weight.replace(/\D/g, '');
   if (weight.includes('T')) return +weight.replace(/\D/g, '') * 1000000;
 };
-
-console.log(arrange(['200G', '300G', '150G', '100KG', '1T']));
