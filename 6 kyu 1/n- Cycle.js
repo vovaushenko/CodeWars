@@ -9,5 +9,3 @@ const cycle = (n) => {
     if (num === 1) return cycleLength;
   }
 };
-
-console.log(cycle(13));
