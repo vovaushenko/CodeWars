@@ -28,7 +28,3 @@ const swap = (str, n) => {
 
   return res;
 };
-
-swap('', 11345);
-
-// console.log(!' '.replace(/[^a-zA-Z]+/g, ''));
