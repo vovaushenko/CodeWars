@@ -1,17 +1,11 @@
-const maxRot = (n) => {
-  let digits = [...(n + '')];
-  let index = 0;
-  let swappedDigit;
-  let maxRotatedNum = n;
+const present = (x, y) => {
+  if (x === 'crap') return [...x].sort().join('');
+  if (x === 'badpresent') return 'Take this back!';
+  if (x === 'goodpresent')
+    return [...x].map((char) => String.fromCharCode(char.charCodeAt(0) + y)).join('');
+  if (x === 'bang') return [...x].map((char) => char.charCodeAt(0) - y).reduce((a, b) => a + b, 0);
 
-  while (index < digits.length - 1) {
-    swappedDigit = digits.splice(index, 1);
-    digits.push(swappedDigit[0]);
-    maxRotatedNum = Math.max(maxRotatedNum, +digits.join(''));
-    index++;
-  }
-
-  return maxRotatedNum;
+  if (x === 'dog') return 'pass out from excitement y times'.repeat(y);
 };
 
-maxRot(56789);
+console.log(present('goodpresent', 9));
