@@ -9,5 +9,3 @@ const comes_after = (str, l) => {
 
   return res;
 };
-
-console.log(comes_after('Free coffee for all office workers!', 'F'));
