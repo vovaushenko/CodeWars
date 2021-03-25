@@ -14,5 +14,3 @@ const isHappy = (n) => {
 
   return true;
 };
-
-console.log(isHappy(3));
