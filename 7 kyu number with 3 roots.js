@@ -7,5 +7,3 @@ const perfectRoots = (n) => {
 
   return n % 1 === 0;
 };
-
-console.log(perfectRoots(6561));
