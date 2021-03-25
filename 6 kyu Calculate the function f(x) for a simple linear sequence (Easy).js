@@ -16,5 +16,3 @@ const getFunction = (sequence) => {
     sequence[0] ? ` ${sequence[0] > 0 ? '+' : '-'} ${Math.abs(sequence[0])}` : ''
   }`;
 };
-
-console.log(getFunction([3, 3, 3, 3, 3]));
