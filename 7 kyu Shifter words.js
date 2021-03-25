@@ -8,5 +8,3 @@ const shifter = (sentence) => {
 
   return [...new Set(allShifterWords)].length;
 };
-
-console.log(shifter(''));
