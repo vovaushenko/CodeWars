@@ -15,5 +15,3 @@ const number9 = (n) => {
 
   return count;
 };
-
-number9(100);
