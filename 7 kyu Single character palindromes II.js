@@ -18,5 +18,3 @@ const solve = (str) => {
 
   return false;
 };
-
-console.log(solve('abba'));
