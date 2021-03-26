@@ -16,5 +16,3 @@ const shiftedDiff = (first, second) => {
 
 const betterAlternative = (first, second) =>
   first.length === second.length ? (second + second).indexOf(first) : -1;
-
-console.log(betterAlternative('coffee', 'eecoff'));
