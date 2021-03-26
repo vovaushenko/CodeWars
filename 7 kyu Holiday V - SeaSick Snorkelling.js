@@ -12,5 +12,3 @@ const seaSick = (x) => {
 
   return counter / x.length > 0.2 ? 'Throw Up' : 'No Problem';
 };
-
-console.log(seaSick('~'));
