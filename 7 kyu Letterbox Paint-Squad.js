@@ -17,5 +17,3 @@ const paintLetterboxes = (start, end) => {
 
   return result;
 };
-
-console.log(paintLetterboxes(125, 132));
