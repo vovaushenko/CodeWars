@@ -1,20 +1,50 @@
-// https://www.codewars.com/kata/5596f6e9529e9ab6fb000014
+// https://www.codewars.com/kata/52742f58faf5485cae000b9a
+// 4 kyu
 
-const shiftedDiff = (first, second) => {
-  let count = 0;
-  const chars = [...first];
-  let tempChar;
-  while (count < first.length) {
-    if (chars.join('') === second) return count;
-    tempChar = chars.pop();
-    chars.unshift(tempChar);
-    count++;
+const formatDuration = (seconds) => {
+  let [years, days, hours, minutes] = [0, 0, 0, 0];
+  // while (seconds - 31622400 >= 0) {
+  //   seconds -= 31622400;
+  //   years++;
+  // }
+  years = Math.trunc(seconds / 31622400);
+  seconds = seconds % 31622400;
+  console.log(seconds);
+
+  while (seconds - 86400 > 0) {
+    seconds -= 86400;
+    days++;
   }
 
-  return -1;
+  while (seconds - 3600 >= 0) {
+    seconds -= 3600;
+    hours++;
+  }
+  while (seconds - 60 >= 0) {
+    seconds -= 60;
+    minutes++;
+  }
+
+  console.log(years, days, hours, minutes);
+
+  // let humanReadableHours = hours ? (hours > 1 ? `${hours} hours` : `${hours} hour`) : '';
+  // let humanReadableMinutes = minutes
+  //   ? minutes > 1
+  //     ? `${minutes} minutes`
+  //     : `${minutes} minute`
+  //   : '';
+  // let humanReadableSeconds = seconds
+  //   ? seconds > 1
+  //     ? `${seconds} seconds`
+  //     : `${seconds} second`
+  //   : '';
+
+  // const result = [humanReadableHours, humanReadableMinutes, humanReadableSeconds].filter((c) => c);
+
+  // if (result.length === 1) return result.join(' ');
+  // if (result.length === 2) return result.join(' and ');
+
+  // return `${humanReadableHours}, ${humanReadableMinutes} and ${humanReadableSeconds}`;
 };
 
-const betterAlternative = (first, second) =>
-  first.length === second.length ? (second + second).indexOf(first) : -1;
-
-console.log(betterAlternative('coffee', 'eecoff'));
+console.log(formatDuration(205851834));
