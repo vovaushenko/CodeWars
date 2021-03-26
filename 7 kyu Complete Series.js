@@ -4,5 +4,3 @@ const completeSeries = (arr) =>
   [...new Set(arr)].length !== arr.length
     ? [0]
     : Array.from({ length: Math.max(...arr) + 1 }, (_, id) => id);
-
-console.log(completeSeries([3, 4, 5]));
