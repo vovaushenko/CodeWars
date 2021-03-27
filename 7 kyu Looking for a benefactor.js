@@ -8,5 +8,3 @@ const newAvg = (arr, goal) => {
 
   return requiredDonation;
 };
-
-console.log(newAvg([14, 30, 5, 7, 9, 11, 15], 2));
