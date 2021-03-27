@@ -22,5 +22,3 @@ const powers = (n) => {
 
   return members;
 };
-
-console.log(powers(1));
