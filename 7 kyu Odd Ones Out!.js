@@ -10,5 +10,3 @@ const oddOnesOut = (arr) => {
 
   return result;
 };
-
-oddOnesOut([1, 2, 3, 1, 3, 3]);
