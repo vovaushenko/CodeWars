@@ -16,5 +16,3 @@ const numJewelsInStones = (jewels: string, stones: string): number => {
 
   return jewelsCount;
 };
-
-numJewelsInStones('z', 'ZZ');
