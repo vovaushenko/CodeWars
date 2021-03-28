@@ -19,5 +19,3 @@ const palindrome = (num) => {
 
   return palindromeStash.length ? palindromeStash.sort((a, b) => a - b) : 'No palindromes found';
 };
-
-console.log(palindrome(10015885));
