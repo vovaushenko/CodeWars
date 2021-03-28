@@ -4,5 +4,3 @@ const removeDuplication = (arr) =>
   Object.entries(arr.reduce((h, c) => ((h[c] = h[c] + 1 || 1), h), {}))
     .filter(([_, frequency]) => frequency === 1)
     .map(([num, _]) => +num);
-
-console.log(removeDuplication([1, 2, 3, 2, 4, 6, 2, 6, 7]));
