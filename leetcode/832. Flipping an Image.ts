@@ -11,12 +11,3 @@
 
 const flipAndInvertImage = (image: number[][]): number[][] =>
   image.map((row) => row.map((bit) => (bit ? 0 : 1)).reverse());
-
-console.log(
-  flipAndInvertImage([
-    [1, 1, 0, 0],
-    [1, 0, 0, 1],
-    [0, 1, 1, 1],
-    [1, 0, 1, 0],
-  ])
-);
