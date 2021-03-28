@@ -36,5 +36,3 @@ const isValidWord = (word: string): boolean => {
 
   return true;
 };
-
-console.log(findWords(['adsdf', 'sfd']));
