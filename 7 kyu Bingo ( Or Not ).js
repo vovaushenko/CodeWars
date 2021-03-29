@@ -5,8 +5,3 @@ const bingo = (a) =>
     .length === 5
     ? 'WIN'
     : 'LOSE';
-
-console.log('A'.charCodeAt(0));
-console.log('B'.charCodeAt(0));
-
-console.log(bingo([21, 13, 2, 7, 5, 14, 7, 15, 9, 10]));
