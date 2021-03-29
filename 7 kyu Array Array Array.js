@@ -11,5 +11,3 @@ const explode = (x) => {
   }
   return res;
 };
-
-explode(['a', 'b']);
