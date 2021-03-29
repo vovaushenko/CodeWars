@@ -13,5 +13,3 @@ const pattern = (n) => {
 
   return result.join('\n');
 };
-
-pattern(5);
