@@ -4,5 +4,3 @@ const isAllPossibilities = (x) =>
   x.length
     ? Array.from({ length: x.length }, (_, id) => id).every((num) => x.includes(num))
     : 'false';
-
-console.log(isAllPossibilities([1, 2, 3, 4]));
