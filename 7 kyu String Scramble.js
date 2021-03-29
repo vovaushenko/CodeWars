@@ -8,5 +8,3 @@ const scramble = (str, arr) => {
 
   return res.join('');
 };
-
-console.log(scramble('abcd', [0, 3, 1, 2]));
