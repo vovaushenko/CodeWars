@@ -10,5 +10,3 @@ const sortByBits = (arr: number[]): number[] =>
   arr.sort((a, b) =>
     numberOfOnes(a) !== numberOfOnes(b) ? numberOfOnes(a) - numberOfOnes(b) : a - b
   );
-
-console.log(sortByBits([1024, 512, 256, 128, 64, 32, 16, 8, 4, 2, 1]));
