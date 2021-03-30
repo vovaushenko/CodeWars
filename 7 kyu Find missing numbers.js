@@ -6,5 +6,3 @@ const findMissingNumbers = (arr) => {
 
   return referrence.filter((num) => !arr.includes(num));
 };
-
-console.log(findMissingNumbers([-3, -2, 1, 5]));
