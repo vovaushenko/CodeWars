@@ -10,5 +10,3 @@ const getLastDigit = (index) => {
 
   return +lastDigit[lastDigit.length - 1];
 };
-
-console.log(getLastDigit(20001));
