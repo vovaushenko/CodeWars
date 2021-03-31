@@ -1,19 +1,3 @@
-// https://www.codewars.com/kata/the-office-ii-boredom-score
-
-const obj = {
-  tim: 'change',
-  jim: 'accounts',
-  randy: 'canteen',
-  sandy: 'change',
-  andy: 'change',
-  katie: 'IS',
-  laura: 'change',
-  saajid: 'IS',
-  alex: 'trading',
-  john: 'accounts',
-  mr: 'finance',
-};
-
 const BOREDOM_ASSESMENTS = {
   accounts: 1,
   finance: 2,
@@ -36,5 +20,3 @@ const boredom = (staff) => {
   if (totalBoredom > 100) return 'party time!!';
   return 'i can handle this';
 };
-
-console.log(boredom(obj));
