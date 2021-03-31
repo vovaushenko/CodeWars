@@ -24,5 +24,3 @@ const arrayRankTransform = (arr: number[]): number[] => {
 
   return result;
 };
-
-console.log(arrayRankTransform([-10, 33, 20]));
