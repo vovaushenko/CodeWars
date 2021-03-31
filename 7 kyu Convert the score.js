@@ -18,5 +18,3 @@ const scoreboard = (str) =>
     .split(' ')
     .filter((word) => word in NUMBERS)
     .map((number) => NUMBERS[number]);
-
-console.log(scoreboard('Arsenal just conceded another goal, two nil'));
