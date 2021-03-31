@@ -14,11 +14,3 @@ const strCount = (obj) => {
 
   return counter;
 };
-
-strCount({
-  first: '1',
-  second: '2',
-  third: false,
-  fourth: ['anytime', 2, 3, 4],
-  fifth: null,
-});
