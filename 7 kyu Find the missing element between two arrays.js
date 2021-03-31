@@ -11,5 +11,3 @@ const findMissing = (a1, a2) => {
 };
 
 const generateHashMap = (arr) => arr.reduce((h, c) => ((h[c] = h[c] + 1 || 1), h), {});
-
-console.log(findMissing([6, 1, 3, 6, 8, 2], [3, 6, 6, 1, 2]));
