@@ -30,5 +30,3 @@ const numbersOfLetters = (num) => {
 
   return path;
 };
-
-console.log(numbersOfLetters(999));
