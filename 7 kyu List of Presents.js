@@ -13,5 +13,3 @@ const howManyGifts = (maxBudget, gifts) => {
 
   return counter;
 };
-
-howManyGifts(20, [13, 2, 4, 6, 1]);
