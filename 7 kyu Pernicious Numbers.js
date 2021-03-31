@@ -19,5 +19,3 @@ const pernicious = (n) => {
 
   return perniciousNumbers.length ? perniciousNumbers : 'No pernicious numbers';
 };
-
-console.log(pernicious(5));
