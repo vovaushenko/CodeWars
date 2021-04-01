@@ -19,5 +19,3 @@ const isConsecutive = (arr) => {
   }
   return true;
 };
-
-console.log(checkRoot('20,21,22,24'));
