@@ -12,5 +12,3 @@ const maxProduct = (arr) => {
 
   return largest * secondLargest;
 };
-
-console.log(maxProduct([33, 231, 454, 11, 9, 99, 57]));
