@@ -7,5 +7,3 @@ const isPerfect = (n) =>
 
 const extraPerfect = (n) =>
   Array.from({ length: n }, (_, id) => id + 1).filter((num) => isPerfect(num) || num === 1);
-
-console.log(extraPerfect(7));
