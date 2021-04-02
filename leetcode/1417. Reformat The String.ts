@@ -22,5 +22,3 @@ const reformat = (s: string): string => {
 
   return reformattedChars.join('');
 };
-
-console.log(reformat('ab123'));
