@@ -12,5 +12,3 @@ const scrollingText = (str) => {
 
   return rotations;
 };
-
-console.log(scrollingText('CODEWARS'));
