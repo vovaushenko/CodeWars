@@ -1,19 +1,9 @@
-// https://www.codewars.com/kata/5f631ed489e0e101a70c70a0
-
-const ìsZeroBalanced = (n) => {
-  if (n.length % 2 !== 0) return false;
-  if (n.reduce((a, b) => a + b, 0)) return false;
-
-  const sorted = [...n].sort((a, b) => a - b);
-
-  let [i, j] = [0, sorted.length - 1];
-  while (i < j) {
-    if (sorted[i] + sorted[j]) return false;
-    i++;
-    j--;
-  }
-
-  return true;
+const exchangeWith = (a, b) => {
+  let temp = [...a];
+  a.length = 0;
+  for (let i = b.length - 1; i >= 0; i--) a.push(b[i]);
+  b.length = 0;
+  for (let j = temp.length - 1; j >= 0; j--) b.push(temp[j]);
 };
 
-console.log(ìsZeroBalanced([-1, 1, -1, 2, 1, -1, 1, -2]));
+console.log(exchangeWith([1, 2], ['a', 'b']));
