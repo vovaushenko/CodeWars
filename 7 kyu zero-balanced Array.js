@@ -15,5 +15,3 @@ const ìsZeroBalanced = (n) => {
 
   return true;
 };
-
-console.log(ìsZeroBalanced([-1, 1, -1, 2, 1, -1, 1, -2]));
