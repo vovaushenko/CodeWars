@@ -11,5 +11,3 @@ const diff = (a, b) => {
 
   return difference.sort();
 };
-
-diff(['a', 'a', 't', 'e', 'f', 'i', 'j'], ['t', 'g', 'g', 'i', 'k', 'f']);
