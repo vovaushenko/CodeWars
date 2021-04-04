@@ -7,5 +7,3 @@ const swapHeadAndTail = (arr) => {
 
   return arr.length % 2 ? [...tail, arr[mid], ...head] : [...tail, ...head];
 };
-
-console.log(swapHeadAndTail([1, 2, 3, 4, 5]));
