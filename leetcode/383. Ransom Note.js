@@ -16,5 +16,3 @@ const canConstruct = (ransomNote, magazine) => {
 };
 
 const generateHashMap = (str) => [...str].reduce((h, c) => ((h[c] = h[c] + 1 || 1), h), {});
-
-console.log(canConstruct('aaa', 'abaabda'));
