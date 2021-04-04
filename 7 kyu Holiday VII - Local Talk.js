@@ -1,5 +1,3 @@
-// 3
-
 // https://www.codewars.com/kata/57e92812750fcc051800004d
 
 const pak = (str) => {
@@ -11,5 +9,3 @@ const pak = (str) => {
   }
   return res.join(' ');
 };
-
-console.log(pak('  '));
