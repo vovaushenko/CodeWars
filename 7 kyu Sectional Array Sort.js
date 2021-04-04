@@ -8,5 +8,3 @@ const sectSort = (arr, start, len) =>
         ...arr.slice(start + len),
       ]
     : [...arr.slice(0, start), ...arr.slice(start).sort((a, b) => a - b)];
-
-console.log(sectSort([9, 7, 4, 2, 5, 3, 1, 8, 6], 2, 5));
