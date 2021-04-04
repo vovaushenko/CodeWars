@@ -6,5 +6,3 @@ const modifyMultiply = (str, loc, num) => {
 
   return Array.from({ length: num }, () => word).join('-');
 };
-
-console.log(modifyMultiply('This is a string', 3, 5));
