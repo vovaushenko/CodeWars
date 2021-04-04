@@ -13,5 +13,3 @@ const productExceptSelf = (nums) => {
     return nums.map((num) => totalProduct / num);
   }
 };
-
-console.log(productExceptSelf([1, 2, 3, 4]));
