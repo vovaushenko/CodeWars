@@ -7,6 +7,3 @@ const median = (arr) => {
 
   return sorted.length % 2 === 0 ? (sorted[midId - 1] + sorted[midId]) / 2 : sorted[midId];
 };
-// arr.length ? arr.reduce((a, b) => a + b, 0) / arr.length : false;
-
-console.log(median([10, 29, 23, 94, 76, 96, 5, 85, 4, 33, 47, 41, 87]));
