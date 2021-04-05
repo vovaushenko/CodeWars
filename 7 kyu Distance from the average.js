@@ -4,5 +4,3 @@ const distancesFromAverage = (arr) => {
   const average = arr.reduce((a, b) => a + b, 0) / arr.length;
   return arr.map((num) => +(average - num).toFixed(2));
 };
-
-console.log(distancesFromAverage([55, 95, 62, 36, 48]));
