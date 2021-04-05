@@ -16,5 +16,3 @@ const schoolSelection = (arr) =>
       '4th grade': 0,
     }
   );
-
-console.log(schoolSelection([5, 7, 4, 9, 10, 5, 15, 9, 5]));
