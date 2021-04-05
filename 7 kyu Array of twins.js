@@ -4,5 +4,3 @@ const twins = (arr) =>
   Object.values(arr.reduce((h, c) => ((h[c] = h[c] + 1 || 1), h), {})).every(
     (frequency) => frequency === 2
   );
-
-console.log(twins([1, 2, 3, 1, 2, 3]));
