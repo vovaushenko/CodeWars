@@ -1,17 +1,21 @@
-// 238. Product of Array Except Self
-// Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].
+// qSort
 
-// The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.
+const randomArray = Array.from({ length: 25 }, () => ~~(Math.random() * 15));
 
-const productExceptSelf = (nums) => {
-  const noZeroes = nums.filter((n) => n);
-  if (nums.length - noZeroes.length > 1) return Array.from({ length: nums.length }, () => 0);
-  const totalProduct = noZeroes.reduce((a, b) => a * b, 1);
-  if (nums.length - noZeroes.length === 1) {
-    return nums.map((num) => (num ? 0 : totalProduct));
-  } else {
-    return nums.map((num) => totalProduct / num);
+const qSort = (arr) => {
+  if (arr.length < 2) return arr;
+  let index = ~~(Math.random() * arr.length);
+  let pivot = arr[index];
+  let less = [];
+  let greater = [];
+  r;
+
+  for (let i = 0; i < arr.length; i++) {
+    if (i !== index) {
+      arr[i] <= pivot ? less.push(arr[i]) : greater.push(arr[i]);
+    }
   }
-};
 
-console.log(productExceptSelf([1, 2, 3, 4]));
+  return [...qSort(less), pivot, ...qSort(greater)];
+};
+console.log(qSort(randomArray));
