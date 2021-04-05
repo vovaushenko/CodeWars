@@ -29,5 +29,3 @@ const largeGroupPositions = (s: string): number[][] => {
 
   return res;
 };
-
-largeGroupPositions('abc');
