@@ -1,22 +1,23 @@
-// https://www.codewars.com/kata/5a1cb5406975987dd9000028
+// https://www.codewars.com/kata/5a6225e5d8e145b540000127
 
-const sortArray = (arr) => {
-  const sortedEven = arr.filter((num) => num % 2 === 0).sort((a, b) => b - a);
-  const sortedOdd = arr.filter((num) => num % 2).sort((a, b) => a - b);
-
-  const res = [];
-  let [i, j] = [0, 0];
-
-  for (let num of arr) {
-    if (num % 2 === 0) {
-      res.push(sortedEven[i]);
-      i++;
-    } else {
-      res.push(sortedOdd[j]);
-      j++;
+const generateHashMap = (arr) => arr.reduce((h, c) => ((h[c] = h[c] + 1 || 1), h), {});
+const common = (a, b, c) => {
+  const h1 = generateHashMap(a);
+  const h2 = generateHashMap(b);
+  const h3 = generateHashMap(c);
+  let sum = 0;
+  for (let num of a) {
+    if (
+      num in h2 &&
+      num in h3 &&
+      h1[num] === h2[num] &&
+      h2[num] === h3[num] &&
+      h1[nun] === h3[num]
+    ) {
+      sum += num;
     }
   }
-  return res;
+  return sum;
 };
 
-sortArray([5, 3, 2, 8, 1, 4]);
+console.log(common([1, 2, 3], [5, 3, 2], [7, 3, 2]));

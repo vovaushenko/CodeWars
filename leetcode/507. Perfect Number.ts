@@ -12,5 +12,3 @@ const checkPerfectNumber = (num: number): boolean => {
 
   return sumOfDivisors === num;
 };
-
-console.log(checkPerfectNumber(2));
