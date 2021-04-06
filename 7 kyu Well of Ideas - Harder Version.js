@@ -9,11 +9,3 @@ const well = (x) => {
 
   return numberOfGoodIdeas > 2 ? 'I smell a series!' : 'Publish!';
 };
-
-console.log(
-  well([
-    ['gOOd', 'bad', 'BAD', 'bad', 'bad'],
-    ['bad', 'bAd', 'bad'],
-    ['GOOD', 'bad', 'bad', 'bAd'],
-  ])
-);
