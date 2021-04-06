@@ -11,4 +11,3 @@ const countOdds = (low: number, high: number): number => {
 
   return oddsCounter;
 };
-console.log(countOdds(3, 7));
