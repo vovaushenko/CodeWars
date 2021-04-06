@@ -16,5 +16,3 @@ const realSize = (arrays) => {
 
   return values.length;
 };
-
-realSize([[[5], 3], 0, 2, [], [4, [5, 6]]]);
