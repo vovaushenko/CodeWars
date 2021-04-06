@@ -13,5 +13,3 @@ const group = (arr) => {
 
   return res;
 };
-
-group([3, 2, 6, 2, 1, 3]);
