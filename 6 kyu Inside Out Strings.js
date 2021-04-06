@@ -21,5 +21,3 @@ const insideOut = (sentence) =>
     .split(' ')
     .map((word) => turnWordInsideOut(word))
     .join(' ');
-
-console.log(turnWordInsideOut('semynak'));
