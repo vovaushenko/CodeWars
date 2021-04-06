@@ -18,5 +18,3 @@ const sortArray = (arr) => {
   }
   return res;
 };
-
-sortArray([5, 3, 2, 8, 1, 4]);
