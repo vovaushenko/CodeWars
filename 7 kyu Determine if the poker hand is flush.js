@@ -3,5 +3,3 @@
 const isFlush = (cards) =>
   [...new Set(cards.map((card) => card.replace(/[0-9]/g, '')[1] || card.replace(/[0-9]/g, '')[0]))]
     .length === 1;
-
-console.log(isFlush(['AS', '3S', '9S', 'KS', '4S']));
