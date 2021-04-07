@@ -6,5 +6,3 @@ const averageLength = (arr) => {
   );
   return arr.map((w) => (w.length !== averageLength ? w[0].repeat(averageLength) : w));
 };
-
-console.log(averageLength(['aa', 'bbb', 'cccc']));
