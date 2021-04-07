@@ -17,5 +17,3 @@ const findLHS = (nums) => {
 
   return longest;
 };
-
-findLHS([1, 1, 1, 1]);
