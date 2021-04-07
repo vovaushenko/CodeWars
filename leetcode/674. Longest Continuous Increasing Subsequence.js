@@ -30,5 +30,3 @@ const findLengthOfLCIS = (nums) => {
 
   return maxLength;
 };
-
-console.log(findLengthOfLCIS([1, 2, 3, 4, 5]));
