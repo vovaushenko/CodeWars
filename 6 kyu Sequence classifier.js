@@ -19,5 +19,3 @@ const sequenceClassifier = (arr) => {
   if (negative.length && zero.length && !positive.length) return 4;
   return 5;
 };
-
-console.log(sequenceClassifier([8, 8, 8, 8, 8, 8]));
