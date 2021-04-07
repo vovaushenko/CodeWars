@@ -1,17 +1,16 @@
-// 1422. Maximum Score After Splitting a String
-// Given a string s of zeros and ones, return the maximum score after splitting the string into two non-empty substrings (i.e. left substring and right substring).
+const mirror = (obj) =>
+  Object.keys(obj).reduce(
+    (mirrored, k) => ((mirrored[k] = [...k].reverse().join('')), mirrored),
+    {}
+  );
 
-// The score after splitting a string is the number of zeros in the left substring plus the number of ones in the right substring.
-const maxScore = (s) => {
-  let score = 0;
-  let leftScore, rightScore;
-  for (let i = 1; i < s.length; i++) {
-    leftScore = [...s.slice(0, i)].filter((num) => num === '0').length;
-    rightScore = [...s.slice(i)].filter((num) => num === '1').length;
+console.log(mirror({ abc: 1, bcz: 2 }));
 
-    score = Math.max(score, leftScore + rightScore);
-  }
-  return score;
-};
+// {
+//   const mirrorCopy = {};
+//   for (let key in obj) {
+//     mirrorCopy[key] = [...key].reverse().join('');
+//   }
 
-maxScore('1111');
+//   return mirrorCopy;
+// };
