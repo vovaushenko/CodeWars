@@ -1,14 +1,15 @@
-// 1523. Count Odd Numbers in an Interval Range
+// 46. Permutations
 
-// Given two non-negative integers low and high. Return the count of odd numbers between low and high (inclusive).
+// Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
 
-const countOdds = (low: number, high: number): number => {
-  let oddsCounter = 0;
-  while (low <= high) {
-    if (low % 2 !== 0) oddsCounter++;
-    low++;
+function permute(nums: number[]): number[][] {
+  const map: any = {};
+  const permutations = [];
+  let tempArr = [];
+
+  for (let i = 0; i < nums.length; i++) {
+    for (let j = 0; j < nums.length; j++) {}
   }
 
-  return oddsCounter;
-};
-console.log(countOdds(3, 7));
+  return [[1]];
+}

@@ -18,10 +18,3 @@ const whosOnline = (friends) =>
     }
     return output;
   }, {});
-
-console.log(
-  whosOnline([
-    { username: 'Lucy', status: 'offline', lastActivity: 22 },
-    { username: 'Bob', status: 'online', lastActivity: 11 },
-  ])
-);
