@@ -10,5 +10,3 @@ const swapTwo = (arr, a, b) => {
 
   return copy;
 };
-
-swapTwo([1, 2, 3, 4], 2, 4);
