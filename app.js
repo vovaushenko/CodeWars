@@ -1,14 +1,17 @@
-// https://www.codewars.com/kata/5a3f4eace1ce0eeda600003d
+// 1422. Maximum Score After Splitting a String
+// Given a string s of zeros and ones, return the maximum score after splitting the string into two non-empty substrings (i.e. left substring and right substring).
 
-const swap = (a, id1, id2) => ([a[id1], a[id2]] = [a[id2], a[id1]]);
+// The score after splitting a string is the number of zeros in the left substring plus the number of ones in the right substring.
+const maxScore = (s) => {
+  let score = 0;
+  let leftScore, rightScore;
+  for (let i = 1; i < s.length; i++) {
+    leftScore = [...s.slice(0, i)].filter((num) => num === '0').length;
+    rightScore = [...s.slice(i)].filter((num) => num === '1').length;
 
-const swapTwo = (arr, a, b) => {
-  let copy = [...arr];
-  const firstId = arr.indexOf(a);
-  const secondId = arr.lastIndexOf(b);
-  swap(copy, firstId, secondId);
-
-  return copy;
+    score = Math.max(score, leftScore + rightScore);
+  }
+  return score;
 };
 
-swapTwo([1, 2, 3, 4], 2, 4);
+maxScore('1111');
