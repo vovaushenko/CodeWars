@@ -5,5 +5,3 @@ const numberOfPairs = (gloves) =>
     (glovesCount, c) => glovesCount + Math.trunc(c / 2),
     0
   );
-
-numberOfPairs(['red', 'green', 'red', 'blue', 'blue']);
