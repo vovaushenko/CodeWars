@@ -25,5 +25,3 @@ const compoundMatch = (arr, word) => {
 
   return [firstPart, secondPart, [lookup[secondPart], lookup[firstPart]]];
 };
-
-console.log(compoundMatch(['super', 'bow', 'bowl', 'tar', 'get', 'book', 'let'], 'superbowl'));
