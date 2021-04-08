@@ -13,5 +13,3 @@ const findDisappearedNumbers = (nums: number[]): number[] => {
 
   return missingNumbers;
 };
-
-console.log(findDisappearedNumbers([1, 1]));
