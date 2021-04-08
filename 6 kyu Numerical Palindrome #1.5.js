@@ -12,5 +12,3 @@ const palindrome = (start, s) => {
   }
   return res;
 };
-
-console.log(palindrome(6, 4));
