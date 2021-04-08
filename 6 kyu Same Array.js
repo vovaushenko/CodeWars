@@ -6,16 +6,3 @@ const same = (a1, a2) => {
   const flat2 = a2.reduce((fl, subarr) => fl.concat(...subarr), []).sort((a, b) => a - b);
   return JSON.stringify(flat1) === JSON.stringify(flat2);
 };
-
-console.log(
-  same(
-    [
-      [2, 1],
-      [3, 6],
-    ],
-    [
-      [6, 3],
-      [5, 2],
-    ]
-  )
-);
