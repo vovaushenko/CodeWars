@@ -24,6 +24,3 @@ class GroupByDifference {
     return res.sort((a, b) => a - b);
   }
 }
-
-let diff = new GroupByDifference([5, 32, 5, 1, 31, 70, 30, 8]);
-console.log(diff.find(3));
