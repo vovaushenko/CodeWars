@@ -1,6 +1,6 @@
-// https://www.codewars.com/kata/56b22765e1007b79f2000079
+// https://www.codewars.com/kata/58356a94f8358058f30004b5
 
-const isNarcissistic = (n, digits = [...(n + '')].map(Number)) =>
-  digits.reduce((a, b) => a + b ** digits.length, 0) === n;
+const flyBy = (lamps, drone) =>
+  'o'.repeat(drone.length < lamps.length ? drone.length : lamps.length) + lamps.slice(drone.length);
 
-console.log(isNarcissistic(153));
+console.log(flyBy('xxxxxx', '=====T'));
