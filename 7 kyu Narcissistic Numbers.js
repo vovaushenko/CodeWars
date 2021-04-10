@@ -2,5 +2,3 @@
 
 const isNarcissistic = (n, digits = [...(n + '')].map(Number)) =>
   digits.reduce((a, b) => a + b ** digits.length, 0) === n;
-
-console.log(isNarcissistic(153));
