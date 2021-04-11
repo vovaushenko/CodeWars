@@ -26,5 +26,3 @@ const tourney = (arr) => {
 
   return rounds;
 };
-
-console.log(tourney([9, 5, 4, 7, 6, 3, 8]));
