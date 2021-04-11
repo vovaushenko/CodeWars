@@ -11,5 +11,3 @@ const areEqual = (v1, v2) => {
 
   return JSON.stringify(Object.entries(v1).sort()) === JSON.stringify(Object.entries(v2).sort());
 };
-
-console.log(areEqual([{ a: 3 }, { b: 4 }], [({ a: 4 }, { b: 3 })]));
