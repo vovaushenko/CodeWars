@@ -11,5 +11,3 @@ const rotate = (str) => {
 
   return rotations;
 };
-
-rotate('Hello');
