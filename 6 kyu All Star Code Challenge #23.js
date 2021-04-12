@@ -15,24 +15,3 @@ const scoring = (arr) =>
     })
     .sort((player1, player2) => player2.score - player1.score)
     .map(({ name }) => name);
-
-scoring([
-  {
-    name: 'JuanPablo',
-    normKill: 5,
-    assist: 12,
-    damage: 3200,
-    healing: 0,
-    streak: 4,
-    envKill: 1,
-  },
-  {
-    name: 'ProfX',
-    normKill: 2,
-    assist: 14,
-    damage: 600,
-    healing: 1500,
-    streak: 0,
-    envKill: 0,
-  },
-]);
