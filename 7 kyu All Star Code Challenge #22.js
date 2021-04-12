@@ -14,5 +14,3 @@ const toTime = (seconds) => {
 
   return `${hours} hour(s) and ${minutes} minute(s)`;
 };
-
-console.log(toTime(323500));
