@@ -6,5 +6,3 @@ const convertCF = (num, scale = 'c') => {
 
   throw new Error('hey');
 };
-
-console.log(convertCF(32, 'c'));
