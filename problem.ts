@@ -1,30 +1,16 @@
-// 658. Find K Closest Elements
+// 120. Triangle
+// Given a triangle array, return the minimum path sum from top to bottom.
 
-function findClosestElements(arr: number[], k: number, x: number): number[] {
-  const differences = arr.map((num) => Math.abs(x - num));
+// For each step, you may move to an adjacent number of the row below. More formally, if you are on index i on the current row, you may move to either index i or index i + 1 on the next row.
 
-  let minId = differences.indexOf(Math.min(...differences));
-  console.log(minId);
-
-  let closest = [arr[minId]];
-  let [i, j] = [minId - 1, minId + 1];
-  console.log(arr[i], arr[j]);
-
-  while (closest.length < k && i >= 0 && j <= arr.length) {
-    if (arr[i] !== undefined && arr[j] !== undefined && k - arr[i] <= arr[j] - k) {
-      closest.push(arr[i]);
-      i++;
-    } else {
-      closest.push(arr[j]);
-      console.log(j);
-      j++;
-    }
+const minimumTotal = (triangle: number[][]): number => {
+  for (let i = triangle.length - 2; i >= 0; i--) {
+    triangle[i] = triangle[i].map(
+      (num, id) => num + Math.min(triangle[i + 1][id], triangle[i + 1][id + 1])
+    );
   }
-  console.log(closest);
-  //   while (closest.length < k) {}
-  //   console.log('object');
-  //   return closest.sort((a, b) => a - b);
-  return [1];
-}
 
-console.log(findClosestElements([1, 2, 3, 4, 5], 4, 3));
+  return triangle[0][0];
+};
+
+console.log(minimumTotal([[1], [2, 3], [4, 5, 6]]));
