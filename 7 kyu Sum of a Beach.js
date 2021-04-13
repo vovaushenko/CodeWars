@@ -4,5 +4,3 @@ const sumOfABeach = (beach) =>
   !beach.toLowerCase().match(/sand|water|sun|fish/g)
     ? 0
     : beach.toLowerCase().match(/sand|water|sun|fish/g).length;
-
-console.log(sumOfABeach('GolDeNSanDyWateRyBeaChSuNN'));
