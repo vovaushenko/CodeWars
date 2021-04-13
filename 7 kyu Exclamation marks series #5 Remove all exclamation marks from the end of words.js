@@ -20,4 +20,6 @@ const removeExclamationsFromTheEnd = (str) => {
   return [...newStr].reverse().join('');
 };
 
-console.log(remove('!!!Hi !!hi!!! !hi'));
+// function remove(s){
+//     return s.replace(/\b!+/g, '');
+//   }
