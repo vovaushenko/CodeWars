@@ -2,14 +2,3 @@
 
 const killer = (suspectInfo, dead) =>
   Object.entries(suspectInfo).find(([_, saw]) => dead.every((person) => saw.includes(person)))[0];
-
-console.log(
-  killer(
-    {
-      James: ['Jacob', 'Bill', 'Lucas'],
-      Johnny: ['David', 'Kyle', 'Lucas'],
-      Peter: ['Lucy', 'Kyle'],
-    },
-    ['Lucas', 'Bill']
-  )
-);
