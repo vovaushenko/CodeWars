@@ -2,5 +2,3 @@
 
 const candies = (kids) =>
   kids.length > 1 ? kids.reduce((r, c) => r + Math.max(...kids) - c, 0) : -1;
-
-console.log(candies([]));
