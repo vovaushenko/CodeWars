@@ -19,5 +19,3 @@ const maxSumBetweenTwoNegatives = (arr) => {
 
   return maxSum;
 };
-
-maxSumBetweenTwoNegatives([4, -1, 6, -2, 3, 5, -7, 7]);
