@@ -25,5 +25,3 @@ const summaryRanges = (arr) => {
     int.length > 1 ? `${int[0]}->${int[int.length - 1]}` : int[0] + ''
   );
 };
-
-summaryRanges([0, 1, 2, 4, 5, 7, 8, 9, 10, 111]);
