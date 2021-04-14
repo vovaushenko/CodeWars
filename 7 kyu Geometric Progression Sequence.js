@@ -10,5 +10,3 @@ const geometricSequenceElements = (base, constant, len) => {
 
   return result.join(', ');
 };
-
-geometricSequenceElements(2, 3, 5);
