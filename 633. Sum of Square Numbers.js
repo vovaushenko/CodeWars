@@ -1,4 +1,5 @@
-// https://leetcode.com/problems/sum-of-square-numbers/
+// 633. Sum of Square Numbers
+// Given a non-negative integer c, decide whether there're two integers a and b such that a2 + b2 = c.
 
 const judgeSquareSum = (c) => {
   const original = c;
@@ -24,5 +25,3 @@ const judgeSquareSum = (c) => {
 
   return false;
 };
-
-console.log(judgeSquareSum(5));
