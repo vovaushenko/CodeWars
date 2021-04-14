@@ -22,5 +22,3 @@ const evenBinary = (str) => {
   }
   return sortedRes.join(' ');
 };
-
-console.log(evenBinary('101 111 100 001 010'));
