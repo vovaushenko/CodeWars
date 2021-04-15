@@ -8,5 +8,3 @@ function separateTypes(input) {
     return types;
   }, {});
 }
-
-console.log(separateTypes(['a', 1, 2, false, 'b']));
