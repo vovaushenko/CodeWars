@@ -9,5 +9,3 @@ const divisions = (n, divisor) => {
   console.log(count);
   return count;
 };
-
-divisions(9999, 3);
