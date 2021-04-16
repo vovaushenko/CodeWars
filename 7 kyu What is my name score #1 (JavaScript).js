@@ -12,5 +12,3 @@ const nameScore = (name) =>
     },
     { [name]: 0 }
   );
-
-console.log(nameScore('Mary Jane'));
