@@ -30,5 +30,3 @@ const weight = {
 const wordscore = (word) =>
   [...word].reduce((score, char) => score + weight[char], 0) * word.length +
   (word.length === 5 ? 50 : 0);
-
-console.log(wordscore('deceive'));
