@@ -14,5 +14,3 @@ const playerManager = (players) => {
 
   return sortedPlayers;
 };
-
-console.log(playerManager('John Doe, 8167238327, Jane Doe, 8163723827'));
