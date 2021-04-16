@@ -16,27 +16,3 @@ const whoseBicycle = (diary1, diary2, diary3) => {
 
   return `I need to buy a bicycle for my ${mostAcademicallySuccessful} son.`;
 };
-
-whoseBicycle(
-  {
-    algebra: 6,
-    history: 7,
-    physics: 8,
-    geography: 9,
-    chemistry: 10,
-  },
-  {
-    algebra: 6,
-    history: 7,
-    physics: 8,
-    geography: 9,
-    chemistry: 10,
-  },
-  {
-    algebra: 6,
-    history: 7,
-    physics: 8,
-    geography: 9,
-    chemistry: 10,
-  }
-);
