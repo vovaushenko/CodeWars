@@ -9,5 +9,3 @@ const combine = (...objects) => {
   }
   return merge;
 };
-
-combine({ a: 10, b: 20, c: 30 }, { a: 3, c: 6, d: 3 });
