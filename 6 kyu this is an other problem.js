@@ -13,13 +13,3 @@ class namedOne {
     }
   }
 }
-
-let nameOne = new namedOne('Naomi', 'Wang');
-
-console.log(nameOne);
-nameOne.firstName = 'Vasia';
-console.log(nameOne);
-console.log(nameOne.fullName);
-
-nameOne.fullName = 'Alex Pupkin';
-console.log(nameOne);
