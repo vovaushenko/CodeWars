@@ -1,24 +1,40 @@
-class OnceNamedOne {
-  constructor(firstName, lastName) {
-    this._firstName = firstName;
-    this._lastName = lastName;
-  }
+// https://www.codewars.com/kata/583d972b8bbc0402cf000121
 
-  get firstName() {
-    return this._firstName;
-  }
-  get lastName() {
-    return this._lastName;
-  }
+const askForMissingDetails = (list) =>
+  list
+    .filter((developer) => Object.values(developer).includes(null))
+    .map((developer) => ({
+      ...developer,
+      question: `Hi, could you please provide your ${
+        Object.entries(developer).find(([_, val]) => val === null)[0]
+      }.`,
+    }));
 
-  get fullName() {
-    return `${this.firstName} ${this.lastName}`;
-  }
-}
-
-let nameOne = new OnceNamedOne('Naomi', 'Wang');
-console.log(nameOne);
-
-nameOne.firstName = 'Vasia';
-console.log(nameOne);
-console.log(nameOne.fullName);
+console.log(
+  askForMissingDetails([
+    {
+      firstName: null,
+      lastName: 'I.',
+      country: 'Argentina',
+      continent: 'Americas',
+      age: 35,
+      language: 'Java',
+    },
+    {
+      firstName: 'Lukas',
+      lastName: 'X.',
+      country: 'Croatia',
+      continent: 'Europe',
+      age: 35,
+      language: null,
+    },
+    {
+      firstName: 'Madison',
+      lastName: 'U.',
+      country: 'United States',
+      continent: 'Americas',
+      age: 32,
+      language: 'Ruby',
+    },
+  ])
+);
