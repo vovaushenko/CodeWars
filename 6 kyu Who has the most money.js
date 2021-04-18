@@ -12,13 +12,3 @@ const mostMoney = (students) => {
 
   return wealthiestStudents.length === 1 ? wealthiestStudents[0].name : 'all';
 };
-
-console.log(
-  mostMoney([
-    { name: 'Andy', fives: 0, tens: 0, twenties: 2 },
-    { name: 'Stephen', fives: 0, tens: 4, twenties: 0 },
-    { name: 'Eric', fives: 8, tens: 1, twenties: 0 },
-    { name: 'David', fives: 2, tens: 0, twenties: 1 },
-    { name: 'Phil', fives: 0, tens: 2, twenties: 1 },
-  ])
-);
