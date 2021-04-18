@@ -11,4 +11,3 @@ const getCount = (words) =>
           { vowels: 0, consonants: 0 }
         )
     : { vowels: 0, consonants: 0 };
-console.log(getCount('To Kata or not111 to Kata'));
