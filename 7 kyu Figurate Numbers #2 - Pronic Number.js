@@ -11,5 +11,3 @@ const isPronic = (n) => {
 
   return tempPronic === n;
 };
-
-isPronic(21);
