@@ -13,4 +13,3 @@ Number.prototype.palindromeBelow = function (base) {
 
   return result;
 };
-(5).palindromeBelow(2);
