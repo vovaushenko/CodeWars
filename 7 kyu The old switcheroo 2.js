@@ -10,8 +10,3 @@ const encode = (str) =>
         : char
     )
     .join('');
-
-console.log('a'.charCodeAt(0));
-console.log('A'.charCodeAt(0));
-
-console.log(encode('ABCD'));
