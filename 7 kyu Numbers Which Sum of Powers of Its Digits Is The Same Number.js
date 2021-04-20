@@ -10,5 +10,3 @@ const eqSumPowdig = (hMax, exp) => {
   }
   return res;
 };
-
-console.log(eqSumPowdig(370, 3));
