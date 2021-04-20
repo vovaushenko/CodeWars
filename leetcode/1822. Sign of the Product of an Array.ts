@@ -7,4 +7,3 @@ const arraySign = (nums: number[]): number => {
 
   return product > 0 ? 1 : -1;
 };
-arraySign([-1, -2, -3, -4, 3, 2, 1]);
