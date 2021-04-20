@@ -12,5 +12,3 @@ const map = (arr, somefunc) => {
 
   return res;
 };
-
-console.log(map([8, 12, '5'], func));
