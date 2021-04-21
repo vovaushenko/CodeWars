@@ -15,5 +15,3 @@ const minimum = (a, x) => {
 
   return Math.min(count1, count2);
 };
-
-minimum(10, 6);
