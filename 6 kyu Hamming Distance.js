@@ -7,5 +7,3 @@ const hamming = (s1, s2) =>
     }
     return hammingDistance;
   }, 0);
-
-console.log(hamming('I like turtles', 'I like turkeys'));
