@@ -1,9 +1,3 @@
-// 290. Word Pattern
-
-// Given a pattern and a string s, find if s follows the same pattern.
-
-// Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.
-
 const wordPattern = (pattern, s) => {
   const words = s.split(' ');
 
@@ -22,5 +16,3 @@ const wordPattern = (pattern, s) => {
 
   return true;
 };
-
-console.log(wordPattern('aaa', 'aa aa aa aa'));
