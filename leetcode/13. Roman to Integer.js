@@ -23,5 +23,3 @@ const romanToInt = (s) => {
 
   return integers.reduce((a, b) => a + b, 0);
 };
-
-console.log(romanToInt('III'));
