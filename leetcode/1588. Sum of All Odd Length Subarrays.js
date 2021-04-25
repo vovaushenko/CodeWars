@@ -21,5 +21,3 @@ const sumOddLengthSubarrays = (arr) => {
   }
   return total;
 };
-
-sumOddLengthSubarrays([1, 4, 2, 5, 3]);
