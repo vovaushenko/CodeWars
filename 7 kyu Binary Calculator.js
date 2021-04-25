@@ -7,5 +7,3 @@ const operations = {
 };
 
 const calculate = (n1, n2, o) => operations[o](parseInt(n1, 2), parseInt(n2, 2)).toString(2);
-
-console.log(calculate(10, 10, 'add'));
