@@ -7,5 +7,3 @@ const twistedSum = (n) =>
     (tSum, num) => tSum + summarizeDigits(num),
     0
   );
-
-console.log(twistedSum(12));
