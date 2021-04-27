@@ -5,5 +5,3 @@ const remove = (str, what) =>
     (res, char) => (char in what && what[char] ? what[char]-- : (res += char), res),
     ''
   );
-
-console.log(remove('this is a string', { t: 1, i: 2 }));
