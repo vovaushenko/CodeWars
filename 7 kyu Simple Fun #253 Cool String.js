@@ -20,5 +20,3 @@ const coolString = (s) => {
 
   return true;
 };
-
-console.log(coolString('zaQwFdA'));
