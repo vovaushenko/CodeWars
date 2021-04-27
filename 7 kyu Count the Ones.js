@@ -9,8 +9,3 @@ const hammingWeight = (n) => {
   }
   return ones;
 };
-
-hammingWeight(2048);
-
-let number = 2048;
-console.log(number.toString(2));
