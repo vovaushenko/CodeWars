@@ -23,5 +23,3 @@ const findUnsortedSubarray = (nums) => {
 
   return finish - start + 1;
 };
-
-console.log(findUnsortedSubarray([2, 6, 4, 8, 10, 9, 15]));
