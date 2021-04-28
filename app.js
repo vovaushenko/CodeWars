@@ -1,9 +1,23 @@
-// https://www.codewars.com/kata/564ab935de55a747d7000040
+// https://www.codewars.com/kata/608673cf4b69590030fee8d6
 
-const remove = (str, what) =>
-  [...str].reduce(
-    (res, char) => (char in what && what[char] ? what[char]-- : (res += char), res),
-    ''
-  );
+const lyricsPrint = (lyric) =>
+  lyric.reduce((result, row) => {
+    for (let i = 0; i < row.length; i++) {
+      const currentWord = row[i];
+      let previousWords = row.filter((_, id) => id < i);
+      let tempWord = '';
 
-console.log(remove('this is a string', { t: 1, i: 2 }));
+      for (let char of currentWord) {
+        tempWord += char;
+        result.push([...previousWords, tempWord + '_']);
+      }
+    }
+    return result;
+  }, []);
+
+console.log(
+  lyricsPrint([
+    ['Hey', 'you'],
+    ['Good', 'luck'],
+  ])
+);
