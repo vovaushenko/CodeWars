@@ -25,5 +25,3 @@ const generateFibs = (limit) => {
   }
   return fibs;
 };
-
-console.log(zeckendorf(0));
