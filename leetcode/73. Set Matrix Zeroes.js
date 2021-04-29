@@ -1,5 +1,7 @@
 // 73. Set Matrix Zeroes
 
+// Given an m x n matrix. If an element is 0, set its entire row and column to 0. Do it in-place.
+
 const setZeroes = (matrix) => {
 	const nullify = {
 		col: [],
@@ -38,9 +40,3 @@ const setZeroes = (matrix) => {
 	}
 	return matrix;
 };
-
-setZeroes([
-	[0, 1, 2, 0],
-	[3, 4, 5, 2],
-	[1, 3, 1, 5],
-]);
