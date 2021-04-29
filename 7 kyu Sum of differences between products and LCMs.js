@@ -8,13 +8,3 @@ const sumDifferencesBetweenProductsAndLCMs = (pairs) =>
 		(res, [n1, n2]) => res + n1 * n2 - lcm(n1, n2),
 		0
 	);
-
-console.log(
-	sumDifferencesBetweenProductsAndLCMs([
-		[15, 18],
-		[4, 5],
-		[12, 60],
-	])
-);
-
-console.log(gcd(0, 0));
