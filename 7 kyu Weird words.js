@@ -10,5 +10,3 @@ const transformToNextLetter = (char) => {
 
 	return String.fromCharCode(char.charCodeAt(0) + 1);
 };
-
-console.log(nextLetter('My Name Is Zoo'));
