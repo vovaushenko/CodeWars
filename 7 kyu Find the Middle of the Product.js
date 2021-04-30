@@ -15,4 +15,3 @@ const findMiddle = (str) => {
 			: +productStr[mid];
 	}
 };
-console.log(findMiddle('asd.fasd.gasdfgsdfgh-sdfghsdfg/asdfga=sdfg'));
