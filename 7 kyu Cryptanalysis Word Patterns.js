@@ -13,5 +13,3 @@ const wordPattern = (word) => {
 
 	return [...word].map((char) => map[char]).join('.');
 };
-
-console.log(wordPattern('Hippopotomonstrosesquippedaliophobia'));
