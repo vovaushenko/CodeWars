@@ -23,5 +23,3 @@ const longest = (str) => {
 	substrings.sort((a, b) => b.length - a.length);
 	return substrings[0];
 };
-
-console.log(longest('asdfaaaabbbbcttavvfffffdf'));
