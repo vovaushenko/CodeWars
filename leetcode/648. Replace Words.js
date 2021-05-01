@@ -24,10 +24,3 @@ const replaceWords = (dictionary, sentence) => {
 
 	return words.join(' ');
 };
-
-console.log(
-	replaceWords(
-		['catt', 'cat', 'bat', 'rat'],
-		'the cattle was rattled by the battery'
-	)
-);
