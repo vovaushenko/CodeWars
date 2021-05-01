@@ -1,4 +1,7 @@
 // 1844. Replace All Digits with Characters
+// You are given a 0-indexed string s that has lowercase English letters in its even indices and digits in its odd indices.
+
+// There is a function shift(c, x), where c is a character and x is a digit, that returns the xth character after c.
 
 const replaceDigits = (s) => {
 	let [i, j] = [0, 1];
@@ -15,5 +18,3 @@ const replaceDigits = (s) => {
 	}
 	return res;
 };
-
-console.log(replaceDigits('a1b2c3d4e'));
