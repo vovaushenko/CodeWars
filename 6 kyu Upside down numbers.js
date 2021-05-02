@@ -16,7 +16,3 @@ const solve = (x, y) =>
 	Array.from({ length: y - x }, (_, id) => x + id).filter((num) =>
 		isUpsideDownNumber(num)
 	).length;
-
-console.log(solve(10, 100));
-
-console.log(isUpsideDownNumber(8));
