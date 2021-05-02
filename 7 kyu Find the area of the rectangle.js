@@ -6,5 +6,3 @@ const area = (d, l) => {
 
 	return s % 1 ? +s.toFixed(2) : s;
 };
-
-console.log(area(12, 5));
