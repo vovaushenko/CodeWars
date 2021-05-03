@@ -12,5 +12,3 @@ const runningSum = (nums) => {
 
 	return nums;
 };
-
-console.log(runningSum([3, 1, 2, 10, 1]));
