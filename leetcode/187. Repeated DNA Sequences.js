@@ -16,5 +16,3 @@ const findRepeatedDnaSequences = (s) => {
 
 	return [...new Set(repetedDNA)];
 };
-
-console.log(findRepeatedDnaSequences('AAAAAAAAAAAAA'));
