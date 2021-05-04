@@ -10,5 +10,3 @@ const areaCode = (text) => {
 
 	return text.slice(start + 1, end);
 };
-
-areaCode("The supplier's phone number is (555) 867-5309");
