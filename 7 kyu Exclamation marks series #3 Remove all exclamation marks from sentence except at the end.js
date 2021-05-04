@@ -15,5 +15,3 @@ const remove = (str, stopAddingExc = false) =>
 		}, [])
 		.reverse()
 		.join('');
-
-console.log(remove('!Hi!!!'));
