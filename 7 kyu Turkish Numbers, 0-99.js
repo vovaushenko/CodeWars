@@ -37,5 +37,3 @@ const getTurkishNumber = (num) => {
 	turkishNumber += num && ` ${TURKISH_NUMBERS[num]}`;
 	return turkishNumber;
 };
-
-console.log(getTurkishNumber(91));
