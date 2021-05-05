@@ -1,5 +1,21 @@
-// https://www.codewars.com/kata/5844a422cbd2279a0c000281
+// 66. Plus One
 
-const multi = (arr) => arr.reduce((a, b) => a * b, 1);
-const add = (arr) => arr.reduce((a, b) => a + b, 0);
-const reverse = (str) => [...str].reverse().join('');
+const plusOne = (arr) => {
+	for (let i = arr.length - 1; i >= 0; i--) {
+		arr[i] = arr[i] + 1;
+
+		if (arr[i] !== 10) {
+			break;
+		} else {
+			arr[i] = 0;
+			if (i === 0) {
+				arr.unshift(1);
+				break;
+			}
+		}
+	}
+
+	return arr;
+};
+
+console.log(plusOne([9, 9]));
