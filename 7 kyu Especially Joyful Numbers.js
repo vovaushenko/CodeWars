@@ -6,6 +6,3 @@ const numberJoy = (n) => {
 };
 
 const reversedNumber = (num) => +[...(num + '')].reverse().join('');
-
-console.log(numberJoy(1729));
-console.log(reversedNumber(1729));
