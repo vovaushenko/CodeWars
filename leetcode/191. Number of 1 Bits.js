@@ -5,5 +5,3 @@ Write a function that takes an unsigned integer and returns the number of '1' bi
 */
 
 const hammingWeight = (n) => n.toString(2).replace(/0/g, '').length;
-
-console.log(hammingWeight(00000000000000000000000000001011));
