@@ -4,5 +4,3 @@ const consonantCount = (str) =>
 	[...str.replace(/[^A-Za-z]+/g, '')].filter(
 		(char) => !'aeiou'.includes(char.toLowerCase())
 	).length;
-
-console.log(consonantCount('sda1xzZz1))@'));
