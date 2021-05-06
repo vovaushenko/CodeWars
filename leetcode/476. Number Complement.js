@@ -6,5 +6,3 @@ Given a positive integer num, output its complement number. The complement strat
 
 const findComplement = (n) =>
 	parseInt([...n.toString(2)].map((bit) => (bit === '1' ? 0 : 1)).join(''), 2);
-
-console.log(findComplement(5));
