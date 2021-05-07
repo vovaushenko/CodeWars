@@ -5,5 +5,3 @@ const validateIncrement = (newNum) =>
 
 const incrementer = (arr) =>
 	arr.map((num, id) => validateIncrement(num + id + 1));
-
-console.log(validateIncrement(12));
