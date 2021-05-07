@@ -19,5 +19,3 @@ const minIncrementForUnique = (list) => {
 	}
 	return incrementCounter;
 };
-
-console.log(minIncrementForUnique([3, 2, 1, 2, 1, 7]));
