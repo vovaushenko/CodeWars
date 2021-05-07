@@ -12,5 +12,3 @@ const dative = (word) => {
 
 	return VOWELS.front.includes(lastVowel) ? word + 'nek' : word + 'nak';
 };
-
-dative('ablok');
