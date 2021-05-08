@@ -1,9 +1,31 @@
-const keyboard = ['1','ABC2','DEF3','GHI4','JKL5','MNO6','PQRS7','TUV8','WXYZ9','*',' 0','#'];
+// 819. Most Common Word
+/*
 
-const presses = (phrase) =>
-	[...phrase.toUpperCase()].reduce((buttonsPressed, char) => {
-		const row = keyboard.find((btn) => btn.includes(char));
+Given a string paragraph and a string array of the banned words banned, return the most frequent word that is not banned. It is guaranteed there is at least one word that is not banned, and that the answer is unique.
 
-		buttonsPressed += row ? row.indexOf(char) + 1 : 0;
-		return buttonsPressed;
-	}, 0);
+The words in paragraph are case-insensitive and the answer should be returned in lowercase.
+
+*/
+const mostCommonWord = (paragraph, banned) => {
+	let words = paragraph
+		.replace(/[^\w\s]|_/g, ' ')
+		.toLowerCase()
+		.split(' ')
+		.filter((c) => c);
+
+	let frequencies = {};
+
+	for (let word of words) {
+		if (!banned.includes(word)) {
+			frequencies[word] ? frequencies[word]++ : (frequencies[word] = 1);
+		}
+	}
+
+	const sortedByFrequency = Object.entries(frequencies).sort(
+		(a, b) => b[1] - a[1]
+	);
+
+	return sortedByFrequency[0][0];
+};
+
+console.log(mostCommonWord('a, a, a, a, b,b,b,c, c', ['a']));
