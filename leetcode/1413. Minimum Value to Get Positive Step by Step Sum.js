@@ -21,5 +21,3 @@ const minStartValue = (nums) => {
 
 	return min >= 1 ? 1 : -min + 1;
 };
-
-console.log(minStartValue([-5, -2, 4, 4, -2]));
