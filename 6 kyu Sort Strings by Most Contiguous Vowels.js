@@ -24,5 +24,3 @@ const sortStringsByVowels = (strings) =>
 			return maxVovelLength1 > maxVovelLength2 ? -1 : 1;
 		}
 	});
-
-console.log(sortStringsByVowels(['none', 'uuu', 'Yuuuge!!']));
