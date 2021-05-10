@@ -6,11 +6,7 @@ Given an integer array nums (0-indexed) and two integers target and start, find 
 Return abs(i - start).
 */
 
-const getMinDistance = (
-	nums: number[],
-	target: number,
-	start: number
-): number | undefined => {
+const getMinDistance = (nums, target, start) => {
 	if (nums[start] === target) return 0;
 	let forward = start;
 	let greaterIdOfTarget;
@@ -32,9 +28,8 @@ const getMinDistance = (
 		back--;
 	}
 
-	console.log(smallerIdOfTarget, greaterIdOfTarget);
 	if (smallerIdOfTarget === undefined)
-		return Math.abs(greaterIdOfTarget || 0 - start);
+		return Math.abs(greaterIdOfTarget - start);
 	if (greaterIdOfTarget === undefined)
 		return Math.abs(smallerIdOfTarget - start);
 
@@ -43,5 +38,3 @@ const getMinDistance = (
 		Math.abs(greaterIdOfTarget - start)
 	);
 };
-
-console.log(getMinDistance([1, 2, 3, 4, 5], 5, 3));

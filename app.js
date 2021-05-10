@@ -1,28 +1,42 @@
-// https://www.codewars.com/kata/5d2d0d34bceae80027bffddb
+// 1848. Minimum Distance to the Target Element
 
-const calculateMaxContVowelLength = (str) => {
-	const vowels = 'aeiouAEIOU ';
-	let tempLength = 0;
-	let maxLength = -Infinity;
-	for (let i = 0; i < str.length; i++) {
-		if (vowels.includes(str[i])) {
-			tempLength++;
-			maxLength = Math.max(tempLength, maxLength);
-		} else {
-			tempLength = 0;
+/*
+Given an integer array nums (0-indexed) and two integers target and start, find an index i such that nums[i] == target and abs(i - start) is minimized. Note that abs(x) is the absolute value of x.
+
+Return abs(i - start).
+*/
+
+const getMinDistance = (nums, target, start) => {
+	if (nums[start] === target) return 0;
+	let forward = start;
+	let greaterIdOfTarget;
+	while (forward < nums.length) {
+		if (nums[forward] === target) {
+			greaterIdOfTarget = forward;
+			break;
 		}
+		forward++;
 	}
-	return maxLength;
+
+	let back = start;
+	let smallerIdOfTarget;
+	while (back >= 0) {
+		if (nums[back] === target) {
+			smallerIdOfTarget = back;
+			break;
+		}
+		back--;
+	}
+
+	if (smallerIdOfTarget === undefined)
+		return Math.abs(greaterIdOfTarget - start);
+	if (greaterIdOfTarget === undefined)
+		return Math.abs(smallerIdOfTarget - start);
+
+	return Math.min(
+		Math.abs(smallerIdOfTarget - start),
+		Math.abs(greaterIdOfTarget - start)
+	);
 };
 
-const sortStringsByVowels = (strings) =>
-	strings.sort((s1, s2) => {
-		let maxVovelLength1 = calculateMaxContVowelLength(s1);
-		let maxVovelLength2 = calculateMaxContVowelLength(s2);
-
-		if (maxVovelLength1 !== maxVovelLength2) {
-			return maxVovelLength1 > maxVovelLength2 ? -1 : 1;
-		}
-	});
-
-console.log(sortStringsByVowels(['none', 'uuu', 'Yuuuge!!']));
+console.log(getMinDistance([1, 2, 3, 4, 5], 5, 3));
