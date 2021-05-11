@@ -34,5 +34,3 @@ const minimumAbsDifference = (arr) => {
 
 	return res;
 };
-
-console.log(minimumAbsDifference([1, 3, 6, 10, 15]));
