@@ -12,5 +12,3 @@ const sumNested = (arr) => {
 
 	return sum;
 };
-
-console.log(sumNested([1, [2, [3, [4]]]]));
