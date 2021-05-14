@@ -43,5 +43,3 @@ const findMinDiff = (arr) => {
 
 	return minDiff;
 };
-
-console.log(findMinDiff([4, 3, 1, 3, 6]));
