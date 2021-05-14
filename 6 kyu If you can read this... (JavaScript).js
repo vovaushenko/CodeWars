@@ -5,5 +5,3 @@ const to_nato = (words) =>
 		.map((char) => (/[a-zA-Z]/.test(char) ? NATO[char.toLowerCase()] : char))
 		.filter((c) => c !== ' ')
 		.join(' ');
-
-console.log(to_nato('If, you can read?'));
