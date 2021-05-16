@@ -21,7 +21,3 @@ const ultimateReverse = (s) => {
 
 	return ultimatelyRevesedArr;
 };
-
-console.log(
-	ultimateReverse(['I', 'like', 'big', 'butts', 'and', 'I', 'cannot', 'lie!'])
-);
