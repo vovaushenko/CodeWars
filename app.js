@@ -1,47 +1,10 @@
-// 530. Minimum Absolute Difference in BST
+// https://www.codewars.com/kata/598f76a44f613e0e0b000026
 
-/*
-Given the root of a Binary Search Tree (BST), return the minimum absolute difference between the values of any two different nodes in the tree.
-*/
-
-/**
- * Definition for a binary tree node.
- * function TreeNode(val, left, right) {
- *     this.val = (val===undefined ? 0 : val)
- *     this.left = (left===undefined ? null : left)
- *     this.right = (right===undefined ? null : right)
- * }
- */
-/**
- * @param {TreeNode} root
- * @return {number}
- */
-
-const getMinimumDifference = (root) => {
-	const values = [];
-
-	(function traverseTree(node) {
-		if (!node) return;
-		values.push(node.val);
-		if (node.left) traverseTree(node.left);
-		if (node.right) traverseTree(node.right);
-	})(root);
-
-	return findMinDiff(values);
-};
-
-const findMinDiff = (arr) => {
-	arr.sort((a, b) => a - b);
-	let [i, j] = [0, 1];
-	let minDiff = Infinity;
-
-	while (j < arr.length) {
-		minDiff = Math.min(minDiff, arr[j] - arr[i]);
-		i++;
-		j++;
-	}
-
-	return minDiff;
-};
-
-console.log(findMinDiff([4, 3, 1, 3, 6]));
+const sumOfIntegersInString = (s) =>
+	s
+		.replace(/\D/g, ' ')
+		.split(' ')
+		.reduce((sum, num) => (num ? (sum += +num) : (sum += 0)), 0);
+sumOfIntegersInString(
+	'The30quick20brown10f0x1203jumps914ov3r1349the102l4zy dog'
+);
