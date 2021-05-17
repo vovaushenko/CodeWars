@@ -3,5 +3,3 @@
 const firstNonRepeated = (s) =>
 	[...s].find((char) => [...s].filter((c) => c === char).length === 1) || null;
 // this is not optimal 🤑
-
-console.log(firstNonRepeated('test'));
