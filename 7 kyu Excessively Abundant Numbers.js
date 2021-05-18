@@ -8,5 +8,3 @@ const abundantNumber = (n) => {
 
 	return divisorsSum > n;
 };
-
-console.log(abundantNumber(12));
