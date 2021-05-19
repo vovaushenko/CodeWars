@@ -1,12 +1,11 @@
-// https://www.codewars.com/kata/56a75b91688b49ad94000015
-
-const abundantNumber = (n) => {
-	let divisorsSum = 0;
-	for (let i = 0; i < n; i++) {
-		if (n % i === 0) divisorsSum += i;
+const maxDepth = (s) => {
+	let maxDepth = 0;
+	let currentDepth = 0;
+	for (let char of s) {
+		if (char === '(') currentDepth++;
+		if (char === ')') currentDepth--;
+		maxDepth = Math.max(maxDepth, currentDepth);
 	}
 
-	return divisorsSum > n;
+	return maxDepth;
 };
-
-console.log(abundantNumber(12));
