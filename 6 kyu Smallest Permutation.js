@@ -20,4 +20,3 @@ const minPermutation = (n) => {
 	}
 	return n < 0 ? -permutation.join('') : +permutation.join('');
 };
-console.log(minPermutation(-20));

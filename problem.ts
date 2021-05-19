@@ -1,47 +1,24 @@
-// 1848. Minimum Distance to the Target Element
+// [5,2,1,2,5,2,1,2,5]
 
-/*
-Given an integer array nums (0-indexed) and two integers target and start, find an index i such that nums[i] == target and abs(i - start) is minimized. Note that abs(x) is the absolute value of x.
+function maximumUniqueSubarray(nums: number[]): number {
+	let [currentSum, maxSum] = [0, 0];
+	let [i, j] = [0, 0];
+	let set = new Set();
 
-Return abs(i - start).
-*/
-
-const getMinDistance = (
-	nums: number[],
-	target: number,
-	start: number
-): number | undefined => {
-	if (nums[start] === target) return 0;
-	let forward = start;
-	let greaterIdOfTarget;
-	while (forward < nums.length) {
-		if (nums[forward] === target) {
-			greaterIdOfTarget = forward;
-			break;
+	while (i < nums.length) {
+		if (!set.has(nums[i])) {
+			set.add(nums[i]);
+			currentSum += nums[i];
+			maxSum = Math.max(maxSum, currentSum);
+			i++;
+		} else {
+			set.delete(nums[j]);
+			currentSum -= nums[j];
+			j++;
 		}
-		forward++;
 	}
 
-	let back = start;
-	let smallerIdOfTarget;
-	while (back >= 0) {
-		if (nums[back] === target) {
-			smallerIdOfTarget = back;
-			break;
-		}
-		back--;
-	}
+	return maxSum;
+}
 
-	console.log(smallerIdOfTarget, greaterIdOfTarget);
-	if (smallerIdOfTarget === undefined)
-		return Math.abs(greaterIdOfTarget || 0 - start);
-	if (greaterIdOfTarget === undefined)
-		return Math.abs(smallerIdOfTarget - start);
-
-	return Math.min(
-		Math.abs(smallerIdOfTarget - start),
-		Math.abs(greaterIdOfTarget - start)
-	);
-};
-
-console.log(getMinDistance([1, 2, 3, 4, 5], 5, 3));
+console.log(maximumUniqueSubarray([5, 2, 1, 2, 5, 2, 1, 2, 5]));
