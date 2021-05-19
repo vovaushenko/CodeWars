@@ -7,5 +7,3 @@ const shuffleIt = (arr, ...pairs) => {
 };
 
 const swap = (a, id1, id2) => ([a[id1], a[id2]] = [a[id2], a[id1]]);
-
-console.log(shuffleIt([1, 2, 3, 4, 5], [1, 2], [3, 4]));
