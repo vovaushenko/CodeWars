@@ -13,5 +13,3 @@ const canBeEqual = (target, arr) => {
 
 	return true;
 };
-
-console.log(canBeEqual([1], [1]));
