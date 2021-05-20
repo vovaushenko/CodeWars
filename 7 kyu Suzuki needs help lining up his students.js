@@ -7,9 +7,3 @@ const lineupStudents = (students) =>
 		.sort((s1, s2) =>
 			s1.length !== s2.length ? s2.length - s1.length : s1.localeCompare(s2)
 		);
-
-console.log(
-	lineupStudents(
-		'Tadashi Takahiro Takao Takashi Takayuki Takehiko Takeo Takeshi Takeshi'
-	)
-);
