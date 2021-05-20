@@ -6,4 +6,5 @@ const zebulansNightmare = (f) =>
 		.map((chunk, i) => (i ? chunk[0].toUpperCase() + chunk.slice(1) : chunk))
 		.join('');
 
-console.log(zebulansNightmare('trolling_is_fun'));
+const zebulansNightmare = (functionName) =>
+	functionName.replace(/_./g, (v) => v[1].toUpperCase());
