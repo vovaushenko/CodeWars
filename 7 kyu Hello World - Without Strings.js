@@ -1,5 +1,3 @@
-const hello = 'Hello, World!';
-
 const helloWorld = () =>
 	String.fromCharCode(
 		72,
@@ -16,5 +14,3 @@ const helloWorld = () =>
 		100,
 		33
 	);
-
-console.log(helloWorld());
