@@ -17,5 +17,3 @@ function makeParts(arr, chunkSize) {
 	if (counter < chunkSize && temparr.length) chuks.push(temparr);
 	return chuks;
 }
-
-console.log(makeParts([1, 2, 3, 4, 5, 5], 2));
