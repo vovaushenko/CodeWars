@@ -17,5 +17,3 @@ const maximum69Number = (num) => {
 
 	return +digits.join('');
 };
-
-console.log(maximum69Number(9999));
