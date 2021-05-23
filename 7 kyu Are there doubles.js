@@ -11,5 +11,3 @@ const doubleCheck = (str) => {
 
 	return false;
 };
-
-console.log(doubleCheck('a 11 c d'));
