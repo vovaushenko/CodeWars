@@ -11,11 +11,3 @@ const findMaxConsecutiveOnes = (nums) =>
 			.split('0')
 			.map((c) => c.length)
 	);
-
-console.log(findMaxConsecutiveOnes([1, 1, 0, 1, 1, 1]));
-
-// let [i, j] = [0, 1];
-// while (j < nums.length) {
-//   i++;
-//   j++;
-// }
