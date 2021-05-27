@@ -12,5 +12,3 @@ const letterCheck = ([s1, s2]) => {
 
 	return true;
 };
-
-console.log(letterCheck(['THE EYES', 'they see']));
