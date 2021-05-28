@@ -1,7 +1,6 @@
-// https://www.codewars.com/kata/5a2b7edcb6486a856e00005b
-
-const checkVowel = (string, position) => isVowel(string[position]);
-
-const isVowel = (char) => (char ? 'aeiou'.includes(char.toLowerCase()) : false);
-
-console.log(isVowel(undefined));
+const invertTree = (root) => {
+	if (root) {
+		[root.right, root.left] = [invertTree(root.left), invertTree(root.right)];
+	}
+	return root;
+};
