@@ -3,5 +3,3 @@
 const checkVowel = (string, position) => isVowel(string[position]);
 
 const isVowel = (char) => (char ? 'aeiou'.includes(char.toLowerCase()) : false);
-
-console.log(isVowel(undefined));
