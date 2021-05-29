@@ -1,12 +1,34 @@
-// https://leetcode.com/problems/determine-if-string-halves-are-alike/
+var Converter = {
+	toAscii: (hex) => {
+		let [i, j] = [0, 1];
+		let res = '';
+		while (j < hex.length) {
+			console.log();
+			res += String.fromCharCode(parseInt(hex[i] + hex[j], 16));
+			i += 2;
+			j += 2;
+		}
 
-const halvesAreAlike = (s) =>
-	vowelsLength(s.slice(0, s.length / 2)) ===
-	vowelsLength(s.slice(s.length / 2));
+		return res;
+	},
 
-const vowelsLength = (s) =>
-	[...s].filter((char) => 'aeiouAEIOU'.includes(char)).length;
+	toHex: (str) => [...str].map((c) => c.charCodeAt(0).toString(16)).join(''),
+};
 
-console.log(halvesAreAlike('AbCdEfGh'));
+const toHex = (str) =>
+	[...str].map((c) => c.charCodeAt(0).toString(16)).join('');
 
-// s.slice(0, s.length / 2) s.slice(s.length / 2);
+const toAsii = (hex) => {
+	let [i, j] = [0, 1];
+	let res = '';
+	while (j < hex.length) {
+		console.log();
+		res += String.fromCharCode(parseInt(hex[i] + hex[j], 16));
+		i += 2;
+		j += 2;
+	}
+
+	return res;
+};
+
+console.log(toAsii('4c6f6f6b206d6f6d2c206e6f2068616e6473'));
