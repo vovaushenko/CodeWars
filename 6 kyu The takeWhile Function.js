@@ -10,15 +10,3 @@ const takeWhile = (arr, pred) => {
 	}
 	return res;
 };
-
-function takeWhile(arr, pred) {
-	let res = [];
-	for (let i = 0; i < arr.length; i++) {
-		if (pred(arr[i])) {
-			res.push(arr[i]);
-		} else {
-			return res;
-		}
-	}
-	return res;
-}
