@@ -18,10 +18,3 @@ const duplicateZeros = (arr) => {
 		}
 	}
 };
-
-// let arr = [0, 1, 2];
-
-// arr.splice(0, 0, '😉');
-
-// console.log(arr);
-duplicateZeros([1, 0, 2, 3, 0, 4, 5, 0]);
