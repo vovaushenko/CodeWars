@@ -15,5 +15,3 @@ const stringExpansion = (str) => {
 };
 
 let isLetter = (char) => /[a-z]/i.test(char);
-
-console.log(stringExpansion('3abc'));
