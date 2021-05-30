@@ -16,7 +16,3 @@ const missingAlphabets = (s) => {
 	}
 	return missingChars;
 };
-
-console.log(
-	missingAlphabets('yxcoafrhllvsnztdvwgqfridjpjunciehzhbetwuspcezaxgbqon')
-);
