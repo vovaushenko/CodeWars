@@ -19,5 +19,3 @@ const expandedForm = (num) => {
 	console.log(expanded);
 	return expanded.join(' + ');
 };
-
-console.log(expandedForm(88.353824));
