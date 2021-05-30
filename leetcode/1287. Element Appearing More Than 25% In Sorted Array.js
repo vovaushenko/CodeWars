@@ -15,5 +15,3 @@ const findSpecialInteger = (arr) => {
 		if (map[num] / arr.length > 0.25) return num;
 	}
 };
-
-console.log(findSpecialInteger([1, 2, 2, 6, 6, 6, 6, 7, 10]));
