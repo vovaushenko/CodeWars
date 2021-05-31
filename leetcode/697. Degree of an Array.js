@@ -27,5 +27,3 @@ const findShortestSubArray = (arr) => {
 	);
 	return Math.min(...lengths);
 };
-
-console.log(findShortestSubArray([1, 2, 2, 3, 1, 4, 2]));
