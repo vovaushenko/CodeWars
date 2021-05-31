@@ -8,5 +8,3 @@ const calculateString = (str) => {
 
 	return Math.round(eval(`${firstNum}${operand}${secondNum}`)) + '';
 };
-
-console.log(calculateString(';$%§fsdfsd235??df/sdfgf5gh.000kk0000'));
