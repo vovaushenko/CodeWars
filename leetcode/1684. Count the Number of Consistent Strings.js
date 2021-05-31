@@ -12,7 +12,3 @@ const countConsistentStrings = (allowed, words) =>
 		(counter, word) => (isConsistent(word, allowed) && counter++, counter),
 		0
 	);
-
-console.log(countConsistentStrings('ab', ['ad', 'bd', 'aaab', 'baa', 'badab']));
-
-console.log(isConsistent('ab', 'ab'));
