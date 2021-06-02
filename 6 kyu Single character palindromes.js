@@ -9,5 +9,3 @@ const solve = (str) => {
 	}
 	return 'not possible';
 };
-
-console.log(solve('abbaab'));
