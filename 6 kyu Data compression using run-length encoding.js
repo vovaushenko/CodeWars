@@ -31,7 +31,3 @@ const decode = (input) => {
 	}
 	return decodedInput;
 };
-
-// console.log(encode('A'));
-
-console.log(decode('10A3B3C1D'));
