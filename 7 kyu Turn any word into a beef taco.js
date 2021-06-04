@@ -1,5 +1,4 @@
 // https://www.codewars.com/kata/59414b46d040b7b8f7000021
-// aeiou
 
 const TACO_CODE = {
 	t: 'tomato',
@@ -18,5 +17,3 @@ const tacofy = (word) => [
 		.filter((taco) => taco),
 	'shell',
 ];
-
-console.log(tacofy('ydjkpwqrzto'));
