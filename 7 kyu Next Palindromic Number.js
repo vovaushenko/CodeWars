@@ -11,7 +11,3 @@ const nextPal = (n) => {
 
 	return n;
 };
-
-console.log(nextPal(4474));
-
-console.log(isPalindromicNumber(4554));
