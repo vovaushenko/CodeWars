@@ -4,5 +4,3 @@ const sortVowels = (s) =>
 	typeof s === 'string'
 		? [...s].map((c) => (/[aeiou]/gi.test(c) ? `|${c}` : `${c}|`)).join('\n')
 		: '';
-
-console.log(sortVowels('MTTGEENIIJIIIYEIXE%'));
