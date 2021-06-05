@@ -1,23 +1,26 @@
-// https://www.codewars.com/kata/5491689aff74b9b292000334
+// https://leetcode.com/problems/sum-of-even-numbers-after-queries/
 
-const f = (s) => {
-	let maxMultiplier = -Infinity;
-	let substring = '';
-	for (let i = 0; i < s.length + 1; i++) {
-		let sbstr = s.slice(0, i);
-		let multiplier = s.length / sbstr.length;
+const sumEvenAfterQueries = (arr, queries) => {
+	let res = [];
+	for (let [inc, id] of queries) {
+		arr[id] += inc;
+		let evenSum = arr.reduce(
+			(sum, n) => (n % 2 === 0 ? (sum += n) : (sum += 0)),
+			0
+		);
 
-		if (multiplier % 1 === 0) {
-			if (sbstr.repeat(multiplier) === s) {
-				if (multiplier > maxMultiplier) {
-					substring = sbstr;
-				}
-				maxMultiplier = Math.max(multiplier, maxMultiplier);
-			}
-		}
+		res.push(evenSum);
 	}
 
-	return [substring, maxMultiplier];
+	return res;
 };
 
-console.log(f('abcde'));
+sumEvenAfterQueries(
+	[1, 2, 3, 4],
+	[
+		[1, 0],
+		[-3, 1],
+		[-4, 0],
+		[2, 3],
+	]
+);
