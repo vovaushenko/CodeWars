@@ -19,5 +19,3 @@ const f = (s) => {
 
 	return [substring, maxMultiplier];
 };
-
-console.log(f('abcde'));
