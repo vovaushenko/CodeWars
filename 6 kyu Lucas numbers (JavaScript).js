@@ -1,10 +1,5 @@
 // https://www.codewars.com/kata/55a7de09273f6652b200002e
 
-// const lucasnum = (n, memo = [2, 1]) => {
-// 	if (n === 1) return 2;
-// 	if (n === 2) return 1;
-// 	return lucasnum(n - 1) + lucasnum(n - 2);
-// };
 const lucasnum = (n, memo = [2, 1]) => {
 	let id = Math.abs(n);
 	if (memo[id] !== undefined) return n >= 0 ? memo[id] : -memo[id];
@@ -13,5 +8,3 @@ const lucasnum = (n, memo = [2, 1]) => {
 
 	return n >= 0 ? memo[n] : id % 2 === 0 ? memo[id] : -memo[id];
 };
-
-console.log(lucasnum(-5));
