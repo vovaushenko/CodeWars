@@ -14,17 +14,7 @@ const rotate = (matrix) => {
 	}
 
 	for (let row of matrix) {
-		row = row.slice(initialLength);
-		row = 1;
-		row = [];
+		for (let i = 0; i < initialLength; i++) row.shift();
 	}
 	return matrix;
 };
-
-console.log(
-	rotate([
-		[1, 2, 3],
-		[4, 5, 6],
-		[7, 8, 9],
-	])
-);
