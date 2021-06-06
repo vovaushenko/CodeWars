@@ -17,5 +17,3 @@ const sortSentence = (sentence) =>
 		.sort((w1, w2) => w1.replace(/\D/gi, '') - w2.replace(/\D/gi, ''))
 		.map((word) => word.replace(/\d/, ''))
 		.join(' ');
-
-console.log(sortSentence('is2 sentence4 This1 a3'));
