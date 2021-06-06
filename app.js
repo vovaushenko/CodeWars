@@ -1,8 +1,4 @@
-// https://www.codewars.com/kata/593b1909e68ff627c9000186
+// https://www.codewars.com/kata/59564f3bcc15b5591a00004a
 
-const nickname = (name) =>
-	name.length > 4
-		? 'aeiou'.includes(name[2])
-			? name.slice(0, 4)
-			: name.slice(0, 3)
-		: 'Error: Name too short';
+const filterEvenLengthWords = (words) =>
+	words.filter((word) => !word.length % 2);
