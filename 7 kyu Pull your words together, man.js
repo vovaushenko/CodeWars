@@ -8,5 +8,3 @@ const sentencify = (words) =>
 			return sentence;
 		}, '')
 		.trim() + '.';
-
-console.log(sentencify(['i', 'am', 'an', 'AI']));
