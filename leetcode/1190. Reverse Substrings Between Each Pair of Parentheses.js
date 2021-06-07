@@ -25,5 +25,3 @@ const reverseParentheses = (str) => {
 
 	return stack[0].join('');
 };
-
-reverseParentheses('(ed(et(oc))el)');
