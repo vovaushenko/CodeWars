@@ -8,5 +8,3 @@ const calculate = (str) =>
 			.map((el) => (el === 'loses' ? '-' : el === 'gains' ? '+' : el))
 			.join('')
 	);
-
-console.log(calculate('Panda has 48 apples and loses 4'));
