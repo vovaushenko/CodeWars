@@ -1,8 +1,12 @@
-// https://www.codewars.com/kata/5912ded3f9f87fd271000120
+// https://leetcode.com/problems/palindrome-linked-list/
 
-const countCorrectCharacters = (w1, w2) => {
-	if (w1.length !== w2.length) throw new Error('😠');
-	return [...w1].filter((char, id) => w2[id] === char).length;
+const isPalindrome = (head) => {
+	let values = [];
+
+	while (head) {
+		values.push(head.val);
+		head = head.next;
+	}
+
+	return values.join('') === values.reverse().join('');
 };
-
-console.log(countCorrectCharacters('dog', 'god'));
