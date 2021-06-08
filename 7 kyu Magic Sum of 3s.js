@@ -9,4 +9,3 @@ const magicSum = (numbers) =>
 
 const andIsOdd = (num) => !!(num % 2) && num;
 const hasThree = (num) => [...(num + '')].includes('3');
-console.log(magicSum([]));
