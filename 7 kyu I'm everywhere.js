@@ -11,5 +11,3 @@ const i = (word) => {
 
 	return `i${word}`;
 };
-
-console.log(i('Fly'));
