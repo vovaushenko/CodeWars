@@ -27,5 +27,3 @@ const vowelShift = (text, n) => {
 
 	return letters.join('');
 };
-
-vowelShift('This is a test!', 3);
