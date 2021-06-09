@@ -21,17 +21,18 @@ const isPalindrome = (str) => {
 const partition = (s) => {
 	const res = [];
 
-	const helper = (str, array) => {
-		if (str.length === 0 && array.length !== 0) {
-			res.push(array);
+	const helper = (str, palidromes) => {
+		if (!str.length && palidromes.length) {
+			res.push(palidromes);
 			return;
 		}
 
 		for (let i = 0; i < str.length; i++) {
-			const subStr = str.substring(0, i + 1);
+			let substring = str.substring(0, i + 1);
 
-			if (isPalindrome(subStr))
-				helper(str.substring(i + 1), [...array, subStr]);
+			if (isPalindrome(substring)) {
+				helper(str.substring(i + 1), [...palidromes, substring]);
+			}
 		}
 	};
 
@@ -40,4 +41,43 @@ const partition = (s) => {
 	return res;
 };
 
-partition('aab');
+console.log(partition('aab'));
+
+var partition = function (s) {
+	if (s.length == 1) return [[s]];
+
+	let result = [];
+	findPalindrom([], 0);
+	return result;
+
+	function findPalindrom(palindrom, start) {
+		if (start === s.length) {
+			result.push([...palindrom]);
+			return;
+		}
+
+		let sub = '';
+		for (let i = start; i < s.length; i++) {
+			sub += s[i];
+			if (checkPalindrom(sub)) {
+				palindrom.push(sub);
+				findPalindrom([...palindrom], i + 1);
+				palindrom.pop();
+			}
+		}
+	}
+
+	function checkPalindrom(sub) {
+		let start = 0;
+		let end = sub.length - 1;
+		while (start < end) {
+			if (sub[start] != sub[end]) {
+				return false;
+			}
+			start++;
+			end--;
+		}
+
+		return true;
+	}
+};
