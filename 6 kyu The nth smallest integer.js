@@ -7,5 +7,3 @@ const nthSmallest = (nums, n) => {
 
 	return unique.sort((n1, n2) => n1 - n2)[n - 1];
 };
-
-console.log(nthSmallest([45, -10, 4, 5, 4], 4));
