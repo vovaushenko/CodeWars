@@ -13,5 +13,3 @@ const maxAndMin = (a1, a2) => {
 
 	return [maxDiff, minDiff];
 };
-
-maxAndMin([3, 10, 5], [20, 7, 15, 8]);
