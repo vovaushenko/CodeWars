@@ -1,19 +1,43 @@
-// https://www.codewars.com/kata/5669a5113c8ebf16ed00004c
+// https://leetcode.com/problems/palindrome-partitioning/
 
-String.prototype.eachChar = function (prop) {
-	if (typeof prop === 'function')
-		return [...this].map((char) => prop(char)).join('');
+/*
+131. Palindrome Partitioning
+Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.
 
-	return [...this].map((char) => char + prop).join('');
+A palindrome string is a string that reads the same backward as forward.
+*/
+const isPalindrome = (str) => {
+	let [i, j] = [0, str.length - 1];
+
+	while (i < j) {
+		if (str[i] !== str[j]) return false;
+		i++;
+		j--;
+	}
+
+	return true;
 };
 
-console.log(
-	'Fool Bar'.eachChar(function (char) {
-		if (char == 'l') {
-			return char.toUpperCase();
-		} else {
-			return char;
+const partition = (s) => {
+	const res = [];
+
+	const helper = (str, array) => {
+		if (str.length === 0 && array.length !== 0) {
+			res.push(array);
+			return;
 		}
-	})
-);
-console.log('Fool Bar'.eachChar('⭐'));
+
+		for (let i = 0; i < str.length; i++) {
+			const subStr = str.substring(0, i + 1);
+
+			if (isPalindrome(subStr))
+				helper(str.substring(i + 1), [...array, subStr]);
+		}
+	};
+
+	helper(s, []);
+
+	return res;
+};
+
+partition('aab');
