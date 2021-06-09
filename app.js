@@ -1,25 +1,17 @@
-// https://www.codewars.com/kata/597f334f1fe82a950500004b
+// https://www.codewars.com/kata/5669a5113c8ebf16ed00004c
 
-const getCommonDirectoryPath = (pathes) => {
-	let chunks = pathes.map((path) => path.split('/'));
-	let common = [];
-	let firstPath = chunks[0];
-
-	for (let i = 0; i < firstPath.length; i++) {
-		if (chunks.every((chunk) => chunk[i] === firstPath[i])) {
-			common.push(firstPath[i]);
-		} else {
-			break;
+const SubstringTest = (s1, s2) => {
+	s1 = s1.toLowerCase();
+	s2 = s2.toLowerCase();
+	for (let i = 0; i < s1.length; i++) {
+		let tempStr = '';
+		for (let j = i; j < s1.length; j++) {
+			tempStr += s1[j];
+			if (tempStr.length > 1 && s2.includes(tempStr)) return true;
 		}
 	}
 
-	return common.length ? common.join('/') + '/' : '';
+	return false;
 };
 
-console.log(
-	getCommonDirectoryPath([
-		'/web/assets/style.css',
-		'/web/scripts/app.js',
-		'home/setting.conf',
-	])
-);
+SubstringTest('fooz', 'bar');
