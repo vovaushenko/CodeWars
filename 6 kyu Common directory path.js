@@ -15,11 +15,3 @@ const getCommonDirectoryPath = (pathes) => {
 
 	return common.length ? common.join('/') + '/' : '';
 };
-
-console.log(
-	getCommonDirectoryPath([
-		'/web/assets/style.css',
-		'/web/scripts/app.js',
-		'home/setting.conf',
-	])
-);
