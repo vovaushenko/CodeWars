@@ -6,14 +6,3 @@ String.prototype.eachChar = function (prop) {
 
 	return [...this].map((char) => char + prop).join('');
 };
-
-console.log(
-	'Fool Bar'.eachChar(function (char) {
-		if (char == 'l') {
-			return char.toUpperCase();
-		} else {
-			return char;
-		}
-	})
-);
-console.log('Fool Bar'.eachChar('⭐'));
