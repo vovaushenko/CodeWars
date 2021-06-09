@@ -33,5 +33,3 @@ const isPalindrome = (str) => {
 
 	return true;
 };
-
-console.log(breakPalindrome('aabaa'));
