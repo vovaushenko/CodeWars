@@ -15,5 +15,3 @@ const hasAlternatingBits = (num) => {
 	}
 	return true;
 };
-
-console.log(hasAlternatingBits(3));
