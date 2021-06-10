@@ -1,5 +1,13 @@
 // https://leetcode.com/problems/1-bit-and-2-bit-characters/
 
+/*
+We have two special characters:
+
+The first character can be represented by one bit 0.
+The second character can be represented by two bits (10 or 11).
+Given a binary array bits that ends with 0, return true if the last character must be a one-bit character.
+*/
+
 const isOneBitCharacter = (bits) => {
 	let i = 0;
 	let currentJump = 1;
@@ -15,5 +23,3 @@ const isOneBitCharacter = (bits) => {
 	}
 	return currentJump === 1;
 };
-
-isOneBitCharacter([1, 0, 0]);
