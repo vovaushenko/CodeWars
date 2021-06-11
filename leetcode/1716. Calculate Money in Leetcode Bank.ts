@@ -23,5 +23,3 @@ const totalMoney = (n: number): number => {
 
 	return money;
 };
-
-console.log(totalMoney(20));
