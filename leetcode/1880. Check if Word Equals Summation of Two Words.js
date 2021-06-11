@@ -16,5 +16,3 @@ const isSumEqual = (first, second, target) =>
 
 const calcWordVal = (word) =>
 	parseInt([...word].map((char) => char.charCodeAt(0) - 97).join(''));
-
-console.log(isSumEqual('aaa', 'a', 'aaaa'));
