@@ -22,5 +22,3 @@ const insertMissingLetters = (str) => {
 
 	return res.join('');
 };
-
-console.log(insertMissingLetters('holly'));

@@ -6,10 +6,6 @@ You have n coins and you want to build a staircase with these coins. The stairca
 Given the integer n, return the number of complete rows of the staircase you will build.
 */
 
-//  5     i = 1;  n - i,  i++
-//  4     i = 2;  n -i, i++
-//  2
-
 const arrangeCoins = (n: number): number => {
 	let stair = 1;
 	while (n >= 0) {
@@ -23,5 +19,3 @@ const arrangeCoins = (n: number): number => {
 
 	return stair - 1;
 };
-
-console.log(arrangeCoins(5));
