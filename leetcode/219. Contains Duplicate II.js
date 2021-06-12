@@ -1,5 +1,11 @@
 // https://leetcode.com/problems/contains-duplicate-ii/
 
+/*
+219. Contains Duplicate II
+
+Given an integer array nums and an integer k, return true if there are two distinct indices i and j in the array such that nums[i] == nums[j] and abs(i - j) <= k.
+*/
+
 const containsNearbyDuplicate = (nums, k) => {
 	const charFrequencies = [...nums].reduce(
 		(h, c) => ((h[c] = h[c] + 1 || 1), h),
@@ -39,5 +45,3 @@ let validateDistance = (ids, k) => {
 
 	return false;
 };
-
-console.log(containsNearbyDuplicate([1, 2, 3, 1], 2));
