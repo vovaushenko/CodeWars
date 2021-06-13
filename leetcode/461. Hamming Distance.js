@@ -1,5 +1,13 @@
 // https://leetcode.com/problems/hamming-distance/
 
+/*
+461. Hamming Distance
+
+The Hamming distance between two integers is the number of positions at which the corresponding bits are different.
+
+Given two integers x and y, return the Hamming distance between them.
+*/
+
 const hammingDistance = (x, y) => {
 	let bins = [x, y].sort((a, b) => a - b).map((n) => n.toString(2));
 	let diff = bins[1].length - bins[0].length;
@@ -9,5 +17,3 @@ const hammingDistance = (x, y) => {
 
 	return hammDist;
 };
-
-console.log(hammingDistance(4, 1));
