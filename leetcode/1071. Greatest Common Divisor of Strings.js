@@ -11,5 +11,3 @@ const gcdOfStrings = (str1, str2) => {
 
 	return str1.substring(0, gcd(str1.length, str2.length));
 };
-
-console.log(gcdOfStrings('ABCABC', 'ABC'));
