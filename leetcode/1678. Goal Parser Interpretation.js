@@ -7,5 +7,3 @@ Given the string command, return the Goal Parser's interpretation of command.
 */
 
 const interpret = (command) => command.replace(/\(\)/g, 'o').replace(/\W/g, '');
-
-console.log(interpret('(al)G(al)()()G'));
