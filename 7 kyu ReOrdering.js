@@ -13,5 +13,3 @@ const reOrdering = (text) => {
 };
 
 const isUpperCase = (char) => char.toUpperCase() === char;
-
-console.log(reOrdering('wario LoBan hello'));
