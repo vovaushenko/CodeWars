@@ -1,11 +1,21 @@
-// 1678. Goal Parser Interpretation
+// https://www.codewars.com/kata/60908bc1d5811f0025474291
 
-/*
-You own a Goal Parser that can interpret a string command. The command consists of an alphabet of "G", "()" and/or "(al)" in some order. The Goal Parser will interpret "G" as the string "G", "()" as the string "o", and "(al)" as the string "al". The interpreted strings are then concatenated in the original order.
+const findSquares = (n) => {
+	let perfectSquares = [4, 9];
+	let start = 4;
 
-Given the string command, return the Goal Parser's interpretation of command.
-*/
+	while (
+		perfectSquares[perfectSquares.length - 1] -
+			perfectSquares[perfectSquares.length - 2] !==
+		n
+	) {
+		perfectSquares.push(start ** 2);
+		start++;
+	}
 
-const interpret = (command) => command.replace(/\(\)/g, 'o').replace(/\W/g, '');
+	return `${perfectSquares[perfectSquares.length - 1]}-${
+		perfectSquares[perfectSquares.length - 2]
+	}`;
+};
 
-console.log(interpret('(al)G(al)()()G'));
+console.log(findSquares(81));
