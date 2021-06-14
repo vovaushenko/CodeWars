@@ -19,5 +19,3 @@ const testResult = (arr) => {
 
 	return result;
 };
-
-console.log(testResult([10, 9, 9, 10, 9, 10, 9]));
