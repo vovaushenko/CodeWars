@@ -20,5 +20,3 @@ const decompressRLElist = (nums) => {
 
 	return result;
 };
-
-console.log(decompressRLElist([1, 1, 2, 3]));
