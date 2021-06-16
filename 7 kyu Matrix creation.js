@@ -5,5 +5,3 @@ const getMatrix = (length) =>
 
 const generateRow = (length, iteration) =>
 	Array.from({ length }, (_, id) => (id === iteration ? 1 : 0));
-
-console.log(getMatrix(5, 4));
