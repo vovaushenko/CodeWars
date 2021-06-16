@@ -12,5 +12,3 @@ const deepFlat = (a, values = []) => {
 	}
 	return values;
 };
-
-console.log(deepFlat([[1, 2], 3]));
