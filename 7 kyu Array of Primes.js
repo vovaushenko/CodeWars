@@ -18,7 +18,3 @@ const primes = (min, max) => {
 
 	return primeNums.length ? primeNums : null;
 };
-
-// : isPrime(min) ? primes =[...primes, min] : primes(min + 1, max, primes);
-
-console.log(primes(8, 9));
