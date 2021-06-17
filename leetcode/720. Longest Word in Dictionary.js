@@ -1,5 +1,10 @@
 // https://leetcode.com/problems/longest-word-in-dictionary/
+/*
+720. Longest Word in Dictionary
+Given an array of strings words representing an English Dictionary, return the longest word in words that can be built one character at a time by other words in words.
 
+If there is more than one possible answer, return the longest word with the smallest lexicographical order. If there is no answer, return the empty string.
+*/
 const longestWord = (words) => {
 	words.sort((w1, w2) => w2.length - w1.length);
 	const map = words.reduce((m, w) => (!m[w] ? (m[w] = true) : '', m), {});
@@ -28,7 +33,3 @@ const isValidWord = (word, map) => {
 
 	return true;
 };
-
-console.log(
-	longestWord(['a', 'banana', 'app', 'appl', 'ap', 'apply', 'apple'])
-);
