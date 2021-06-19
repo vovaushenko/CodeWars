@@ -13,10 +13,3 @@ class Lamp {
 		return `The lamp is ${this.on ? 'on' : 'off'}.`;
 	}
 }
-
-let coolLamp = new Lamp('red');
-
-console.log(coolLamp);
-console.log(coolLamp.toggleSwitch());
-
-console.log(coolLamp.state());
