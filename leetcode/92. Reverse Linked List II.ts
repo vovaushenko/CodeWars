@@ -1,4 +1,11 @@
-class ListNode {
+// 92. Reverse Linked List II
+
+/*
+
+Given the head of a singly linked list and two integers left and right where left <= right, reverse the nodes of the list from position left to position right, and return the reversed list.
+*/
+
+export class ListNode {
 	val: number;
 	next: ListNode | null;
 	constructor(val?: number, next?: ListNode | null) {
@@ -53,10 +60,3 @@ function reverseBetween(
 
 	return reversedList.head;
 }
-
-let list = new SLL();
-list.push(1);
-list.push(2);
-list.push(3);
-
-console.log(list);
