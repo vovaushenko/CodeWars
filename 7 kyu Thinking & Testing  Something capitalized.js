@@ -7,7 +7,7 @@ const testit = (s) => {
 		.map((c) =>
 			c.length === 1
 				? c.toUpperCase()
-				: c.slice(0, c.length - 2) + c.slice(c.length - 2).toUpperCase()
+				: c.slice(0, c.length - 1) + c.slice(c.length - 1).toUpperCase()
 		)
 		.join(' ');
 };
