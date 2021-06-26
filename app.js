@@ -1,35 +1,16 @@
-// https://leetcode.com/problems/rotate-list/
+const insertionSortList = (head) => {
+	const values = [];
 
-const rotateRight = (head, k) => {
-	let values = [];
-
-	const dfs = (node) => {
-		if (!node) return;
-		values.push(node.val);
-		if (node.next) dfs(node.next);
-	};
-
-	dfs(head);
-
-	let rotated = rotate(values, k);
-
-	let list = new SLL();
-
-	for (let val of rotated) list.push(val);
-
-	return list.head;
-};
-
-let rotate = (values, k) => {
-	if (!values.length) return values;
-	let rotationNum = k % values.length;
-	let counter = 0;
-	while (counter !== rotationNum) {
-		values.unshift(values.pop());
-		counter++;
+	while (head) {
+		values.push(head.val);
+		head = head.next;
 	}
 
-	return values;
+	values.sort((a, b) => a - b);
+	let list = new SLL();
+	for (let val of values) list.push(val);
+
+	return list.head;
 };
 
 class SLL {
@@ -39,15 +20,13 @@ class SLL {
 	}
 
 	push(val) {
-		let node = new ListNode(val);
-		if (this.head === null) {
-			this.head = node;
-			this.tail = node;
+		let newNode = new ListNode(val);
+		if (!this.head) {
+			this.head = newNode;
+			this.tail = newNode;
 		} else {
-			this.tail.next = node;
-			this.tail = node;
+			this.tail.next = newNode;
+			this.tail = newNode;
 		}
 	}
 }
-
-console.log(rotate([1, 2, 3, 4, 5], 123421123));

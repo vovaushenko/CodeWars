@@ -17,4 +17,3 @@ const singleNumber = (nums: number[]): number[] => {
 
 	return res;
 };
-singleNumber([1, 2, 1, 3, 2, 5]);

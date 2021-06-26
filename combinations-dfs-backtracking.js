@@ -1,19 +1,9 @@
-// https://leetcode.com/problems/combinations/
+// https://leetcode.com/problems/largest-number/
 
-const combine = (n, k) => {
-	let res = [];
-	let dfs = (combination, start) => {
-		if (combination.length === k) {
-			res.push(combination);
-			return;
-		}
+const largestNumber = (nums) => {
+	// nums.sort((n1, n2) => +String(n2)[0] - +String(n1)[0]);
 
-		for (let i = start; i <= n; i++) {
-			dfs([...combination, i], i + 1);
-		}
-	};
-
-	dfs([], 1);
-	console.log(res);
-	return res;
+	console.log(nums);
 };
+
+largestNumber([3, 30, 34, 5, 9]);
