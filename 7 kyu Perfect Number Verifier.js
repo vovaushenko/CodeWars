@@ -22,5 +22,3 @@ const isPerfect = (n) => {
 
 	return n === factors.reduce((a, b) => a + b, 0) - n;
 };
-
-console.log(isPerfect(1));
