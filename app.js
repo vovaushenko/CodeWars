@@ -1,26 +1,31 @@
-// https://www.codewars.com/kata/56a28c30d7eb6acef700004d
+// https://www.codewars.com/kata/56562b12044fa538b0000010
 
-function getFactors(num) {
-	const isEven = num % 2 === 0;
-	const max = Math.sqrt(num);
-	const inc = isEven ? 1 : 2;
-	let factors = [1, num];
-
-	for (let curFactor = isEven ? 2 : 3; curFactor <= max; curFactor += inc) {
-		if (num % curFactor !== 0) continue;
-		factors.push(curFactor);
-		let compliment = num / curFactor;
-		if (compliment !== curFactor) factors.push(compliment);
-	}
-
-	return factors;
-}
-
-const isPerfect = (n) => {
-	if (n === 1) return false;
-	const factors = getFactors(n);
-
-	return n === factors.reduce((a, b) => a + b, 0) - n;
+const imgExtensions = {
+	jpg: true,
+	gif: true,
+	png: true,
+	tiff: true,
+	svg: true,
+	bmp: true,
 };
 
-console.log(isPerfect(1));
+const imageFilter = (arr) => {
+	console.log(arr);
+	return arr.map((file) =>
+		isIncludesImgExtension(file) ? [file, ...file.split('.')] : null
+	);
+};
+
+const isIncludesImgExtension = (filename) => {
+	for (let key in imgExtensions) {
+		if (filename.endsWith(key)) {
+			if (filename.split('.')[0]) return true;
+		}
+	}
+
+	return false;
+};
+
+console.log(isIncludesImgExtension('.tiff.php'));
+
+console.log(imageFilter(['_rain.png', '6787.bmp', '.tiff.php', 'tiff.tiff']));
