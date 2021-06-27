@@ -1,20 +1,23 @@
 /**
- * *260.  Single Number III
- * Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
-
-You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
+ * *279. Perfect Squares
+ * Given an integer n, return the least number of perfect square numbers that sum to n.
+	A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.
  */
 
-const singleNumber = (nums: number[]): number[] => {
-	const hash = nums.reduce(
-		(h, n) => ((h[n] = h[n] + 1 || 1), h),
-		{} as Record<string, number>
-	);
+const numSquares = (n: number): number => {
+	if (Math.sqrt(n) % 1 === 0) return 1;
+	let start = 1;
+	let pSquares = [];
+	let combinations = [];
 
-	const res = Object.entries(hash)
-		.filter(([_, fr]) => fr === 1)
-		.map((t) => +t[0]);
+	while (start ** 2 < n) {
+		pSquares.push(start ** 2);
+		start++;
+	}
 
-	return res;
+	console.log(pSquares);
+
+	return 1;
 };
-singleNumber([1, 2, 1, 3, 2, 5]);
+
+console.log(numSquares(12));

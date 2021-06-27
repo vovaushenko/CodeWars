@@ -17,5 +17,3 @@ const primeArray = (n) => {
 
 	return primeNums;
 };
-
-console.log(primeArray(2));
