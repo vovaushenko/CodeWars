@@ -1,23 +1,17 @@
-/**
- * *279. Perfect Squares
- * Given an integer n, return the least number of perfect square numbers that sum to n.
-	A perfect square is an integer that is the square of an integer; in other words, it is the product of some integer with itself. For example, 1, 4, 9, and 16 are perfect squares while 3 and 11 are not.
- */
+export const swap = (id1: number, id2: number, arr: number[]): number[] =>
+	([arr[id1], arr[id2]] = [arr[id2], arr[id1]]);
 
-const numSquares = (n: number): number => {
-	if (Math.sqrt(n) % 1 === 0) return 1;
-	let start = 1;
-	let pSquares = [];
-	let combinations = [];
+let array = [9, 1, 4, 8, 12, 1, 2];
 
-	while (start ** 2 < n) {
-		pSquares.push(start ** 2);
-		start++;
+const bSort = (arr: number[]): number[] => {
+	for (let i = arr.length; i >= 0; i--) {
+		for (let j = 0; j < i; j++) {
+			if (arr[j] > arr[i]) swap(i, j, arr);
+		}
 	}
 
-	console.log(pSquares);
-
-	return 1;
+	return arr;
 };
 
-console.log(numSquares(12));
+bSort(array);
+console.log(array);
