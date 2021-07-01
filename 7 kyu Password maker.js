@@ -10,5 +10,3 @@ const makePassword = (phrase) =>
 				lookup[w[0]] !== undefined ? pass + lookup[w[0]] : pass + w[0],
 			''
 		);
-
-console.log(makePassword('Give me liberty or give me death'));
