@@ -24,25 +24,3 @@ function makeEqual(words: string[]): boolean {
 
 	return true;
 }
-
-export {};
-
-console.log(
-	makeEqual([
-		'caaaaa',
-		'aaaaaaaaa',
-		'a',
-		'bbb',
-		'bbbbbbbbb',
-		'bbb',
-		'cc',
-		'cccccccccccc',
-		'ccccccc',
-		'ccccccc',
-		'cc',
-		'cccc',
-		'c',
-		'cccccccc',
-		'c',
-	])
-);
