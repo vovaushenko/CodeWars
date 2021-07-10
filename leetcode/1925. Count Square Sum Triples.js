@@ -24,5 +24,3 @@ const countTriples = (n) => {
 
 	return triples;
 };
-
-console.log(countTriplets(1));
