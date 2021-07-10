@@ -32,5 +32,3 @@ const calculateFactors = (n) => {
 	}
 	return factors;
 };
-
-greatestCommonFactor([468, 156, 806, 312, 442]);
