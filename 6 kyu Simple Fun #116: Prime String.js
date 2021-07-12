@@ -10,5 +10,3 @@ const primeString = (str) => {
 	}
 	return true;
 };
-
-isPrime('abaaba');
