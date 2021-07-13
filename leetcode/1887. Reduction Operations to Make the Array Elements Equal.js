@@ -25,9 +25,3 @@ const reductionOperations = (nums) => {
 
 	return reductions;
 };
-
-console.log(reductionOperations([1, 3, 5]));
-
-// [1, 1, 2, 2, 2]    | 1 | 4
-
-// [1,1,1,1,1,1,1,1,1,1]
