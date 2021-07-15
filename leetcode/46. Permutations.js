@@ -1,8 +1,6 @@
 // https://leetcode.com/problems/permutations/
-
+// * 46. Permutations
 /*
-46. Permutations
-
 Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.
 */
 
@@ -22,5 +20,3 @@ const permute = (nums) => {
 	_permute([]);
 	return permutations;
 };
-
-console.log(permute([1, 2, 3]));
