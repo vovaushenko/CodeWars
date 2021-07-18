@@ -7,7 +7,3 @@ const per = (n, stack = []) =>
 
 const multiplyDigits = (n) =>
 	[...String(n)].reduce((prod, d) => prod * Number(d), 1);
-
-console.log(multiplyDigits(69));
-
-console.log(per(5));
