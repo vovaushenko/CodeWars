@@ -50,5 +50,3 @@ const alphabetWar = (fight) => {
 		? 'Right side wins!'
 		: "Let's fight again!";
 };
-
-console.log(alphabetWar('bjjjaj'));
