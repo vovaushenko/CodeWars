@@ -1,27 +1,9 @@
-const sumOfSquaredDigits = (n: number): number =>
-	[...String(n)].reduce((s, d) => s + Number(d) ** 2, 0);
+// https://leetcode.com/problems/maximum-number-of-words-you-can-type/
 
-export const isHappy = (n: number): boolean => {
-	let numberIsHappy = false;
-	let seen: Record<string, boolean> = {};
+const isValid = (word: string, prohibited: string): boolean =>
+	[...word].filter((char) => prohibited.includes(char)).length === 0;
 
-	const helper = (num: number): void => {
-		if (num === 1) {
-			numberIsHappy = true;
-			return;
-		}
-		if (num in seen) {
-			return;
-		}
-		seen[num] = true;
-		helper(sumOfSquaredDigits(num));
-	};
-
-	helper(n);
-
-	return numberIsHappy;
-};
-
-console.log(isHappy(2));
+const canBeTypedWords = (text: string, broken: string): number =>
+	text.split(' ').filter((word) => isValid(word, broken)).length;
 
 export {};
