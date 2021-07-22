@@ -23,5 +23,3 @@ const constructRectangle = (area) => {
 
 	return pairs[0];
 };
-
-console.log(constructRectangle(122122));
