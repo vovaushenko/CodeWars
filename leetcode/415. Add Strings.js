@@ -38,5 +38,3 @@ const addStrings = (n1, n2) => {
 
 	return res;
 };
-
-console.log(addStrings('11', '123'));
