@@ -1,42 +1,34 @@
-// https://leetcode.com/problems/add-strings/
+// https://leetcode.com/problems/most-common-word/
 
-// 415. Add Strings
-/*
-Given two non-negative integers, num1 and num2 represented as string, return the sum of num1 and num2 as a string.
+const mostCommonWord = (paragraph, banned) => {
+	const words = paragraph
+		.toLowerCase()
+		.match(/[a-z] /gi)
+		.join('')
+		.split(' ')
+		.filter((w) => w);
 
-You must solve the problem without using any built-in library for handling large integers (such as BigInteger). You must also not convert the inputs to integers directly.
+	console.log(words);
 
-*/
-
-const addStrings = (n1, n2) => {
-	let [num1, num2] = [n1, n2].sort((a, b) => a.length - b.length);
-
-	let leadingZeroes = '0'.repeat(num2.length - num1.length);
-	num1 = leadingZeroes + num1;
-
-	let res = '';
-	let handicap = false;
-
-	for (let i = num2.length - 1; i >= 0; i--) {
-		let sum = +num2[i] + +num1[i];
-
-		if (handicap) {
-			sum += 1;
-			handicap = false;
-		}
-		if (sum < 10) {
-			res = sum + res;
+	const map = new Map();
+	for (let word of words) {
+		if (map.has(word)) {
+			let freq = map.get(word);
+			map.set(word, freq + 1);
 		} else {
-			res = sum - 10 + res;
-			handicap = true;
+			map.set(word, 1);
 		}
-
-		if (i === 0 && handicap) {
-			res = '1' + res;
+	}
+	let maxFrequency = 0;
+	let foundWord = '';
+	for (let word of words) {
+		if (map.get(word) > maxFrequency && !banned.includes(word)) {
+			maxFrequency = Math.max(maxFrequency, map.get(word));
+			foundWord = word;
 		}
 	}
 
-	return res;
+	return foundWord;
 };
 
-console.log(addStrings('11', '123'));
+console.log(mostCommonWord('abx asda.', ['a']));
