@@ -1,34 +1,23 @@
-// https://leetcode.com/problems/most-common-word/
+// https://leetcode.com/problems/delete-columns-to-make-sorted/
 
-const mostCommonWord = (paragraph, banned) => {
-	const words = paragraph
-		.toLowerCase()
-		.match(/[a-z] /gi)
-		.join('')
-		.split(' ')
-		.filter((w) => w);
+const minDeletionSize = (strs) => {
+	let sorted = 0;
 
-	console.log(words);
-
-	const map = new Map();
-	for (let word of words) {
-		if (map.has(word)) {
-			let freq = map.get(word);
-			map.set(word, freq + 1);
-		} else {
-			map.set(word, 1);
-		}
+	for (let i = 0; i < strs[0].length; i++) {
+		if (isSorted(strs.map((s) => s[i]))) sorted++;
 	}
-	let maxFrequency = 0;
-	let foundWord = '';
-	for (let word of words) {
-		if (map.get(word) > maxFrequency && !banned.includes(word)) {
-			maxFrequency = Math.max(maxFrequency, map.get(word));
-			foundWord = word;
-		}
-	}
-
-	return foundWord;
+	return strs[0].length - sorted;
 };
 
-console.log(mostCommonWord('abx asda.', ['a']));
+const isSorted = (chars) => {
+	let [i, j] = [0, 1];
+	while (j < chars.length) {
+		if (chars[i].localeCompare(chars[j]) === 1) return false;
+		i++;
+		j++;
+	}
+	return true;
+};
+
+// console.log(isSorted('abcdef'));
+console.log(minDeletionSize(['a', 'b']));
