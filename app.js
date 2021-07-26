@@ -1,23 +1,18 @@
-// https://leetcode.com/problems/delete-columns-to-make-sorted/
+// https://leetcode.com/problems/sum-of-digits-of-string-after-convert/
 
-const minDeletionSize = (strs) => {
-	let sorted = 0;
+const getLucky = (s, k, counter = 0) =>
+	counter === k
+		? s
+		: counter === 0
+		? getLucky(
+				sumOfDigits([...s].map((l) => l.charCodeAt(0) - 96).join('')),
+				k,
+				counter + 1
+		  )
+		: getLucky(sumOfDigits(s), k, counter + 1);
 
-	for (let i = 0; i < strs[0].length; i++) {
-		if (isSorted(strs.map((s) => s[i]))) sorted++;
-	}
-	return strs[0].length - sorted;
-};
+const sumOfDigits = (s) => String([...s].reduce((s, c) => s + +c, 0));
 
-const isSorted = (chars) => {
-	let [i, j] = [0, 1];
-	while (j < chars.length) {
-		if (chars[i].localeCompare(chars[j]) === 1) return false;
-		i++;
-		j++;
-	}
-	return true;
-};
+console.log(sumOfDigits('262124'));
 
-// console.log(isSorted('abcdef'));
-console.log(minDeletionSize(['a', 'b']));
+console.log(getLucky('iiii', 1));
