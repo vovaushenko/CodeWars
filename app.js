@@ -1,18 +1,17 @@
-// https://leetcode.com/problems/sum-of-digits-of-string-after-convert/
+// https://leetcode.com/problems/relative-sort-array/
 
-const getLucky = (s, k, counter = 0) =>
-	counter === k
-		? s
-		: counter === 0
-		? getLucky(
-				sumOfDigits([...s].map((l) => l.charCodeAt(0) - 96).join('')),
-				k,
-				counter + 1
-		  )
-		: getLucky(sumOfDigits(s), k, counter + 1);
+const relativeSortArray = (arr1, arr2) => {
+	const lookup = arr2.reduce((l, n, id) => ((l[n] = id), l), {});
 
-const sumOfDigits = (s) => String([...s].reduce((s, c) => s + +c, 0));
+	const intersectionSorted = arr1
+		.filter((n) => n in lookup)
+		.sort((a, b) => lookup[a] - lookup[b]);
 
-console.log(sumOfDigits('262124'));
+	const differenceSorted = arr1
+		.filter((n) => !(n in lookup))
+		.sort((a, b) => a - b);
 
-console.log(getLucky('iiii', 1));
+	return [...intersectionSorted, ...differenceSorted];
+};
+
+relativeSortArray([2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19], [2, 1, 4, 3, 9, 6]);
