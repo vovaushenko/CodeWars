@@ -6,4 +6,3 @@ Given a binary string s ​​​​​without leading zeros, return true​​�
 */
 const checkOnesSegment = (s: string): boolean =>
 	s.split('0').filter((c) => c).length === 1;
-console.log(checkOnesSegment('1000'));
