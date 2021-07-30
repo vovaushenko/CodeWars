@@ -1,9 +1,14 @@
-// https://leetcode.com/problems/check-if-binary-string-has-at-most-one-segment-of-ones/
+// https://leetcode.com/explore/challenge/card/july-leetcoding-challenge-2021/612/week-5-july-29th-july-31st/3832/
 
-//* 1784. Check if Binary String Has at Most One Segment of Ones
-/*
-Given a binary string s ​​​​​without leading zeros, return true​​​ if s contains at most one contiguous segment of ones. Otherwise, return false.
-*/
-const checkOnesSegment = (s: string): boolean =>
-	s.split('0').filter((c) => c).length === 1;
-console.log(checkOnesSegment('1000'));
+class Node {
+	val: number | string;
+	next: Node | null;
+	constructor(val: string | number) {
+		this.next = null;
+		this.val = val;
+	}
+}
+
+class SLL {}
+
+export {};
