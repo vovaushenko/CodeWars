@@ -19,5 +19,3 @@ const maxProduct = (nums: number[]): number => {
 
 	return maxProduct;
 };
-
-console.log(maxProduct([2, 3, -2, 4]));

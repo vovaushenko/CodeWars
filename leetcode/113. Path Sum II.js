@@ -1,9 +1,14 @@
-// https://leetcode.com/problems/path-sum-ii/
+// 113. Path Sum II
+/*
+Given the root of a binary tree and an integer targetSum, return all root-to-leaf paths where each path's sum equals targetSum.
+
+A leaf is a node with no children.
+*/
 
 const pathSum = (root, targetSum) => {
 	const solutions = [];
 	const traverse = (node, currentSum, values) => {
-		if (!node) return;
+		if (!node || currentSum > targetSum) return;
 		if (node.left === null && node.right === null) {
 			values.push(node.val);
 			currentSum += node.val;
