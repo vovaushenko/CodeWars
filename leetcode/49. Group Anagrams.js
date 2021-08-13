@@ -7,15 +7,22 @@ An Anagram is a word or phrase formed by rearranging the letters of a different 
 */
 
 const groupAnagrams = (strs) => {
-	const map = {};
+	const map = new Map();
 
 	for (let str of strs) {
-		const key = [...str].sort().join('');
-		if (!map[key]) {
-			map[key] = [];
+		const sorted = [...str].sort().join('');
+
+		if (map.has(sorted)) {
+			map.get(sorted).push(str);
+		} else {
+			map.set(sorted, [str]);
 		}
-		map[key].push(str);
 	}
 
-	return Object.values(map);
+	const anagrams = [];
+	for (group of map.values()) {
+		anagrams.push(group);
+	}
+
+	return anagrams;
 };
