@@ -1,50 +1,96 @@
-// https://leetcode.com/problems/group-anagrams/
+export {};
 
-const groupAnagrams = (strs: string[]): string[][] => {
-	let anagrams: Record<string, string[]> = {};
+class BSTNode {
+	val: number;
+	left: null | BSTNode;
+	right: null | BSTNode;
 
-	anagrams[strs[0]] = [strs[0]];
-	let anagramsLength = 1;
+	constructor(val: number) {
+		this.val = val;
+		this.left = null;
+		this.right = null;
+	}
+}
 
-	for (let i = 1; i < strs.length; i++) {
-		let counter = 0;
+class BST {
+	root: null | BSTNode;
+	constructor() {
+		this.root = null;
+	}
 
-		for (let key in anagrams) {
-			counter++;
-			if (areAnagrams(key, strs[i])) {
-				anagrams[key].push(strs[i]);
-				break;
-			}
-
-			if (counter === anagramsLength) {
-				anagrams[strs[i]] = [strs[i]];
-				anagramsLength++;
+	push(val: number) {
+		let newNode = new BSTNode(val);
+		if (!this.root) {
+			this.root = newNode;
+			return;
+		} else {
+			let currentNode = this.root;
+			while (true) {
+				if (val < currentNode.val) {
+					if (!currentNode.left) {
+						currentNode.left = newNode;
+						return;
+					} else {
+						currentNode = currentNode.left;
+					}
+				} else if (val > currentNode.val) {
+					if (!currentNode.right) {
+						currentNode.right = newNode;
+						return;
+					} else {
+						currentNode = currentNode.right;
+					}
+				} else {
+					return undefined;
+				}
 			}
 		}
 	}
 
-	return [...Object.values(anagrams)];
+	dfs(): number[] {
+		const values: number[] = [];
 
-	return [['h']];
-};
+		const traverse = (node: BSTNode | null) => {
+			if (!node) return;
+			values.push(node.val);
+			if (node.left) traverse(node.left);
+			if (node.right) traverse(node.right);
+		};
 
-const areAnagrams = (str1: string, str2: string): boolean => {
-	if (str1.length !== str2.length) return false;
-	const h1 = generateHash(str1);
-	const h2 = generateHash(str2);
-	for (let key in h1) {
-		if (!(key in h2)) return false;
-		if (h2[key] !== h1[key]) return false;
+		traverse(this.root);
+		return values;
 	}
 
-	return true;
-};
+	bfs(): number[] {
+		const values: number[] = [];
 
-const generateHash = (str: string): Record<string, number> =>
-	[...str].reduce(
-		(h, c) => ((h[c] = h[c] + 1 || 1), h),
-		{} as Record<string, number>
-	);
+		const queue = [this.root];
 
-console.log(groupAnagrams(['eat', 'tea', 'tan', 'ate', 'nat', 'bat']));
-export {};
+		while (queue.length) {
+			let currentNode = queue.shift();
+			values.push(currentNode?.val!);
+			if (currentNode?.left) queue.push(currentNode.left);
+			if (currentNode?.right) queue.push(currentNode.right);
+		}
+
+		return values;
+	}
+}
+
+let tree = new BST();
+
+tree.push(13);
+tree.push(9);
+tree.push(23);
+tree.push(7);
+tree.push(11);
+tree.push(17);
+tree.push(77);
+console.log(tree);
+console.log(tree.dfs());
+console.log(tree.bfs());
+
+//            13
+//        9        23
+//     7   11   17    77
+//
