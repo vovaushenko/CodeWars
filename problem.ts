@@ -1,10 +1,13 @@
-export {};
-
-class BSTNode {
+interface ITreeNode {
 	val: number;
-	left: null | BSTNode;
-	right: null | BSTNode;
+	left: null | ITreeNode;
+	right: null | ITreeNode;
+}
 
+export class TreeNode implements ITreeNode {
+	val: number;
+	left: null | ITreeNode;
+	right: null | ITreeNode;
 	constructor(val: number) {
 		this.val = val;
 		this.left = null;
@@ -12,45 +15,47 @@ class BSTNode {
 	}
 }
 
-class BST {
-	root: null | BSTNode;
+export class BST {
+	root: null | ITreeNode;
+
 	constructor() {
 		this.root = null;
 	}
 
-	push(val: number) {
-		let newNode = new BSTNode(val);
-		if (!this.root) {
+	push(val: number): void {
+		const newNode = new TreeNode(val);
+		if (this.root === null) {
 			this.root = newNode;
 			return;
 		} else {
-			let currentNode = this.root;
+			let current = this.root;
 			while (true) {
-				if (val < currentNode.val) {
-					if (!currentNode.left) {
-						currentNode.left = newNode;
+				if (val < current.val) {
+					if (!current.left) {
+						current.left = newNode;
 						return;
 					} else {
-						currentNode = currentNode.left;
+						current = current.left;
 					}
-				} else if (val > currentNode.val) {
-					if (!currentNode.right) {
-						currentNode.right = newNode;
+				} else if (val > current.val) {
+					if (!current.right) {
+						current.right = newNode;
 						return;
 					} else {
-						currentNode = currentNode.right;
+						current = current.right;
 					}
 				} else {
-					return undefined;
+					throw new Error('This node already exists');
 				}
 			}
 		}
 	}
 
 	dfs(): number[] {
-		const values: number[] = [];
+		if (!this.root) return [];
+		const values: Array<number> = [];
 
-		const traverse = (node: BSTNode | null) => {
+		const traverse = (node: TreeNode): void => {
 			if (!node) return;
 			values.push(node.val);
 			if (node.left) traverse(node.left);
@@ -62,35 +67,32 @@ class BST {
 	}
 
 	bfs(): number[] {
-		const values: number[] = [];
-
-		const queue = [this.root];
+		if (!this.root) return [];
+		const values: Array<number> = [];
+		const queue: Array<TreeNode> = [this.root];
 
 		while (queue.length) {
-			let currentNode = queue.shift();
-			values.push(currentNode?.val!);
-			if (currentNode?.left) queue.push(currentNode.left);
-			if (currentNode?.right) queue.push(currentNode.right);
+			let node = queue.shift();
+			if (node) {
+				values.push(node.val);
+				if (node.left) queue.push(node.left);
+				if (node.right) queue.push(node.right);
+			}
 		}
 
 		return values;
 	}
 }
 
-let tree = new BST();
-
-tree.push(13);
-tree.push(9);
-tree.push(23);
-tree.push(7);
+const tree = new BST();
+tree.push(12);
+tree.push(10);
 tree.push(11);
-tree.push(17);
+tree.push(6);
+tree.push(15);
+tree.push(13);
 tree.push(77);
 console.log(tree);
+
 console.log(tree.dfs());
 console.log(tree.bfs());
-
-//            13
-//        9        23
-//     7   11   17    77
-//

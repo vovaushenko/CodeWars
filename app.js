@@ -1,40 +1,15 @@
-const ALPHABET = [
-	'.-',
-	'-...',
-	'-.-.',
-	'-..',
-	'.',
-	'..-.',
-	'--.',
-	'....',
-	'..',
-	'.---',
-	'-.-',
-	'.-..',
-	'--',
-	'-.',
-	'---',
-	'.--.',
-	'--.-',
-	'.-.',
-	'...',
-	'-',
-	'..-',
-	'...-',
-	'.--',
-	'-..-',
-	'-.--',
-	'--..',
-];
+const isValidWord = (token) => {
+	return /^(([a-z]?)|([a-z]+\-?[a-z]+))[!.,]?$/.test(token);
+};
 
-const uniqueMorseRepresentations = (words) =>
-	[
-		...new Set(
-			words.map(
-				(wrd) => [...wrd].map((c) => ALPHABET[c.charCodeAt(0) - 97]).join(''),
-				''
-			)
-		),
-	].length;
+const countValidWords = (sentence) =>
+	sentence
+		.split(' ')
+		.filter((_) => _)
+		.filter((token) => isValidWord(token)).length;
 
-console.log(uniqueMorseRepresentations(['gin', 'zen', 'gig', 'msg']));
+console.log(isValidWord(''));
+
+console.log(isValidWord('dsa'));
+
+console.log(countValidWords('cat and  dog'));
