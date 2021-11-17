@@ -3,18 +3,26 @@
 
 // Find the node in the BST that the node's value equals val and return the subtree rooted with that node. If such a node does not exist, return null.
 
+const searchBST = (root, val) => {
+	if (!root) return null;
+	if (val === root.val) return root;
+	if (val < root.val) return searchBST(root.left, val);
+	if (val > root.val) return searchBST(root.right, val);
+	return null;
+};
+
 var searchBST = function (root, val) {
-  if (!root) return null;
-  let queue = [root];
-  let node;
+	if (!root) return null;
+	let queue = [root];
+	let node;
 
-  while (queue.length) {
-    node = queue.shift();
-    if (node.val === val) return node;
+	while (queue.length) {
+		node = queue.shift();
+		if (node.val === val) return node;
 
-    if (node.left) queue.push(node.left);
-    if (node.right) queue.push(node.right);
-  }
+		if (node.left) queue.push(node.left);
+		if (node.right) queue.push(node.right);
+	}
 
-  return null;
+	return null;
 };
