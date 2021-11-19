@@ -17,3 +17,5 @@ const hammingDistance = (x, y) => {
 
 	return hammDist;
 };
+
+const hammingDistance = (x, y) => (x ^ y).toString(2).replace(/0/g, '').length;
