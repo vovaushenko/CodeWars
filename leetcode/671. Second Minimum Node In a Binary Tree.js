@@ -6,18 +6,35 @@
 // If no such second minimum value exists, output -1 instead.
 
 const findSecondMinimumValue = (root) => {
-  const values = [];
-  const traverse = (node) => {
-    values.push(node.val);
+	const values = [];
+	const traverse = (node) => {
+		values.push(node.val);
 
-    if (node.left) traverse(node.left);
-    if (node.right) traverse(node.right);
-  };
+		if (node.left) traverse(node.left);
+		if (node.right) traverse(node.right);
+	};
 
-  traverse(root);
+	traverse(root);
 
-  const unique = [...new Set(values)].sort((a, b) => a - b);
-  if (unique.length < 2) return -1;
+	const unique = [...new Set(values)].sort((a, b) => a - b);
+	if (unique.length < 2) return -1;
 
-  return unique[1];
+	return unique[1];
+};
+
+const findSecondMinimumValue = (root, smallest = [Infinity, Infinity]) => {
+	if (!root) return;
+
+	if (!smallest.includes(root.val) && root.val < smallest[1]) {
+		smallest.pop();
+		smallest.push(root.val);
+		smallest.sort((a, b) => a - b);
+	}
+
+	root.left && findSecondMinimumValue(root.left, smallest);
+	root.right && findSecondMinimumValue(root.right, smallest);
+
+	console.log(smallest);
+
+	return smallest[1];
 };
