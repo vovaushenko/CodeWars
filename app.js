@@ -1,18 +1,20 @@
-const findSecondMinimumValue = (root, smallest = [Infinity, Infinity]) => {
-	if (!root) return;
+const numComponents = (head, nums) => {
+	let lookup = new Map();
 
-	if (!smallest.includes(root.val) && root.val < smallest[1]) {
-		smallest.pop();
-		smallest.push(root.val);
-		smallest.sort((a, b) => a - b);
+	nums.forEach((item) => {
+		lookup.set(item, true);
+	});
+
+	let count = 0;
+
+	while (head) {
+		if (lookup.has(head.val)) {
+			while (head && lookup.has(head.val)) head = head.next;
+			count++;
+		}
+		if (head) head = head.next;
 	}
-
-	root.left && findSecondMinimumValue(root.left, smallest);
-	root.right && findSecondMinimumValue(root.right, smallest);
-
-	console.log(smallest);
-
-	return smallest[1];
+	return count;
 };
 
-console.log(findSecondMinimumValue({ val: 5 }));
+console.log(numComponents([], [1, 2, 3]));
