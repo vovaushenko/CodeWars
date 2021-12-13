@@ -1,20 +1,21 @@
-const numComponents = (head, nums) => {
-	let lookup = new Map();
-
-	nums.forEach((item) => {
-		lookup.set(item, true);
-	});
-
-	let count = 0;
-
-	while (head) {
-		if (lookup.has(head.val)) {
-			while (head && lookup.has(head.val)) head = head.next;
-			count++;
+const maxPower = (s) => {
+	let prevChar = null;
+	let maxPower = 1;
+	let currentPower = 1;
+	const helper = (str) => {
+		if (!str.length) return;
+		let currentChar = str[0];
+		if (currentChar === prevChar) {
+			currentPower++;
+			maxPower = Math.max(currentPower, maxPower);
+		} else {
+			currentPower = 1;
 		}
-		if (head) head = head.next;
-	}
-	return count;
+		prevChar = currentChar;
+		helper(str.substring(1));
+	};
+	helper(s);
+	return maxPower;
 };
 
-console.log(numComponents([], [1, 2, 3]));
+console.log(maxPower('hooraaaaaaaaaaay'));
