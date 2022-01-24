@@ -24,3 +24,14 @@ const detectCapitalUse = (word) => {
 };
 
 const isCapital = (letter) => letter === letter.toUpperCase();
+
+// * FP * *
+const isCapital = (char) => char.toUpperCase() === char;
+const isLowercase = (c) => !isCapital(c);
+const allCapitals = (word) => [...word].every(isCapital);
+const allLowercase = (word) => [...word].every(isLowercase);
+const isCapitalized = (word) =>
+	isCapital(word[0]) && allLowercase(word.slice(1));
+
+const detectCapitalUse = (word) =>
+	[allCapitals, allLowercase, isCapitalized].some((f) => f(word));
