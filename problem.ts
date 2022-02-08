@@ -1,15 +1,40 @@
-const pluck = <DataType, KeyType extends keyof DataType>(
-	items: DataType[],
-	key: KeyType
-): DataType[KeyType][] => {
-	return items.map((item) => item[key]);
+class ListNode {
+	val: number;
+	next: ListNode | null;
+	constructor(val?: number, next?: ListNode | null) {
+		this.val = val === undefined ? 0 : val;
+		this.next = next === undefined ? null : next;
+	}
+}
+
+const getListMap = (head: ListNode): Map<number, number> => {
+	const map = new Map();
+	let index = 0;
+	let current = head;
+	while (current) {
+		if (!current.next) {
+			map.set(index, current.val);
+			break;
+		}
+		map.set(index, current.val);
+		current = current.next;
+		index++;
+	}
+	return map;
 };
 
-const dogs = [
-	{ name: 'Mimi', age: 12 },
-	{ name: 'LG', age: 13 },
-	{ name: 'BigBoy', age: 3 },
-	{ name: 'Lisa', age: 5 },
-];
+const pairSum = (head: ListNode | null): number => {
+	if (!head) return 0;
 
-console.log(pluck(dogs, 'name'));
+	let maxTwinSum = -Infinity;
+	const map = getListMap(head);
+	const mapSize = map.size;
+
+	for (const [id, val] of map) {
+		maxTwinSum = Math.max(val + (map.get(mapSize - 1 - id) || 0));
+		console.log(val, map.get(mapSize - 1 - id));
+		if (id === mapSize / 2) break;
+	}
+
+	return maxTwinSum;
+};

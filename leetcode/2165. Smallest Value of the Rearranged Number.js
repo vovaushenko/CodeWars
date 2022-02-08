@@ -1,4 +1,11 @@
-'use strict';
+//2165. Smallest Value of the Rearranged Number
+/*
+You are given an integer num. Rearrange the digits of num such that its value is minimized and it does not contain any leading zeros.
+
+Return the rearranged number with minimal value.
+
+Note that the sign of the number does not change after rearranging the digits.
+*/
 const ascending = (a, b) => a - b;
 const descending = (a, b) => b - a;
 
@@ -19,4 +26,3 @@ const smallestNumber = (num) => {
 		return -1 * sortedDigits.join('');
 	}
 };
-console.log(smallestNumber(-7609));
