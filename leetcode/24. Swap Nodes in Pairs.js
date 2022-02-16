@@ -51,3 +51,18 @@ const swapPairs = (head) => {
 	);
 	return swappedList.head;
 };
+
+// betterAlternative
+const swapPairs = (head) => {
+	let dummy = new ListNode();
+	dummy.next = head;
+	let result = dummy;
+	while (dummy.next && dummy.next.next) {
+		let [p, q] = [dummy.next, dummy.next.next];
+		dummy.next = q;
+		p.next = q.next;
+		q.next = p;
+		dummy = p;
+	}
+	return result.next;
+};
