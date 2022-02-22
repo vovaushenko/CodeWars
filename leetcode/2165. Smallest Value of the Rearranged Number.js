@@ -1,25 +1,11 @@
-'use strict';
-<<<<<<< HEAD
+//2165. Smallest Value of the Rearranged Number
+/*
+You are given an integer num. Rearrange the digits of num such that its value is minimized and it does not contain any leading zeros.
 
-const canSeePersonsCount = (heights) => {
-	let view = [],
-		res = [],
-		n = heights.length,
-		cnt = 0;
-	for (let i = n - 1; i >= 0; cnt = 0, i--) {
-		while (view[view.length - 1] < heights[i]) {
-			cnt++;
-			view.pop();
-		}
-		res.unshift(cnt + !!view.length);
-		view.push(heights[i]);
-	}
-	return res;
-};
+Return the rearranged number with minimal value.
 
-console.log(canSeePersonsCount([10, 6, 8, 5, 11, 9]));
-console.log(canSeePersonsCount([4, 3, 2, 1]));
-=======
+Note that the sign of the number does not change after rearranging the digits.
+*/
 const ascending = (a, b) => a - b;
 const descending = (a, b) => b - a;
 
@@ -40,5 +26,3 @@ const smallestNumber = (num) => {
 		return -1 * sortedDigits.join('');
 	}
 };
-console.log(smallestNumber(-7609));
->>>>>>> 20ad12d1b63344c8981f1b898acb2b31cfb00c71
