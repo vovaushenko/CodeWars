@@ -1,15 +1,12 @@
-const pluck = <DataType, KeyType extends keyof DataType>(
-	items: DataType[],
-	key: KeyType
-): DataType[KeyType][] => {
-	return items.map((item) => item[key]);
+export { foo };
+// goal 10 -> 4
+const foo = () => 'bar';
+
+const removeElement = (nums: number[], target): number => {
+	for (let i = nums.length - 1; i >= 0; i--) {
+		nums[i] === target && nums.splice(i, 1);
+	}
+	return nums.length;
 };
 
-const dogs = [
-	{ name: 'Mimi', age: 12 },
-	{ name: 'LG', age: 13 },
-	{ name: 'BigBoy', age: 3 },
-	{ name: 'Lisa', age: 5 },
-];
-
-console.log(pluck(dogs, 'name'));
+console.log(removeElement([1, 2, 2, 2, 3, 2, 4], 2));

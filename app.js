@@ -1,21 +1,20 @@
-const maxPower = (s) => {
-	let prevChar = null;
-	let maxPower = 1;
-	let currentPower = 1;
-	const helper = (str) => {
-		if (!str.length) return;
-		let currentChar = str[0];
-		if (currentChar === prevChar) {
-			currentPower++;
-			maxPower = Math.max(currentPower, maxPower);
-		} else {
-			currentPower = 1;
+'use strict';
+
+const canSeePersonsCount = (heights) => {
+	let view = [],
+		res = [],
+		n = heights.length,
+		cnt = 0;
+	for (let i = n - 1; i >= 0; cnt = 0, i--) {
+		while (view[view.length - 1] < heights[i]) {
+			cnt++;
+			view.pop();
 		}
-		prevChar = currentChar;
-		helper(str.substring(1));
-	};
-	helper(s);
-	return maxPower;
+		res.unshift(cnt + !!view.length);
+		view.push(heights[i]);
+	}
+	return res;
 };
 
-console.log(maxPower('hooraaaaaaaaaaay'));
+console.log(canSeePersonsCount([10, 6, 8, 5, 11, 9]));
+console.log(canSeePersonsCount([4, 3, 2, 1]));
