@@ -1,4 +1,7 @@
-'use strict';
+//https://www.algoexpert.io/questions/Find%20Closest%20Value%20In%20BST
+
+// AVG: Time = O(log(N)), N - number of nodes
+// worst case  - O(N)
 
 const findClosestValueInBst = (tree, target) => {
 	let diff = Infinity;
