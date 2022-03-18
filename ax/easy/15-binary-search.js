@@ -1,5 +1,3 @@
-'use strict';
-
 const binarySearch = (arr, target) => {
 	let [start, end] = [0, arr.length - 1];
 	let mid = Math.floor((start + end) / 2);
@@ -15,5 +13,3 @@ const binarySearch = (arr, target) => {
 
 	return arr[mid] === target ? mid : -1;
 };
-
-console.log(binarySearch([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 75));
