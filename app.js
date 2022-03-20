@@ -1,22 +1,15 @@
-'use strict';
-
-const findClosestValueInBst = (tree, target) => {
-	let diff = Infinity;
-	let closest = Infinity;
-	const traverse = (node) => {
-		if (node.value === target) {
-			return (closest = node.value);
+const countCollisions = (directions) => {
+	let res = 0,
+		n = directions.length,
+		i = 0,
+		carsFromRight = 0;
+	while (i < n && directions[i] === 'L') i++;
+	for (; i < n; i++) {
+		if (directions[i] === 'R') carsFromRight++;
+		else {
+			res += directions[i] === 'S' ? carsFromRight : carsFromRight + 1;
+			carsFromRight = 0;
 		}
-		const currentDiff = Math.abs(node.value - target);
-		if (currentDiff < diff) {
-			diff = currentDiff;
-			closest = node.value;
-		}
-
-		node.left && traverse(node.left);
-		node.right && traverse(node.right);
-	};
-
-	traverse(tree);
-	return closest;
+	}
+	return res;
 };
