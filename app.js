@@ -1,19 +1,19 @@
 'use strict';
 
-const binarySearch = (arr, target) => {
-	let [start, end] = [0, arr.length - 1];
-	let mid = Math.floor((start + end) / 2);
-
-	while (arr[mid] !== target && start < end) {
-		if (target > arr[mid]) {
-			start = mid + 1;
-		} else {
-			end = mid - 1;
+const convert = function (s, numRows) {
+	const result = [];
+	let [step, index] = [1, 0];
+	for (let i = 0; i < s.length; i++) {
+		if (result[index] === undefined) {
+			result[index] = '';
 		}
-		mid = Math.floor((start + end) / 2);
+		result[index] += s[i];
+		if (index === 0) {
+			step = 1;
+		} else if (index === numRows - 1) {
+			step = -1;
+		}
+		index += step;
 	}
-
-	return arr[mid] === target ? mid : -1;
+	return result.join('');
 };
-
-console.log(binarySearch([0, 1, 21, 33, 45, 45, 61, 71, 72, 73], 75));
