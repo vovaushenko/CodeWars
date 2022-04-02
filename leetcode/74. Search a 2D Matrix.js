@@ -15,7 +15,6 @@ const searchMatrix = (matrix, target) => {
 	let mid = Math.floor((start + end) / 2);
 
 	while (flat[mid] !== target && start < end) {
-		r;
 		if (target > flat[mid]) {
 			start = mid + 1;
 		} else {
