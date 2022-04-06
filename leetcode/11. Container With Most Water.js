@@ -19,3 +19,18 @@ const maxArea = (height) => {
 	}
 	return maxArea;
 };
+
+const maxArea2 = (height) => {
+	let [left, right] = [0, height.length - 1];
+	let max = Math.min(height[left], height[right]) * (right - left);
+	while (left < right) {
+		if (height[left] <= height[right]) {
+			left++;
+		} else {
+			right--;
+		}
+		max = Math.max(max, Math.min(height[left], height[right]) * (right - left));
+	}
+
+	return max;
+};
