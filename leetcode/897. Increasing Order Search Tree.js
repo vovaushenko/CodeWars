@@ -3,6 +3,31 @@
 
 Given the root of a binary search tree, rearrange the tree in in-order so that the leftmost node in the tree is now the root of the tree, and every node has no left child and only one right child.
 */
+const sortedTreeValues = (root) => {
+	const values = [];
+	const q = [root];
+	while (q.length) {
+		const node = q.pop();
+		values.push(node.val);
+		if (node.left) q.push(node.left);
+		if (node.right) q.push(node.right);
+	}
+	return values.sort((a, b) => a - b);
+};
+
+const increasingBST2 = (root) => {
+	const sortedValues = sortedTreeValues(root);
+	const nodes = sortedValues.map((val) => new TreeNode(val));
+	let [slow, fast] = [0, 1];
+	while (fast < nodes.length) {
+		nodes[slow].right = nodes[fast];
+		slow++;
+		fast++;
+	}
+	return nodes[0];
+};
+
+//  ===== OLD =====
 
 const increasingBST = (root) => {
 	const values = [];
