@@ -1,19 +1,18 @@
-'use strict';
+// 2274. Maximum Consecutive Floors Without Special Floors
 
-const convert = function (s, numRows) {
-	const result = [];
-	let [step, index] = [1, 0];
-	for (let i = 0; i < s.length; i++) {
-		if (result[index] === undefined) {
-			result[index] = '';
-		}
-		result[index] += s[i];
-		if (index === 0) {
-			step = 1;
-		} else if (index === numRows - 1) {
-			step = -1;
-		}
-		index += step;
+const maxConsecutive = (bottom, top, special) => {
+	let fromFloor = bottom;
+	let result = 0;
+	special.sort((a, b) => a - b);
+	special.push(1 + top);
+
+	for (const sp of special) {
+		const nextFloor = sp - 1;
+		const outcome = nextFloor - fromFloor + 1;
+		result = Math.max(result, outcome);
+
+		fromFloor = 1 + sp;
 	}
-	return result.join('');
+
+	return result;
 };
